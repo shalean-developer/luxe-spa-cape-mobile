@@ -105,6 +105,38 @@ const Services = () => {
       price: "R 350",
       description: "Professional intimate area waxing in a comfortable, private setting.",
     },
+    {
+      title: "Exfoliating Body Scrub",
+      category: "Body Treatments",
+      image: massageImage,
+      duration: "45 min",
+      price: "R 420",
+      description: "Luxurious full-body exfoliation to reveal smooth, glowing skin.",
+    },
+    {
+      title: "Detox Body Scrub",
+      category: "Body Treatments",
+      image: massageImage,
+      duration: "60 min",
+      price: "R 480",
+      description: "Purifying body treatment with detoxifying scrub and nourishing wrap.",
+    },
+    {
+      title: "Couples Swedish Massage",
+      category: "Couples Treatments",
+      image: massageImage,
+      duration: "60 min",
+      price: "R 850",
+      description: "Relaxing side-by-side massage for two in the comfort of your home.",
+    },
+    {
+      title: "Couples Hot Stone Massage",
+      category: "Couples Treatments",
+      image: massageImage,
+      duration: "90 min",
+      price: "R 1,200",
+      description: "Indulgent couples massage using heated stones for ultimate relaxation.",
+    },
   ];
 
   const categories = [...new Set(services.map(s => s.category))];

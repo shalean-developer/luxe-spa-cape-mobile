@@ -43,6 +43,11 @@ const Footer = () => {
                   Contact
                 </Link>
               </li>
+              <li>
+                <Link to="/terms" className="text-sm text-muted-foreground hover:text-primary transition-smooth">
+                  Terms & Conditions
+                </Link>
+              </li>
             </ul>
           </div>
 
@@ -92,8 +97,8 @@ const Footer = () => {
             </div>
             <div className="text-sm text-muted-foreground">
               <p className="font-medium mb-1">Hours</p>
-              <p>Mon - Sat: 9am - 8pm</p>
-              <p>Sunday: 10am - 6pm</p>
+              <p>Available 24/7</p>
+              <p className="text-xs mt-1">Book anytime, we're always here</p>
             </div>
           </div>
         </div>

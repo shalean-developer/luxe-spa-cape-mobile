@@ -175,8 +175,39 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Testimonials */}
+      {/* Locations Section */}
       <section className="py-20 bg-background">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12 animate-fade-in">
+            <h2 className="font-serif text-3xl md:text-4xl font-bold mb-4">Premium Locations We Serve</h2>
+            <p className="text-muted-foreground text-lg">
+              Bringing luxury spa experiences to Cape Town's most exclusive areas
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6">
+            {[
+              { name: "Camps Bay", link: "/locations/camps-bay" },
+              { name: "Clifton", link: "/locations/clifton" },
+              { name: "Constantia", link: "/locations/constantia" },
+              { name: "Bishopscourt", link: "/locations/bishopscourt" },
+              { name: "Fresnaye", link: "/locations/fresnaye" },
+            ].map((location, index) => (
+              <Link key={index} to={location.link}>
+                <Card className="hover:shadow-lg transition-smooth border-2 border-primary/20 hover:border-primary group">
+                  <CardContent className="p-6 text-center">
+                    <MapPin className="h-8 w-8 mx-auto mb-3 text-primary group-hover:scale-110 transition-smooth" />
+                    <h3 className="font-serif text-lg font-semibold">{location.name}</h3>
+                  </CardContent>
+                </Card>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials */}
+      <section className="py-20 bg-muted/30">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12 animate-fade-in">
             <h2 className="font-serif text-3xl md:text-4xl font-bold mb-4">What Our Clients Say</h2>
