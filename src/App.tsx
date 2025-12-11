@@ -12,11 +12,17 @@ import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Booking from "./pages/Booking";
 import Terms from "./pages/Terms";
+import Locations from "./pages/Locations";
+import Blog from "./pages/Blog";
 import CampsBay from "./pages/locations/CampsBay";
 import Clifton from "./pages/locations/Clifton";
 import Constantia from "./pages/locations/Constantia";
 import Bishopscourt from "./pages/locations/Bishopscourt";
 import Fresnaye from "./pages/locations/Fresnaye";
+import SomersetWest from "./pages/locations/SomersetWest";
+import Stellenbosch from "./pages/locations/Stellenbosch";
+import Tokai from "./pages/locations/Tokai";
+import Goodwood from "./pages/locations/Goodwood";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -33,6 +39,8 @@ const App = () => (
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/services" element={<Services />} />
+              <Route path="/locations" element={<Locations />} />
+              <Route path="/blog" element={<Blog />} />
               <Route path="/about" element={<About />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/booking" element={<Booking />} />
@@ -42,6 +50,10 @@ const App = () => (
               <Route path="/locations/constantia" element={<Constantia />} />
               <Route path="/locations/bishopscourt" element={<Bishopscourt />} />
               <Route path="/locations/fresnaye" element={<Fresnaye />} />
+              <Route path="/locations/somerset-west" element={<SomersetWest />} />
+              <Route path="/locations/stellenbosch" element={<Stellenbosch />} />
+              <Route path="/locations/tokai" element={<Tokai />} />
+              <Route path="/locations/goodwood" element={<Goodwood />} />
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
               <Route path="*" element={<NotFound />} />
             </Routes>
