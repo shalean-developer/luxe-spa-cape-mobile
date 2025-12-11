@@ -5,12 +5,15 @@ import { Button } from "@/components/ui/button";
 import massageImage from "@/assets/massage.jpg";
 import facialImage from "@/assets/facial.jpg";
 import nailsImage from "@/assets/nails.jpg";
+import hotStonesImage from "@/assets/hot-stones.jpg";
+import spaSetupImage from "@/assets/spa-setup.jpg";
+import heroSpaImage from "@/assets/hero-spa.jpg";
 
 const blogPosts = [
   {
     title: "The Ultimate Guide to At-Home Spa Days",
     excerpt: "Transform your home into a luxurious spa retreat with our expert tips and recommendations for the perfect self-care day.",
-    image: massageImage,
+    image: spaSetupImage,
     date: "December 10, 2024",
     readTime: "5 min read",
     category: "Self-Care",
@@ -18,7 +21,7 @@ const blogPosts = [
   {
     title: "Benefits of Regular Massage Therapy",
     excerpt: "Discover how consistent massage treatments can improve your physical and mental well-being, reduce stress, and boost immunity.",
-    image: facialImage,
+    image: massageImage,
     date: "December 5, 2024",
     readTime: "4 min read",
     category: "Wellness",
@@ -26,7 +29,7 @@ const blogPosts = [
   {
     title: "Skincare Secrets: Achieving That Cape Town Glow",
     excerpt: "Expert skincare tips tailored for the South African climate to keep your skin radiant and healthy all year round.",
-    image: nailsImage,
+    image: facialImage,
     date: "November 28, 2024",
     readTime: "6 min read",
     category: "Skincare",
@@ -34,7 +37,7 @@ const blogPosts = [
   {
     title: "Couples Spa Treatments: Reconnect and Relax",
     excerpt: "Why sharing a spa experience with your partner can strengthen your bond and create lasting memories together.",
-    image: massageImage,
+    image: heroSpaImage,
     date: "November 20, 2024",
     readTime: "4 min read",
     category: "Relationships",
@@ -42,7 +45,7 @@ const blogPosts = [
   {
     title: "The Art of Hot Stone Massage",
     excerpt: "Learn about the ancient practice of hot stone therapy and how it can melt away tension and restore balance.",
-    image: facialImage,
+    image: hotStonesImage,
     date: "November 15, 2024",
     readTime: "5 min read",
     category: "Treatments",

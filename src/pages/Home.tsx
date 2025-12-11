@@ -6,6 +6,8 @@ import heroImage from "@/assets/hero-spa.jpg";
 import massageImage from "@/assets/massage.jpg";
 import facialImage from "@/assets/facial.jpg";
 import nailsImage from "@/assets/nails.jpg";
+import hotStonesImage from "@/assets/hot-stones.jpg";
+import spaSetupImage from "@/assets/spa-setup.jpg";
 
 const Home = () => {
   const features = [
@@ -34,7 +36,7 @@ const Home = () => {
   const services = [
     {
       title: "Massage Therapy",
-      image: massageImage,
+      image: hotStonesImage,
       duration: "60-90 min",
       description: "Swedish, deep tissue, hot stone, and aromatherapy massages",
     },
@@ -43,6 +45,12 @@ const Home = () => {
       image: facialImage,
       duration: "45-60 min",
       description: "Hydrating, anti-aging, and deep cleansing treatments",
+    },
+    {
+      title: "Body Treatments",
+      image: spaSetupImage,
+      duration: "45-60 min",
+      description: "Exfoliating scrubs and detox body treatments",
     },
     {
       title: "Manicure & Pedicure",
