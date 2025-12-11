@@ -6,6 +6,8 @@ import massageImage from "@/assets/massage.jpg";
 import facialImage from "@/assets/facial.jpg";
 import nailsImage from "@/assets/nails.jpg";
 import waxingImage from "@/assets/waxing.jpg";
+import hotStonesImage from "@/assets/hot-stones.jpg";
+import spaSetupImage from "@/assets/spa-setup.jpg";
 
 const Services = () => {
   const services = [
@@ -28,7 +30,7 @@ const Services = () => {
     {
       title: "Hot Stone Massage",
       category: "Massage Therapy",
-      image: massageImage,
+      image: hotStonesImage,
       duration: "90 min",
       price: "R 650",
       description: "Luxurious massage using heated stones to deeply relax muscles and improve blood flow.",
@@ -108,7 +110,7 @@ const Services = () => {
     {
       title: "Exfoliating Body Scrub",
       category: "Body Treatments",
-      image: massageImage,
+      image: spaSetupImage,
       duration: "45 min",
       price: "R 420",
       description: "Luxurious full-body exfoliation to reveal smooth, glowing skin.",
@@ -116,7 +118,7 @@ const Services = () => {
     {
       title: "Detox Body Scrub",
       category: "Body Treatments",
-      image: massageImage,
+      image: spaSetupImage,
       duration: "60 min",
       price: "R 480",
       description: "Purifying body treatment with detoxifying scrub and nourishing wrap.",
@@ -132,7 +134,7 @@ const Services = () => {
     {
       title: "Couples Hot Stone Massage",
       category: "Couples Treatments",
-      image: massageImage,
+      image: hotStonesImage,
       duration: "90 min",
       price: "R 1,200",
       description: "Indulgent couples massage using heated stones for ultimate relaxation.",
