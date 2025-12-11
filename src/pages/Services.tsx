@@ -22,7 +22,7 @@ const Services = () => {
     {
       title: "Deep Tissue Massage",
       category: "Massage Therapy",
-      image: massageImage,
+      image: spaSetupImage,
       duration: "60 min",
       price: "R 500",
       description: "Therapeutic massage targeting deep muscle layers to relieve chronic pain and muscle knots.",
@@ -38,7 +38,7 @@ const Services = () => {
     {
       title: "Aromatherapy Massage",
       category: "Massage Therapy",
-      image: massageImage,
+      image: facialImage,
       duration: "60 min",
       price: "R 480",
       description: "Gentle massage combined with essential oils to enhance relaxation and wellbeing.",
@@ -54,7 +54,7 @@ const Services = () => {
     {
       title: "Anti-Aging Facial",
       category: "Facial Treatments",
-      image: facialImage,
+      image: spaSetupImage,
       duration: "60 min",
       price: "R 550",
       description: "Advanced facial targeting fine lines, wrinkles, and signs of aging.",
@@ -62,7 +62,7 @@ const Services = () => {
     {
       title: "Deep Cleansing Facial",
       category: "Facial Treatments",
-      image: facialImage,
+      image: massageImage,
       duration: "45 min",
       price: "R 400",
       description: "Purifying treatment to clear pores and refresh oily or congested skin.",
@@ -78,7 +78,7 @@ const Services = () => {
     {
       title: "Gel Manicure",
       category: "Nail Care",
-      image: nailsImage,
+      image: spaSetupImage,
       duration: "45 min",
       price: "R 250",
       description: "Long-lasting gel polish that stays chip-free for weeks.",
@@ -86,7 +86,7 @@ const Services = () => {
     {
       title: "Luxury Pedicure",
       category: "Nail Care",
-      image: nailsImage,
+      image: hotStonesImage,
       duration: "60 min",
       price: "R 320",
       description: "Indulgent foot treatment with exfoliation, massage, and polish.",
@@ -102,7 +102,7 @@ const Services = () => {
     {
       title: "Brazilian Wax",
       category: "Waxing Services",
-      image: waxingImage,
+      image: spaSetupImage,
       duration: "30 min",
       price: "R 350",
       description: "Professional intimate area waxing in a comfortable, private setting.",
@@ -110,7 +110,7 @@ const Services = () => {
     {
       title: "Exfoliating Body Scrub",
       category: "Body Treatments",
-      image: spaSetupImage,
+      image: hotStonesImage,
       duration: "45 min",
       price: "R 420",
       description: "Luxurious full-body exfoliation to reveal smooth, glowing skin.",
@@ -118,7 +118,7 @@ const Services = () => {
     {
       title: "Detox Body Scrub",
       category: "Body Treatments",
-      image: spaSetupImage,
+      image: massageImage,
       duration: "60 min",
       price: "R 480",
       description: "Purifying body treatment with detoxifying scrub and nourishing wrap.",
@@ -126,7 +126,7 @@ const Services = () => {
     {
       title: "Couples Swedish Massage",
       category: "Couples Treatments",
-      image: massageImage,
+      image: spaSetupImage,
       duration: "60 min",
       price: "R 850",
       description: "Relaxing side-by-side massage for two in the comfort of your home.",
