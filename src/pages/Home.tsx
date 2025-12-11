@@ -102,11 +102,15 @@ const Home = () => {
             Experience luxury spa treatments in the comfort of your home with Cape Town's premier mobile spa service.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link to="/booking">
+            <a
+              href="https://wa.me/27681849866?text=Hi%2C%20I'd%20like%20to%20book%20a%20spa%20treatment"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <Button size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90 text-lg px-8 py-6 luxury-glow">
                 Book Your Treatment
               </Button>
-            </Link>
+            </a>
             <Link to="/services">
               <Button size="lg" variant="outline" className="border-2 border-white text-white hover:bg-white hover:text-primary text-lg px-8 py-6">
                 View Services
@@ -252,11 +256,15 @@ const Home = () => {
           <p className="text-lg mb-8 max-w-2xl mx-auto opacity-90">
             Book your appointment today and discover why we're Cape Town's favorite mobile spa
           </p>
-          <Link to="/booking">
+          <a
+            href="https://wa.me/27681849866?text=Hi%2C%20I'd%20like%20to%20book%20a%20spa%20treatment"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <Button size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90 text-lg px-8 py-6">
               Book Your Spa Day
             </Button>
-          </Link>
+          </a>
         </div>
       </section>
     </div>

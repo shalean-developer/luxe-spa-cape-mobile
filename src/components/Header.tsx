@@ -44,9 +44,13 @@ const Header = () => {
                 068 184 9866
               </Button>
             </a>
-            <Link to="/booking">
+            <a
+              href="https://wa.me/27681849866?text=Hi%2C%20I'd%20like%20to%20book%20a%20spa%20treatment"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <Button className="luxury-gradient luxury-glow">Book Now</Button>
-            </Link>
+            </a>
           </div>
 
           {/* Mobile Menu Button */}
@@ -79,9 +83,14 @@ const Header = () => {
                   068 184 9866
                 </Button>
               </a>
-              <Link to="/booking" className="w-full">
+              <a
+                href="https://wa.me/27681849866?text=Hi%2C%20I'd%20like%20to%20book%20a%20spa%20treatment"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full"
+              >
                 <Button className="w-full luxury-gradient luxury-glow">Book Now</Button>
-              </Link>
+              </a>
             </div>
           </div>
         )}
