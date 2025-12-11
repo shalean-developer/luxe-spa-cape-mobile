@@ -16,9 +16,17 @@ import Locations from "./pages/Locations";
 import Blog from "./pages/Blog";
 import CampsBay from "./pages/locations/CampsBay";
 import Clifton from "./pages/locations/Clifton";
+import Llandudno from "./pages/locations/Llandudno";
+import HoutBay from "./pages/locations/HoutBay";
 import Constantia from "./pages/locations/Constantia";
 import Bishopscourt from "./pages/locations/Bishopscourt";
 import Fresnaye from "./pages/locations/Fresnaye";
+import BantryBay from "./pages/locations/BantryBay";
+import SeaPoint from "./pages/locations/SeaPoint";
+import GreenPoint from "./pages/locations/GreenPoint";
+import Newlands from "./pages/locations/Newlands";
+import Claremont from "./pages/locations/Claremont";
+import Rondebosch from "./pages/locations/Rondebosch";
 import SomersetWest from "./pages/locations/SomersetWest";
 import Stellenbosch from "./pages/locations/Stellenbosch";
 import Tokai from "./pages/locations/Tokai";
@@ -47,9 +55,17 @@ const App = () => (
               <Route path="/terms" element={<Terms />} />
               <Route path="/locations/camps-bay" element={<CampsBay />} />
               <Route path="/locations/clifton" element={<Clifton />} />
+              <Route path="/locations/llandudno" element={<Llandudno />} />
+              <Route path="/locations/hout-bay" element={<HoutBay />} />
               <Route path="/locations/constantia" element={<Constantia />} />
               <Route path="/locations/bishopscourt" element={<Bishopscourt />} />
               <Route path="/locations/fresnaye" element={<Fresnaye />} />
+              <Route path="/locations/bantry-bay" element={<BantryBay />} />
+              <Route path="/locations/sea-point" element={<SeaPoint />} />
+              <Route path="/locations/green-point" element={<GreenPoint />} />
+              <Route path="/locations/newlands" element={<Newlands />} />
+              <Route path="/locations/claremont" element={<Claremont />} />
+              <Route path="/locations/rondebosch" element={<Rondebosch />} />
               <Route path="/locations/somerset-west" element={<SomersetWest />} />
               <Route path="/locations/stellenbosch" element={<Stellenbosch />} />
               <Route path="/locations/tokai" element={<Tokai />} />
