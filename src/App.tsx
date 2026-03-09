@@ -80,6 +80,16 @@ const App = () => (
               <Route path="/locations/stellenbosch" element={<Stellenbosch />} />
               <Route path="/locations/tokai" element={<Tokai />} />
               <Route path="/locations/goodwood" element={<Goodwood />} />
+              <Route path="/locations/higgovale" element={<Higgovale />} />
+              <Route path="/locations/oranjezicht" element={<Oranjezicht />} />
+              <Route path="/locations/tamboerskloof" element={<Tamboerskloof />} />
+              <Route path="/locations/gardens" element={<Gardens />} />
+              <Route path="/locations/de-waterkant" element={<DeWaterkant />} />
+              <Route path="/locations/mouille-point" element={<MouillePoint />} />
+              <Route path="/locations/franschhoek" element={<Franschhoek />} />
+              <Route path="/locations/paarl" element={<Paarl />} />
+              <Route path="/locations/durbanville" element={<Durbanville />} />
+              <Route path="/locations/bloubergstrand" element={<Bloubergstrand />} />
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
               <Route path="*" element={<NotFound />} />
             </Routes>

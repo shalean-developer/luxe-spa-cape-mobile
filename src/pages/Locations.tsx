@@ -4,22 +4,37 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 
 const locations = [
+  // Atlantic Seaboard
   { name: "Camps Bay", link: "/locations/camps-bay", description: "Beachfront luxury spa services" },
   { name: "Clifton", link: "/locations/clifton", description: "Exclusive coastal treatments" },
   { name: "Llandudno", link: "/locations/llandudno", description: "Ultra-exclusive beach community" },
-  { name: "Hout Bay", link: "/locations/hout-bay", description: "Valley and seaside wellness" },
-  { name: "Constantia", link: "/locations/constantia", description: "Wine valley wellness" },
-  { name: "Bishopscourt", link: "/locations/bishopscourt", description: "Estate spa experiences" },
   { name: "Fresnaye", link: "/locations/fresnaye", description: "Atlantic seaboard relaxation" },
   { name: "Bantry Bay", link: "/locations/bantry-bay", description: "Sunset luxury treatments" },
   { name: "Sea Point", link: "/locations/sea-point", description: "Promenade-side pampering" },
   { name: "Green Point", link: "/locations/green-point", description: "Urban waterfront wellness" },
+  { name: "Mouille Point", link: "/locations/mouille-point", description: "V&A Waterfront luxury" },
+  // City Bowl
+  { name: "Higgovale", link: "/locations/higgovale", description: "Mountainside prestige" },
+  { name: "Oranjezicht", link: "/locations/oranjezicht", description: "Charming city bowl wellness" },
+  { name: "Tamboerskloof", link: "/locations/tamboerskloof", description: "Central elegance" },
+  { name: "Gardens", link: "/locations/gardens", description: "Historic district spa services" },
+  { name: "De Waterkant", link: "/locations/de-waterkant", description: "Trendy village vibes" },
+  // Southern Suburbs
+  { name: "Constantia", link: "/locations/constantia", description: "Wine valley wellness" },
+  { name: "Bishopscourt", link: "/locations/bishopscourt", description: "Estate spa experiences" },
+  { name: "Hout Bay", link: "/locations/hout-bay", description: "Valley and seaside wellness" },
   { name: "Newlands", link: "/locations/newlands", description: "Leafy suburb serenity" },
   { name: "Claremont", link: "/locations/claremont", description: "Southern suburbs luxury" },
   { name: "Rondebosch", link: "/locations/rondebosch", description: "Academic suburb relaxation" },
-  { name: "Somerset West", link: "/locations/somerset-west", description: "Helderberg luxury treatments" },
-  { name: "Stellenbosch", link: "/locations/stellenbosch", description: "Winelands spa services" },
   { name: "Tokai", link: "/locations/tokai", description: "Forest retreat wellness" },
+  // Winelands
+  { name: "Stellenbosch", link: "/locations/stellenbosch", description: "Winelands spa services" },
+  { name: "Franschhoek", link: "/locations/franschhoek", description: "Wine country luxury" },
+  { name: "Paarl", link: "/locations/paarl", description: "Cape Winelands excellence" },
+  { name: "Somerset West", link: "/locations/somerset-west", description: "Helderberg luxury treatments" },
+  // Northern Suburbs
+  { name: "Durbanville", link: "/locations/durbanville", description: "Wine route wellness" },
+  { name: "Bloubergstrand", link: "/locations/bloubergstrand", description: "Table Mountain views" },
   { name: "Goodwood", link: "/locations/goodwood", description: "Northern suburbs pampering" },
 ];
 
