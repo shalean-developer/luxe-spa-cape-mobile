@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
-import { Phone, Mail, MapPin, Instagram, Facebook, Sparkles } from "lucide-react";
+import { Phone, Mail, MapPin, Instagram, Facebook } from "lucide-react";
+import luxuryLogo from "@/assets/luxury-logo.jpeg";
 
 const Footer = () => {
   return (
@@ -8,12 +9,9 @@ const Footer = () => {
         <div className="grid grid-cols-1 gap-8 md:grid-cols-4">
           {/* Brand */}
           <div className="space-y-4">
-            <div className="flex items-center space-x-2">
-              <Sparkles className="h-5 w-5 text-primary" />
-              <span className="font-serif text-lg font-bold text-primary">
-                Luxury Mobile Spa
-              </span>
-            </div>
+            <Link to="/">
+              <img src={luxuryLogo} alt="Luxury Mobile Spa" className="h-14 w-auto" />
+            </Link>
             <p className="text-sm text-muted-foreground">
               Cape Town's premier on-demand spa service. Bringing luxury and relaxation to your doorstep.
             </p>
