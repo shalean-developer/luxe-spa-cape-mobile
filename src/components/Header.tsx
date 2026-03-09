@@ -21,11 +21,8 @@ const Header = () => {
       <nav className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-2 transition-smooth hover:opacity-80">
-            <Sparkles className="h-6 w-6 text-primary" />
-            <span className="font-serif text-xl font-bold tracking-tight text-primary">
-              Luxury Mobile Spa
-            </span>
+          <Link to="/" className="flex items-center transition-smooth hover:opacity-80">
+            <img src={luxuryLogo} alt="Luxury Mobile Spa" className="h-10 w-auto" />
           </Link>
 
           {/* Desktop Navigation */}
