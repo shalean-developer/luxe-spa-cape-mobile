@@ -31,6 +31,16 @@ import SomersetWest from "./pages/locations/SomersetWest";
 import Stellenbosch from "./pages/locations/Stellenbosch";
 import Tokai from "./pages/locations/Tokai";
 import Goodwood from "./pages/locations/Goodwood";
+import Higgovale from "./pages/locations/Higgovale";
+import Oranjezicht from "./pages/locations/Oranjezicht";
+import Tamboerskloof from "./pages/locations/Tamboerskloof";
+import Gardens from "./pages/locations/Gardens";
+import DeWaterkant from "./pages/locations/DeWaterkant";
+import MouillePoint from "./pages/locations/MouillePoint";
+import Franschhoek from "./pages/locations/Franschhoek";
+import Paarl from "./pages/locations/Paarl";
+import Durbanville from "./pages/locations/Durbanville";
+import Bloubergstrand from "./pages/locations/Bloubergstrand";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
