@@ -1,7 +1,8 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { Menu, X, Phone, Sparkles } from "lucide-react";
+import { Menu, X, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import luxuryLogo from "@/assets/luxury-logo.jpeg";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
