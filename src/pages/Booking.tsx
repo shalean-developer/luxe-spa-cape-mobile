@@ -59,13 +59,13 @@ const Booking = () => {
                   <p className="text-muted-foreground mb-6">
                     Send us your booking details and we'll confirm your appointment within 24 hours
                   </p>
-                  <a href="mailto:info@luxurymobilespa.co.za?subject=Booking Request">
+                  <a href="mailto:info@luxurymspa.co.za?subject=Booking Request">
                     <Button size="lg" variant="outline" className="w-full">
                       Send Email
                     </Button>
                   </a>
                   <p className="text-sm text-muted-foreground mt-4">
-                    info@luxurymobilespa.co.za
+                    info@luxurymspa.co.za
                   </p>
                 </CardContent>
               </Card>
