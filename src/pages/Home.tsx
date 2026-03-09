@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Sparkles, MapPin, Users, Heart, Star } from "lucide-react";
+import SEO from "@/components/SEO";
 import heroImage from "@/assets/hero-spa.jpg";
 import massageImage from "@/assets/massage.jpg";
 import facialImage from "@/assets/facial.jpg";
