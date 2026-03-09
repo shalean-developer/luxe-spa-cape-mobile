@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Sparkles, MapPin, Users, Heart, Star } from "lucide-react";
+import SEO from "@/components/SEO";
 import heroImage from "@/assets/hero-spa.jpg";
 import massageImage from "@/assets/massage.jpg";
 import facialImage from "@/assets/facial.jpg";
@@ -80,6 +81,12 @@ const Home = () => {
 
   return (
     <div className="min-h-screen">
+      <SEO 
+        title="Luxury Mobile Spa - Cape Town's Premier On-Demand Spa Service"
+        description="Experience luxury spa treatments in the comfort of your home with Cape Town's premier mobile spa service. Professional massages, facials, and beauty treatments wherever you are."
+        keywords="luxury mobile spa cape town, home spa treatments, mobile massage cape town, in-home beauty services, mobile spa services, spa at home cape town"
+        canonical="/"
+      />
       {/* Hero Section */}
       <section className="relative h-[600px] md:h-[700px] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
