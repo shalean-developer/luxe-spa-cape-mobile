@@ -60,7 +60,7 @@ const Terms = () => {
 
             <h2 className="font-serif text-2xl font-bold mb-4">9. Contact</h2>
             <p className="text-muted-foreground mb-6">
-              For questions about these terms, please contact us at 068 184 9866 or info@luxurymobilespa.co.za
+              For questions about these terms, please contact us at 068 184 9866 or info@luxurymspa.co.za
             </p>
           </div>
         </div>

@@ -48,8 +48,8 @@ const Contact = () => {
     {
       icon: Mail,
       title: "Email",
-      content: "info@luxurymobilespa.co.za",
-      link: "mailto:info@luxurymobilespa.co.za",
+      content: "info@luxurymspa.co.za",
+      link: "mailto:info@luxurymspa.co.za",
     },
     {
       icon: MapPin,
