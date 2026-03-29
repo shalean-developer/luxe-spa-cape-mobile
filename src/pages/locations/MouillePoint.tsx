@@ -1,10 +1,17 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { MapPin, Clock, Sparkles } from "lucide-react";
+import SEO from "@/components/SEO";
 
 const MouillePoint = () => {
   return (
     <div className="min-h-screen">
+      <SEO
+        title="Mobile Spa in Mouille Point | Luxury Spa Cape Town"
+        description="Mobile spa services in Mouille Point, Cape Town. Luxury massage, facials & treatments near the V&A Waterfront. Book now."
+        keywords="mobile spa mouille point, massage mouille point, spa v&a waterfront"
+        canonical="/locations/mouille-point"
+      />
       <section className="py-20 luxury-gradient text-white">
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-center gap-2 mb-4">

@@ -3,10 +3,17 @@ import { MapPin, Phone, Clock, Star, CheckCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import heroImage from "@/assets/hero-spa.jpg";
+import SEO from "@/components/SEO";
 
 const Goodwood = () => {
   return (
     <div className="min-h-screen">
+      <SEO
+        title="Mobile Spa in Goodwood | Luxury Spa Cape Town"
+        description="Affordable luxury mobile spa in Goodwood, Cape Town. Professional massage, facials & treatments delivered to your door."
+        keywords="mobile spa goodwood, massage goodwood, spa northern suburbs cape town"
+        canonical="/locations/goodwood"
+      />
       {/* Hero Section */}
       <section className="relative h-[50vh] flex items-center justify-center">
         <div

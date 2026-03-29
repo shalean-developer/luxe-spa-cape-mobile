@@ -1,10 +1,17 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { MapPin, Clock, Sparkles } from "lucide-react";
+import SEO from "@/components/SEO";
 
 const Tamboerskloof = () => {
   return (
     <div className="min-h-screen">
+      <SEO
+        title="Mobile Spa in Tamboerskloof | Luxury Spa Cape Town"
+        description="Mobile spa services in Tamboerskloof, Cape Town. City Bowl luxury massage, facials & treatments at your home."
+        keywords="mobile spa tamboerskloof, massage tamboerskloof, spa city bowl cape town"
+        canonical="/locations/tamboerskloof"
+      />
       <section className="py-20 luxury-gradient text-white">
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-center gap-2 mb-4">

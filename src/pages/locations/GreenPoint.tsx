@@ -3,10 +3,17 @@ import { MapPin, Phone, Clock, Star, CheckCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import heroImage from "@/assets/massage.jpg";
+import SEO from "@/components/SEO";
 
 const GreenPoint = () => {
   return (
     <div className="min-h-screen">
+      <SEO
+        title="Mobile Spa in Green Point | Luxury Spa Cape Town"
+        description="Mobile spa services in Green Point, Cape Town. Urban waterfront luxury massage, facials & body treatments. Book online."
+        keywords="mobile spa green point, massage green point, spa cape town waterfront"
+        canonical="/locations/green-point"
+      />
       <section className="relative h-[50vh] flex items-center justify-center">
         <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: `url(${heroImage})` }}>
           <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/60 to-background" />

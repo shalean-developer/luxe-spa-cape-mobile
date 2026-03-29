@@ -3,10 +3,17 @@ import { MapPin, Phone, Clock, Star, CheckCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import heroImage from "@/assets/massage.jpg";
+import SEO from "@/components/SEO";
 
 const Llandudno = () => {
   return (
     <div className="min-h-screen">
+      <SEO
+        title="Mobile Spa in Llandudno | Luxury Spa Cape Town"
+        description="Exclusive mobile spa in Llandudno, Cape Town. Ultra-luxury massage, facials & treatments in this pristine beach community."
+        keywords="mobile spa llandudno, massage llandudno, luxury spa cape town beach"
+        canonical="/locations/llandudno"
+      />
       <section className="relative h-[50vh] flex items-center justify-center">
         <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: `url(${heroImage})` }}>
           <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/60 to-background" />

@@ -1,10 +1,17 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { MapPin, Clock, Sparkles } from "lucide-react";
+import SEO from "@/components/SEO";
 
 const Gardens = () => {
   return (
     <div className="min-h-screen">
+      <SEO
+        title="Mobile Spa in Gardens | Luxury Spa Cape Town"
+        description="Mobile spa services in Gardens, Cape Town. Professional in-home massage, facials & wellness treatments. Available 24/7."
+        keywords="mobile spa gardens cape town, massage gardens, spa city bowl"
+        canonical="/locations/gardens"
+      />
       <section className="py-20 luxury-gradient text-white">
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-center gap-2 mb-4">

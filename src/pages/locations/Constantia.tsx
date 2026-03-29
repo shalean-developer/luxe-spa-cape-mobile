@@ -1,10 +1,17 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { MapPin, Clock, Sparkles } from "lucide-react";
+import SEO from "@/components/SEO";
 
 const Constantia = () => {
   return (
     <div className="min-h-screen">
+      <SEO
+        title="Mobile Spa in Constantia | Luxury Spa Cape Town"
+        description="Premium mobile spa in Constantia, Cape Town. Professional massage, facials & wellness treatments in the comfort of your estate."
+        keywords="mobile spa constantia, massage constantia, spa constantia valley"
+        canonical="/locations/constantia"
+      />
       {/* Hero */}
       <section className="py-20 luxury-gradient text-white">
         <div className="container mx-auto px-4">

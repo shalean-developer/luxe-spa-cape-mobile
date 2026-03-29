@@ -3,10 +3,17 @@ import { MapPin, Phone, Clock, Star, CheckCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import heroImage from "@/assets/hero-spa.jpg";
+import SEO from "@/components/SEO";
 
 const Tokai = () => {
   return (
     <div className="min-h-screen">
+      <SEO
+        title="Mobile Spa in Tokai | Luxury Spa Cape Town"
+        description="Mobile spa services in Tokai, Cape Town. Forest-side luxury massage, facials & body treatments. Book your session today."
+        keywords="mobile spa tokai, massage tokai, spa southern suburbs cape town"
+        canonical="/locations/tokai"
+      />
       {/* Hero Section */}
       <section className="relative h-[50vh] flex items-center justify-center">
         <div

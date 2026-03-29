@@ -3,10 +3,17 @@ import { MapPin, Phone, Clock, Star, CheckCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import heroImage from "@/assets/spa-setup.jpg";
+import SEO from "@/components/SEO";
 
 const Newlands = () => {
   return (
     <div className="min-h-screen">
+      <SEO
+        title="Mobile Spa in Newlands | Luxury Spa Cape Town"
+        description="Premium mobile spa in Newlands, Cape Town. Professional massage, facials & treatments in this leafy southern suburb."
+        keywords="mobile spa newlands, massage newlands, spa southern suburbs cape town"
+        canonical="/locations/newlands"
+      />
       <section className="relative h-[50vh] flex items-center justify-center">
         <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: `url(${heroImage})` }}>
           <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/60 to-background" />

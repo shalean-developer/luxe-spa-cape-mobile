@@ -3,10 +3,17 @@ import { MapPin, Phone, Clock, Star, CheckCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import heroImage from "@/assets/hero-spa.jpg";
+import SEO from "@/components/SEO";
 
 const Stellenbosch = () => {
   return (
     <div className="min-h-screen">
+      <SEO
+        title="Mobile Spa in Stellenbosch | Luxury Spa Winelands"
+        description="Luxury mobile spa in Stellenbosch, Cape Winelands. Wine estate massage, facials & beauty treatments. Available 24/7."
+        keywords="mobile spa stellenbosch, massage stellenbosch, spa cape winelands"
+        canonical="/locations/stellenbosch"
+      />
       {/* Hero Section */}
       <section className="relative h-[50vh] flex items-center justify-center">
         <div
