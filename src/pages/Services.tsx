@@ -146,6 +146,12 @@ const Services = () => {
 
   return (
     <div className="min-h-screen">
+      <SEO
+        title="Mobile Spa Services Cape Town | Massage, Facials, Nails | Luxury Mobile Spa"
+        description="Browse our full menu of luxury mobile spa services in Cape Town. Swedish massage, deep tissue, facials, manicures, pedicures, waxing & body treatments delivered to your door."
+        keywords="mobile spa services cape town, massage cape town, facial treatments, manicure pedicure, waxing, body scrub, hot stone massage, aromatherapy"
+        canonical="/services"
+      />
       {/* Hero */}
       <section className="py-20 luxury-gradient text-white">
         <div className="container mx-auto px-4 text-center">

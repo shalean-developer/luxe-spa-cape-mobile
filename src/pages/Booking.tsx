@@ -6,6 +6,12 @@ import SEO from "@/components/SEO";
 const Booking = () => {
   return (
     <div className="min-h-screen">
+      <SEO
+        title="Book a Mobile Spa Treatment | Luxury Mobile Spa Cape Town"
+        description="Book your luxury mobile spa treatment in Cape Town. Easy online booking for massages, facials, nails & more. Available 24/7 across all Cape Town areas."
+        keywords="book mobile spa cape town, spa booking, massage appointment, facial booking cape town"
+        canonical="/booking"
+      />
       {/* Hero */}
       <section className="py-20 luxury-gradient text-white">
         <div className="container mx-auto px-4 text-center">

@@ -4,6 +4,11 @@ import SEO from "@/components/SEO";
 const Terms = () => {
   return (
     <div className="min-h-screen">
+      <SEO
+        title="Terms & Conditions | Luxury Mobile Spa Cape Town"
+        description="Read the terms and conditions for Luxury Mobile Spa services in Cape Town. Booking policies, cancellation terms, and service agreements."
+        canonical="/terms"
+      />
       {/* Hero */}
       <section className="py-20 luxury-gradient text-white">
         <div className="container mx-auto px-4 text-center">
