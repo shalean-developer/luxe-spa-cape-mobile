@@ -68,6 +68,12 @@ const Contact = () => {
 
   return (
     <div className="min-h-screen">
+      <SEO
+        title="Contact Luxury Mobile Spa | Cape Town Mobile Spa"
+        description="Get in touch with Luxury Mobile Spa Cape Town. Call 068 184 9866 or email info@luxurymspa.co.za. Available 24/7 for bookings and enquiries."
+        keywords="contact mobile spa cape town, spa phone number, luxury spa email, cape town spa contact"
+        canonical="/contact"
+      />
       {/* Hero */}
       <section className="py-20 luxury-gradient text-white">
         <div className="container mx-auto px-4 text-center">
