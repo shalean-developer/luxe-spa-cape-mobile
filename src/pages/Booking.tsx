@@ -1,6 +1,7 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Calendar, Phone, Mail } from "lucide-react";
+import SEO from "@/components/SEO";
 
 const Booking = () => {
   return (

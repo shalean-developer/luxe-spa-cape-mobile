@@ -1,4 +1,5 @@
 import { Sparkles } from "lucide-react";
+import SEO from "@/components/SEO";
 
 const Terms = () => {
   return (

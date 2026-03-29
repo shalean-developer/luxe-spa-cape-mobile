@@ -1,5 +1,6 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Heart, Award, Users, MapPin } from "lucide-react";
+import SEO from "@/components/SEO";
 const About = () => {
   const values = [{
     icon: Heart,
