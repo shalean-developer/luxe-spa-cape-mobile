@@ -1,5 +1,6 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Heart, Award, Users, MapPin } from "lucide-react";
+import SEO from "@/components/SEO";
 const About = () => {
   const values = [{
     icon: Heart,
@@ -32,6 +33,12 @@ const About = () => {
     bio: "Certified aesthetician with expertise in anti-aging treatments and skin health."
   }];
   return <div className="min-h-screen">
+      <SEO
+        title="About Luxury Mobile Spa | Cape Town's Premier Mobile Spa"
+        description="Learn about Luxury Mobile Spa — Cape Town's trusted mobile spa service since 2020. Meet our certified therapists and discover our commitment to wellness excellence."
+        keywords="about luxury mobile spa, cape town spa team, mobile spa therapists, wellness company cape town"
+        canonical="/about"
+      />
       {/* Hero */}
       <section className="py-20 luxury-gradient text-white">
         <div className="container mx-auto px-4 text-center">

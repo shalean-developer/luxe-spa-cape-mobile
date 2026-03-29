@@ -1,10 +1,17 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { MapPin, Clock, Sparkles } from "lucide-react";
+import SEO from "@/components/SEO";
 
 const CampsBay = () => {
   return (
     <div className="min-h-screen">
+      <SEO
+        title="Mobile Spa in Camps Bay | Luxury Spa Cape Town"
+        description="Luxury mobile spa services in Camps Bay, Cape Town. Beachfront massage, facials & beauty treatments delivered to your villa or hotel."
+        keywords="mobile spa camps bay, massage camps bay, spa atlantic seaboard"
+        canonical="/locations/camps-bay"
+      />
       {/* Hero */}
       <section className="py-20 luxury-gradient text-white">
         <div className="container mx-auto px-4">

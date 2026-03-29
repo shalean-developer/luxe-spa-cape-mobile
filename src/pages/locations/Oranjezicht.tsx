@@ -1,10 +1,17 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { MapPin, Clock, Sparkles } from "lucide-react";
+import SEO from "@/components/SEO";
 
 const Oranjezicht = () => {
   return (
     <div className="min-h-screen">
+      <SEO
+        title="Mobile Spa in Oranjezicht | Luxury Spa Cape Town"
+        description="Mobile spa services in Oranjezicht, Cape Town. Mountain-view luxury massage, facials & wellness treatments at your home."
+        keywords="mobile spa oranjezicht, massage oranjezicht, spa city bowl"
+        canonical="/locations/oranjezicht"
+      />
       <section className="py-20 luxury-gradient text-white">
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-center gap-2 mb-4">

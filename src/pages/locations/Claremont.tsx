@@ -3,10 +3,17 @@ import { MapPin, Phone, Clock, Star, CheckCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import heroImage from "@/assets/hot-stones.jpg";
+import SEO from "@/components/SEO";
 
 const Claremont = () => {
   return (
     <div className="min-h-screen">
+      <SEO
+        title="Mobile Spa in Claremont | Luxury Spa Cape Town"
+        description="Professional mobile spa services in Claremont, Cape Town. In-home massage, facials & pampering treatments. Book online 24/7."
+        keywords="mobile spa claremont, massage claremont, spa southern suburbs cape town"
+        canonical="/locations/claremont"
+      />
       <section className="relative h-[50vh] flex items-center justify-center">
         <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: `url(${heroImage})` }}>
           <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/60 to-background" />

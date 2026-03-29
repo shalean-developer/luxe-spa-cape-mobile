@@ -1,10 +1,17 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { MapPin, Clock, Sparkles } from "lucide-react";
+import SEO from "@/components/SEO";
 
 const Bishopscourt = () => {
   return (
     <div className="min-h-screen">
+      <SEO
+        title="Mobile Spa in Bishopscourt | Luxury Spa Cape Town"
+        description="Premium mobile spa services in Bishopscourt, Cape Town. In-home massage, facials & wellness treatments. Book your appointment today."
+        keywords="mobile spa bishopscourt, massage bishopscourt, spa southern suburbs"
+        canonical="/locations/bishopscourt"
+      />
       {/* Hero */}
       <section className="py-20 luxury-gradient text-white">
         <div className="container mx-auto px-4">

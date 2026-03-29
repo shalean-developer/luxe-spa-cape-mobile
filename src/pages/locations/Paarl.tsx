@@ -1,10 +1,17 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { MapPin, Clock, Sparkles } from "lucide-react";
+import SEO from "@/components/SEO";
 
 const Paarl = () => {
   return (
     <div className="min-h-screen">
+      <SEO
+        title="Mobile Spa in Paarl | Luxury Spa Winelands"
+        description="Luxury mobile spa services in Paarl, Cape Winelands. Wine estate massage, facials & treatments delivered to your door."
+        keywords="mobile spa paarl, massage paarl, spa cape winelands boland"
+        canonical="/locations/paarl"
+      />
       <section className="py-20 luxury-gradient text-white">
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-center gap-2 mb-4">

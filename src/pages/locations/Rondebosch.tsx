@@ -3,10 +3,17 @@ import { MapPin, Phone, Clock, Star, CheckCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import heroImage from "@/assets/spa-setup.jpg";
+import SEO from "@/components/SEO";
 
 const Rondebosch = () => {
   return (
     <div className="min-h-screen">
+      <SEO
+        title="Mobile Spa in Rondebosch | Luxury Spa Cape Town"
+        description="Mobile spa services in Rondebosch, Cape Town. Academic suburb luxury massage, facials & wellness treatments. Book 24/7."
+        keywords="mobile spa rondebosch, massage rondebosch, spa southern suburbs"
+        canonical="/locations/rondebosch"
+      />
       <section className="relative h-[50vh] flex items-center justify-center">
         <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: `url(${heroImage})` }}>
           <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/60 to-background" />

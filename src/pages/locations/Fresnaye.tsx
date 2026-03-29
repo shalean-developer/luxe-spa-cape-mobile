@@ -1,10 +1,17 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { MapPin, Clock, Sparkles } from "lucide-react";
+import SEO from "@/components/SEO";
 
 const Fresnaye = () => {
   return (
     <div className="min-h-screen">
+      <SEO
+        title="Mobile Spa in Fresnaye | Luxury Spa Cape Town"
+        description="Premium mobile spa in Fresnaye, Cape Town. Atlantic seaboard luxury massage, facials & treatments at your home. Book now."
+        keywords="mobile spa fresnaye, massage fresnaye, spa atlantic seaboard"
+        canonical="/locations/fresnaye"
+      />
       {/* Hero */}
       <section className="py-20 luxury-gradient text-white">
         <div className="container mx-auto px-4">

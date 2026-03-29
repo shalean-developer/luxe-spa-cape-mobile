@@ -3,10 +3,17 @@ import { MapPin, Phone, Clock, Star, CheckCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import heroImage from "@/assets/hero-spa.jpg";
+import SEO from "@/components/SEO";
 
 const SomersetWest = () => {
   return (
     <div className="min-h-screen">
+      <SEO
+        title="Mobile Spa in Somerset West | Luxury Spa Cape Town"
+        description="Premium mobile spa in Somerset West. Professional massage, facials & treatments in the Helderberg area. Book online."
+        keywords="mobile spa somerset west, massage somerset west, spa helderberg"
+        canonical="/locations/somerset-west"
+      />
       {/* Hero Section */}
       <section className="relative h-[50vh] flex items-center justify-center">
         <div

@@ -1,10 +1,17 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { MapPin, Clock, Sparkles } from "lucide-react";
+import SEO from "@/components/SEO";
 
 const Clifton = () => {
   return (
     <div className="min-h-screen">
+      <SEO
+        title="Mobile Spa in Clifton | Luxury Spa Cape Town"
+        description="Exclusive mobile spa services in Clifton, Cape Town. Luxury massage, facials & treatments at your Clifton beach home. Book now."
+        keywords="mobile spa clifton, massage clifton, luxury spa atlantic seaboard"
+        canonical="/locations/clifton"
+      />
       {/* Hero */}
       <section className="py-20 luxury-gradient text-white">
         <div className="container mx-auto px-4">

@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Calendar, Clock, ArrowRight } from "lucide-react";
+import SEO from "@/components/SEO";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import massageImage from "@/assets/massage.jpg";
@@ -63,6 +64,12 @@ const blogPosts = [
 const Blog = () => {
   return (
     <div className="min-h-screen">
+      <SEO
+        title="Wellness & Beauty Blog | Luxury Mobile Spa Cape Town"
+        description="Expert spa tips, wellness advice, and beauty insights from Cape Town's leading mobile spa. Discover self-care routines, treatment guides, and skincare tips."
+        keywords="spa blog, wellness tips cape town, beauty blog, self-care guide, massage tips, skincare advice"
+        canonical="/blog"
+      />
       {/* Hero Section */}
       <section className="relative py-20 bg-gradient-to-br from-primary/10 via-background to-accent/10">
         <div className="container mx-auto px-4 text-center">

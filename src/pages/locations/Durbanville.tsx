@@ -1,10 +1,17 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { MapPin, Clock, Sparkles } from "lucide-react";
+import SEO from "@/components/SEO";
 
 const Durbanville = () => {
   return (
     <div className="min-h-screen">
+      <SEO
+        title="Mobile Spa in Durbanville | Luxury Spa Cape Town"
+        description="Mobile spa services in Durbanville, Cape Town. Professional massage, facials & beauty treatments at your home. Book today."
+        keywords="mobile spa durbanville, massage durbanville, spa northern suburbs"
+        canonical="/locations/durbanville"
+      />
       <section className="py-20 luxury-gradient text-white">
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-center gap-2 mb-4">

@@ -3,10 +3,17 @@ import { MapPin, Phone, Clock, Star, CheckCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import heroImage from "@/assets/hot-stones.jpg";
+import SEO from "@/components/SEO";
 
 const BantryBay = () => {
   return (
     <div className="min-h-screen">
+      <SEO
+        title="Mobile Spa in Bantry Bay | Luxury Spa Cape Town"
+        description="Luxury mobile spa services in Bantry Bay, Cape Town. Professional massage, facials & beauty treatments delivered to your door. Book 24/7."
+        keywords="mobile spa bantry bay, massage bantry bay, spa treatments atlantic seaboard"
+        canonical="/locations/bantry-bay"
+      />
       <section className="relative h-[50vh] flex items-center justify-center">
         <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: `url(${heroImage})` }}>
           <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/60 to-background" />
