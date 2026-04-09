@@ -1,8 +1,9 @@
+"use client";
+
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import Link from "next/link";
 import { Menu, X, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import luxuryLogo from "@/assets/luxury-logo.jpeg";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -21,8 +22,8 @@ const Header = () => {
       <nav className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
-          <Link to="/" className="flex items-center transition-smooth hover:opacity-80">
-            <img src={luxuryLogo} alt="Luxury Mobile Spa" className="h-16 w-auto object-contain" />
+          <Link href="/" className="flex items-center transition-smooth hover:opacity-80">
+            <img src="/images/luxury-logo.jpeg" alt="Luxury Mobile Spa" className="h-16 w-auto object-contain" />
           </Link>
 
           {/* Desktop Navigation */}
@@ -30,7 +31,7 @@ const Header = () => {
             {navItems.map((item) => (
               <Link
                 key={item.name}
-                to={item.path}
+                href={item.path}
                 className="text-sm font-medium text-foreground/80 transition-smooth hover:text-primary"
               >
                 {item.name}
@@ -68,7 +69,7 @@ const Header = () => {
               {navItems.map((item) => (
                 <Link
                   key={item.name}
-                  to={item.path}
+                  href={item.path}
                   onClick={() => setIsOpen(false)}
                   className="rounded-lg px-3 py-2 text-sm font-medium text-foreground/80 transition-smooth hover:bg-muted hover:text-primary"
                 >

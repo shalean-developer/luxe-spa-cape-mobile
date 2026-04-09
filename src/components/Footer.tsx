@@ -1,6 +1,5 @@
-import { Link } from "react-router-dom";
+import Link from "next/link";
 import { Phone, Mail, MapPin, Instagram, Facebook } from "lucide-react";
-import luxuryLogo from "@/assets/luxury-logo.jpeg";
 
 const Footer = () => {
   return (
@@ -9,8 +8,8 @@ const Footer = () => {
         <div className="grid grid-cols-1 gap-8 md:grid-cols-4">
           {/* Brand */}
           <div className="space-y-4">
-            <Link to="/">
-              <img src={luxuryLogo} alt="Luxury Mobile Spa" className="h-14 w-auto" />
+            <Link href="/">
+              <img src="/images/luxury-logo.jpeg" alt="Luxury Mobile Spa" className="h-14 w-auto" />
             </Link>
             <p className="text-sm text-muted-foreground">
               Cape Town's premier on-demand spa service. Bringing luxury and relaxation to your doorstep.
@@ -22,27 +21,27 @@ const Footer = () => {
             <h3 className="font-serif text-sm font-semibold mb-4">Quick Links</h3>
             <ul className="space-y-2">
               <li>
-                <Link to="/services" className="text-sm text-muted-foreground hover:text-primary transition-smooth">
+                <Link href="/services" className="text-sm text-muted-foreground hover:text-primary transition-smooth">
                   Our Services
                 </Link>
               </li>
               <li>
-                <Link to="/about" className="text-sm text-muted-foreground hover:text-primary transition-smooth">
+                <Link href="/about" className="text-sm text-muted-foreground hover:text-primary transition-smooth">
                   About Us
                 </Link>
               </li>
               <li>
-                <Link to="/booking" className="text-sm text-muted-foreground hover:text-primary transition-smooth">
+                <Link href="/booking" className="text-sm text-muted-foreground hover:text-primary transition-smooth">
                   Book Now
                 </Link>
               </li>
               <li>
-                <Link to="/contact" className="text-sm text-muted-foreground hover:text-primary transition-smooth">
+                <Link href="/contact" className="text-sm text-muted-foreground hover:text-primary transition-smooth">
                   Contact
                 </Link>
               </li>
               <li>
-                <Link to="/terms" className="text-sm text-muted-foreground hover:text-primary transition-smooth">
+                <Link href="/terms" className="text-sm text-muted-foreground hover:text-primary transition-smooth">
                   Terms & Conditions
                 </Link>
               </li>
