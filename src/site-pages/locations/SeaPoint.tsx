@@ -252,6 +252,15 @@ const SeaPoint = () => {
                   livens up for summer events.
                 </p>
                 <p>
+                  Sea Point living blends daily Atlantic Seaboard rhythm with frequent hosting — compact apartments, heritage
+                  blocks, surf-side Airbnbs, and boulevard hotels all ask for different setup choreography. We brief desk
+                  staff when you are in a serviced residence, coordinate luggage delays for guests flying into CPT, and keep
+                  treatments whisper-quiet when neighbours share walls — so{" "}
+                  <strong className="font-medium text-foreground">deep tissue massage in Sea Point</strong> and evening{" "}
+                  <strong className="font-medium text-foreground">facials in Sea Point</strong> feel effortless whether you are
+                  home for the season or listing your spare room between travels.
+                </p>
+                <p>
                   Compare suburb nuances anytime via our{" "}
                   <Link href="/locations" className="font-medium text-primary underline-offset-4 hover:underline">
                     Cape Town locations hub
@@ -331,7 +340,8 @@ const SeaPoint = () => {
                     Reviews &amp; trust
                   </h3>
                   <p className="mb-3 text-xs font-semibold uppercase tracking-wide text-primary">
-                    Rated 4.9★ by clients in Sea Point · Trusted by 500+ guests across Cape Town
+                    Rated 4.9★ · Professional certified therapists · Trusted by clients across Cape Town · 500+ bookings
+                    metro-wide
                   </p>
                   <p className="text-sm italic leading-relaxed text-muted-foreground">
                     &ldquo;After a sunrise walk on the promenade, their therapist had the table ready before my coffee

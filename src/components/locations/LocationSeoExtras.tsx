@@ -1,5 +1,10 @@
 import Link from "next/link";
 import { FaqJsonLd } from "@/components/seo/FaqJsonLd";
+import {
+  LocationTrustStrip,
+  NearbyAreasProseBlock,
+  PopularTreatmentsBlock,
+} from "@/components/locations/LocationPageSeoBlocks";
 
 export type LocationNeighbor = { href: string; label: string };
 
@@ -97,6 +102,15 @@ function LocationSeoArticle({ areaLabel }: { areaLabel: string }) {
             we curate timing so treatments complement rather than compete with one another.
           </p>
           <p>
+            Life in {areaLabel} often blends everyday routines with hosting — family bedrooms one week, spare rooms for
+            Airbnb guests the next, or boutique-hotel suites when friends upgrade their stay. Mobile spa visits respect
+            those rhythms: we coordinate intercom names, luggage clutter, and housekeeping schedules so{" "}
+            <strong className="font-medium text-foreground">at-home massage</strong> never interrupts your hosting flow.
+            Whether you are a long-time resident, a recent arrival, or a property manager styling a short-term rental, the
+            same <strong className="font-medium text-foreground">professional certified therapists</strong> deliver
+            consistent, review-ready experiences that keep guests comfortable and your reputation glowing online.
+          </p>
+          <p>
             Ready to reserve? Browse{" "}
             <Link href="/services" className="font-medium text-primary underline-offset-4 hover:underline">
               massage, facials, and nail menus
@@ -153,6 +167,9 @@ export function LocationSeoExtras({
             {localLead ??
               `We provide luxury mobile spa services in ${areaLabel}, including at-home massages, facials, and nail treatments. Our therapists travel to your home, hotel, or Airbnb with a full professional setup.`}
           </p>
+          <LocationTrustStrip />
+          <PopularTreatmentsBlock areaLabel={areaLabel} />
+          <NearbyAreasProseBlock areaLabel={areaLabel} neighbors={neighbors} />
           <nav className="mt-6 flex flex-wrap gap-x-4 gap-y-2 text-sm font-medium" aria-label="Important pages">
             {coreLinks.map((l) => (
               <Link key={l.href} href={l.href} className="text-primary underline-offset-4 hover:underline">

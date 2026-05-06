@@ -251,6 +251,14 @@ const GreenPoint = () => {
                   concerts, boat shows, and quarter-close sprints — reserve couples blocks and stacked facial-plus-massage nights
                   early when calendars collide with Atlantic Seaboard event traffic.
                 </p>
+                <p>
+                  Green Point mixes waterfront hotels, loft-style apartments, and Airbnb pivots for conference overflow —
+                  meaning therapists balance concierge desks, basement parking, and harbour-night noise curfews. Share whether you
+                  are hosting delegates or unwinding after Signal Hill laps — we tailor{" "}
+                  <strong className="font-medium text-foreground">facials in Green Point</strong> for flash photography events and{" "}
+                  <strong className="font-medium text-foreground">deep tissue massage in Green Point</strong> for cyclists looping
+                  the promenade.
+                </p>
               </div>
 
               <h3 className="mt-10 font-serif text-xl font-semibold text-foreground md:text-2xl">
@@ -322,7 +330,8 @@ const GreenPoint = () => {
                     Reviews &amp; trust
                   </h3>
                   <p className="mb-3 text-xs font-semibold uppercase tracking-wide text-primary">
-                    Rated 4.9★ by clients in Green Point · Trusted by 500+ guests across Cape Town
+                    Rated 4.9★ · Professional certified therapists · Trusted by clients across Cape Town · 500+ bookings
+                    metro-wide
                   </p>
                   <p className="text-sm italic leading-relaxed text-muted-foreground">
                     &ldquo;Pre-Waterfront massage without losing our parking spot — exactly the mobile spa Green Point upgrade we

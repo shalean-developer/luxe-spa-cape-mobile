@@ -254,6 +254,14 @@ const Claremont = () => {
                   quarter-end desk marathons, sports seasons, and long-table entertaining — reserve couples rituals and stacked
                   facial-plus-massage blocks early when calendars collide with southern suburbs school events.
                 </p>
+                <p>
+                  Claremont blends Cavendish convenience with leafy streets where families, professors, and hybrid workers share
+                  walls with Airbnb guests during term breaks. Therapists navigate townhouse stairs, helper coordination, and WFH
+                  Zoom calendars — delivering{" "}
+                  <strong className="font-medium text-foreground">deep tissue massage in Claremont</strong> after rugby Saturdays
+                  and express <strong className="font-medium text-foreground">mobile manicure Claremont</strong> sessions before
+                  southern suburbs school fundraisers.
+                </p>
               </div>
 
               <h3 className="mt-10 font-serif text-xl font-semibold text-foreground md:text-2xl">
@@ -325,7 +333,8 @@ const Claremont = () => {
                     Reviews &amp; trust
                   </h3>
                   <p className="mb-3 text-xs font-semibold uppercase tracking-wide text-primary">
-                    Rated 4.9★ by clients in Claremont · Trusted by 500+ guests across Cape Town
+                    Rated 4.9★ · Professional certified therapists · Trusted by clients across Cape Town · 500+ bookings
+                    metro-wide
                   </p>
                   <p className="text-sm italic leading-relaxed text-muted-foreground">
                     &ldquo;They turned our study into a spa between conference calls — the mobile spa Claremont experience we

@@ -247,6 +247,14 @@ const Bloubergstrand = () => {
                   <span className="font-medium text-foreground">limited slots available</span> messaging appears, reserve couples
                   and stacked treatments early.
                 </p>
+                <p>
+                  Blouberg lifestyles rotate around tides, kites, school calendars, and guests chasing Table Mountain balcony
+                  shots — mixing owner-occupied duplexes with holiday lets booked months ahead. We coordinate lift etiquette,
+                  humid sea-air skincare, and ventilation for polish curing so{" "}
+                  <strong className="font-medium text-foreground">deep tissue massage in Bloubergstrand</strong> supports athletic
+                  households while <strong className="font-medium text-foreground">facials Bloubergstrand Cape Town</strong> visitors
+                  glow before sunset braais without salon Uber loops.
+                </p>
               </div>
 
               <h3 className="mt-10 font-serif text-xl font-semibold text-foreground md:text-2xl">
@@ -318,7 +326,8 @@ const Bloubergstrand = () => {
                     Reviews &amp; trust
                   </h3>
                   <p className="mb-3 text-xs font-semibold uppercase tracking-wide text-primary">
-                    Rated 4.9★ by clients across Cape Town · Trusted by 500+ guests metro-wide
+                    Rated 4.9★ · Professional certified therapists · Trusted by clients across Cape Town · 500+ bookings
+                    metro-wide
                   </p>
                   <p className="text-sm italic leading-relaxed text-muted-foreground">
                     &ldquo;They set up facing the bay without fuss — true luxury mobile spa Bloubergstrand polish for our

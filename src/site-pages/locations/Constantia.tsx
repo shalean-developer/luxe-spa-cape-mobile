@@ -253,6 +253,14 @@ const Constantia = () => {
                   entertaining, school holidays, and wedding seasons — reserve stacked facial-plus-massage nights and couples hot
                   stone blocks before calendars collide with long-table Sundays.
                 </p>
+                <p>
+                  Constantia schedules oscillate between quiet homestead weeks and estate weekends packed with tastings,
+                  polo hospitality, and multi-gen family stays — plus vineyard cottages listed for discerning Airbnb guests.
+                  Therapists adapt table orientation for wraparound verandas, coordinate with house managers when staff are on
+                  rotation, and respect gravel-drive arrivals so{" "}
+                  <strong className="font-medium text-foreground">mobile manicure in Constantia</strong> curing times stay
+                  flawless before sunset hosting.
+                </p>
               </div>
 
               <h3 className="mt-10 font-serif text-xl font-semibold text-foreground md:text-2xl">
@@ -324,7 +332,8 @@ const Constantia = () => {
                     Reviews &amp; trust
                   </h3>
                   <p className="mb-3 text-xs font-semibold uppercase tracking-wide text-primary">
-                    Rated 4.9★ by clients in Constantia · Trusted by 500+ guests across Cape Town
+                    Rated 4.9★ · Professional certified therapists · Trusted by clients across Cape Town · 500+ bookings
+                    metro-wide
                   </p>
                   <p className="text-sm italic leading-relaxed text-muted-foreground">
                     &ldquo;They handled our estate access flawlessly — true mobile spa Constantia polish without disturbing the

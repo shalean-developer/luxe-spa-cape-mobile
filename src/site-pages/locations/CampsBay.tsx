@@ -247,6 +247,14 @@ const CampsBay = () => {
                   charts: holiday peaks, event weekends, and charter-season evenings fill fast along Beta Road curves — message
                   early when you need sunset-adjacent arrivals or dual therapists for villa parties.
                 </p>
+                <p>
+                  Camps Bay attracts villa owners, Twelve Apostles hotel guests, and short-term lets stacked along Victoria Road
+                  — each expecting Five-Star discretion without salon parking wars. We choreograph arrivals around tidal wind,
+                  pool decks, and concierge desks so{" "}
+                  <strong className="font-medium text-foreground">couples massage in Camps Bay</strong> and pre-dinner{" "}
+                  <strong className="font-medium text-foreground">facials in Camps Bay</strong> align with sunset drinks,
+                  charter pickups, and visiting family sleeping one floor away.
+                </p>
               </div>
 
               <h3 className="mt-10 font-serif text-xl font-semibold text-foreground md:text-2xl">
@@ -318,7 +326,8 @@ const CampsBay = () => {
                     Reviews &amp; trust
                   </h3>
                   <p className="mb-3 text-xs font-semibold uppercase tracking-wide text-primary">
-                    Rated 4.9★ by clients in Camps Bay · Trusted by 500+ guests across Cape Town
+                    Rated 4.9★ · Professional certified therapists · Trusted by clients across Cape Town · 500+ bookings
+                    metro-wide
                   </p>
                   <p className="text-sm italic leading-relaxed text-muted-foreground">
                     &ldquo;They transformed our rental lounge into a spa before our rehearsal dinner — true mobile spa Camps Bay

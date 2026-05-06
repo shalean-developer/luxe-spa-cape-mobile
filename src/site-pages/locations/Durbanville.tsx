@@ -251,6 +251,15 @@ const Durbanville = () => {
                   blocks early when{" "}
                   <span className="font-medium text-foreground">limited slots available</span> messaging lights up mid-week.
                 </p>
+                <p>
+                  Durbanville households span quiet cul-de-sacs, newer estates, and guest cottages booked for wine-route
+                  weekends — often with grandparents visiting or teens juggling sport fixtures. Therapists respect boom protocols,
+                  homework-hour silence, and pantry-foot traffic so{" "}
+                  <strong className="font-medium text-foreground">at-home massage Durbanville</strong> sessions restore parents after
+                  Bellville commutes without disrupting the household rhythm, while{" "}
+                  <strong className="font-medium text-foreground">mobile manicure Durbanville</strong> appointments align with
+                  Friday hosts prepping dinner tables.
+                </p>
               </div>
 
               <h3 className="mt-10 font-serif text-xl font-semibold text-foreground md:text-2xl">
@@ -322,7 +331,8 @@ const Durbanville = () => {
                     Reviews &amp; trust
                   </h3>
                   <p className="mb-3 text-xs font-semibold uppercase tracking-wide text-primary">
-                    Rated 4.9★ by clients across Cape Town · Trusted by 500+ guests metro-wide
+                    Rated 4.9★ · Professional certified therapists · Trusted by clients across Cape Town · 500+ bookings
+                    metro-wide
                   </p>
                   <p className="text-sm italic leading-relaxed text-muted-foreground">
                     &ldquo;Finally a mobile spa that respects our estate boom — luxury mobile spa Durbanville visits feel calm,

@@ -248,6 +248,15 @@ const Goodwood = () => {
                   <span className="font-medium text-foreground">limited slots available</span> messaging appears, reserve couples
                   and stacked nights early.
                 </p>
+                <p>
+                  Goodwood rhythms blend shift work, school sport, and weekend hops toward Blouberg beaches — often across
+                  multi-gen homes or rented rooms listed between semesters. Therapists arrive with kits tuned for compact lounges,
+                  estate boom lists, and pets darting through kitchens — making{" "}
+                  <strong className="font-medium text-foreground">spa at home Goodwood</strong> visits predictable for repeat hosts
+                  who also book{" "}
+                  <strong className="font-medium text-foreground">deep tissue massage in Goodwood</strong> after Parow office
+                  weeks.
+                </p>
               </div>
 
               <h3 className="mt-10 font-serif text-xl font-semibold text-foreground md:text-2xl">
@@ -319,7 +328,8 @@ const Goodwood = () => {
                     Reviews &amp; trust
                   </h3>
                   <p className="mb-3 text-xs font-semibold uppercase tracking-wide text-primary">
-                    Rated 4.9★ by clients across Cape Town · Trusted by 500+ guests metro-wide
+                    Rated 4.9★ · Professional certified therapists · Trusted by clients across Cape Town · 500+ bookings
+                    metro-wide
                   </p>
                   <p className="text-sm italic leading-relaxed text-muted-foreground">
                     &ldquo;Professional, punctual, and beautifully equipped — luxury mobile spa Goodwood visits finally match how
