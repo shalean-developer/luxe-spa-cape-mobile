@@ -37,6 +37,12 @@ const routeSeoMap: Record<string, RouteSeo> = {
       "Read wellness, skincare and mobile spa insights from Luxury Mobile Spa Cape Town.",
     canonical: "/blog",
   },
+  "blog/home-cleaning-before-spa-cape-town": {
+    title: "Why a Clean Home Enhances Your At-Home Spa Experience in Cape Town",
+    description:
+      "Discover why a clean home improves your at-home spa experience. Learn how professional cleaning and mobile spa services work together in Cape Town.",
+    canonical: "/blog/home-cleaning-before-spa-cape-town",
+  },
   about: {
     title: "About Luxury Mobile Spa Cape Town",
     description:

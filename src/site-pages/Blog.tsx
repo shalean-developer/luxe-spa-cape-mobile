@@ -9,7 +9,28 @@ const hotStonesImage = "/images/hot-stones.jpg";
 const spaSetupImage = "/images/spa-setup.jpg";
 const heroSpaImage = "/images/hero-spa.jpg";
 
-const blogPosts = [
+type BlogPostCard = {
+  title: string;
+  excerpt: string;
+  image: string;
+  date: string;
+  readTime: string;
+  category: string;
+  /** Present when the full article is published */
+  href?: string;
+};
+
+const blogPosts: BlogPostCard[] = [
+  {
+    href: "/blog/home-cleaning-before-spa-cape-town",
+    title: "Why a Clean Home Enhances Your At-Home Spa Experience in Cape Town",
+    excerpt:
+      "How a tidy, organised space sets the tone for at-home massage and facials — and why pairing professional cleaning with your spa booking elevates the whole experience.",
+    image: spaSetupImage,
+    date: "February 4, 2026",
+    readTime: "5 min read",
+    category: "Home & Wellness",
+  },
   {
     title: "How Much Does a Massage Cost in Cape Town? (2026 Guide)",
     excerpt:
@@ -97,43 +118,57 @@ const Blog = () => {
       <section className="py-20 bg-background">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {blogPosts.map((post, index) => (
-              <Card key={index} className="overflow-hidden hover:shadow-xl transition-smooth group">
-                <div className="relative h-48 overflow-hidden">
-                  <img
-                    src={post.image}
-                    alt={post.title}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-smooth"
-                  />
-                  <div className="absolute top-4 left-4">
-                    <span className="px-3 py-1 bg-primary text-primary-foreground text-xs font-medium rounded-full">
-                      {post.category}
-                    </span>
+            {blogPosts.map((post) => {
+              const card = (
+                <Card className="h-full overflow-hidden transition-smooth hover:shadow-xl group">
+                  <div className="relative h-48 overflow-hidden">
+                    <img
+                      src={post.image}
+                      alt={post.title}
+                      className="h-full w-full object-cover transition-smooth group-hover:scale-105"
+                    />
+                    <div className="absolute left-4 top-4">
+                      <span className="rounded-full bg-primary px-3 py-1 text-xs font-medium text-primary-foreground">
+                        {post.category}
+                      </span>
+                    </div>
                   </div>
+                  <CardContent className="p-6">
+                    <div className="mb-3 flex flex-wrap items-center gap-4 text-sm text-muted-foreground">
+                      <span className="flex items-center gap-1">
+                        <Calendar className="h-4 w-4" aria-hidden />
+                        {post.date}
+                      </span>
+                      <span className="flex items-center gap-1">
+                        <Clock className="h-4 w-4" aria-hidden />
+                        {post.readTime}
+                      </span>
+                    </div>
+                    <h3 className="mb-3 font-serif text-xl font-semibold transition-smooth group-hover:text-primary">
+                      {post.title}
+                    </h3>
+                    <p className="mb-4 line-clamp-3 text-muted-foreground">{post.excerpt}</p>
+                    <span className="inline-flex cursor-pointer items-center text-sm font-medium text-primary">
+                      Read more <ArrowRight className="ml-1 h-4 w-4 transition-smooth group-hover:translate-x-1" />
+                    </span>
+                  </CardContent>
+                </Card>
+              );
+
+              return post.href ? (
+                <Link
+                  key={post.title}
+                  href={post.href}
+                  className="block h-full rounded-xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+                >
+                  {card}
+                </Link>
+              ) : (
+                <div key={post.title} className="h-full">
+                  {card}
                 </div>
-                <CardContent className="p-6">
-                  <div className="flex items-center gap-4 text-sm text-muted-foreground mb-3">
-                    <span className="flex items-center gap-1">
-                      <Calendar className="h-4 w-4" />
-                      {post.date}
-                    </span>
-                    <span className="flex items-center gap-1">
-                      <Clock className="h-4 w-4" />
-                      {post.readTime}
-                    </span>
-                  </div>
-                  <h3 className="font-serif text-xl font-semibold mb-3 group-hover:text-primary transition-smooth">
-                    {post.title}
-                  </h3>
-                  <p className="text-muted-foreground mb-4 line-clamp-3">
-                    {post.excerpt}
-                  </p>
-                  <span className="inline-flex items-center text-primary text-sm font-medium cursor-pointer">
-                    Read More <ArrowRight className="ml-1 h-4 w-4 group-hover:translate-x-1 transition-smooth" />
-                  </span>
-                </CardContent>
-              </Card>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>

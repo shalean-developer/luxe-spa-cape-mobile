@@ -25,6 +25,15 @@ function locationPathnames(): string[] {
     .map((e) => `/locations/${e.name}`);
 }
 
+function blogArticlePathnames(): string[] {
+  const dir = path.join(process.cwd(), "app", "blog");
+  return fs
+    .readdirSync(dir, { withFileTypes: true })
+    .filter((e) => e.isDirectory())
+    .filter((e) => fs.existsSync(path.join(dir, e.name, "page.tsx")))
+    .map((e) => `/blog/${e.name}`);
+}
+
 export default function sitemap(): MetadataRoute.Sitemap {
   const siteUrl = getCanonicalSiteUrl();
   const lastModified = new Date();
@@ -43,5 +52,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.8,
   }));
 
-  return [...staticUrls, ...locationUrls];
+  const blogUrls = blogArticlePathnames().map((pathname) => ({
+    url: `${siteUrl}${pathname}`,
+    lastModified,
+    changeFrequency: "monthly" as const,
+    priority: 0.65,
+  }));
+
+  return [...staticUrls, ...locationUrls, ...blogUrls];
 }
