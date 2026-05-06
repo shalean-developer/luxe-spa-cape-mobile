@@ -11,28 +11,31 @@ const heroSpaImage = "/images/hero-spa.jpg";
 
 const blogPosts = [
   {
-    title: "The Ultimate Guide to At-Home Spa Days",
-    excerpt: "Transform your home into a luxurious spa retreat with our expert tips and recommendations for the perfect self-care day.",
-    image: spaSetupImage,
-    date: "December 10, 2024",
-    readTime: "5 min read",
-    category: "Self-Care",
-  },
-  {
-    title: "Benefits of Regular Massage Therapy",
-    excerpt: "Discover how consistent massage treatments can improve your physical and mental well-being, reduce stress, and boost immunity.",
+    title: "How Much Does a Massage Cost in Cape Town? (2026 Guide)",
+    excerpt:
+      "Typical pricing for mobile vs spa massage in Cape Town, what affects your quote, and how to compare value when booking at home.",
     image: massageImage,
-    date: "December 5, 2024",
-    readTime: "4 min read",
-    category: "Wellness",
+    date: "January 15, 2026",
+    readTime: "8 min read",
+    category: "Cape Town",
   },
   {
-    title: "Skincare Secrets: Achieving That Cape Town Glow",
-    excerpt: "Expert skincare tips tailored for the South African climate to keep your skin radiant and healthy all year round.",
+    title: "Best Mobile Spa Services in Cape Town",
+    excerpt:
+      "What to look for in a luxury mobile spa — therapist credentials, hygiene, products, and areas served from the Atlantic Seaboard to the Southern Suburbs.",
+    image: spaSetupImage,
+    date: "January 8, 2026",
+    readTime: "7 min read",
+    category: "Guides",
+  },
+  {
+    title: "At-Home Spa vs Traditional Spa: Which Is Better?",
+    excerpt:
+      "Compare convenience, privacy, atmosphere, and cost so you can choose the right experience for recovery, events, or regular self-care in Cape Town.",
     image: facialImage,
-    date: "November 28, 2024",
+    date: "January 2, 2026",
     readTime: "6 min read",
-    category: "Skincare",
+    category: "Wellness",
   },
   {
     title: "Couples Spa Treatments: Reconnect and Relax",
@@ -71,6 +74,21 @@ const Blog = () => {
           </h1>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto animate-fade-in">
             Expert tips, insights, and inspiration for your wellness journey
+          </p>
+          <p className="mx-auto mt-6 max-w-2xl text-sm leading-relaxed text-muted-foreground md:text-base">
+            Planning an at-home spa day in{" "}
+            <Link href="/locations" className="font-medium text-primary underline-offset-4 hover:underline">
+              Cape Town
+            </Link>
+            ? Browse our{" "}
+            <Link href="/services" className="font-medium text-primary underline-offset-4 hover:underline">
+              mobile spa services
+            </Link>{" "}
+            — massage, facials, and nails — then{" "}
+            <Link href="/booking" className="font-medium text-primary underline-offset-4 hover:underline">
+              book your treatment
+            </Link>{" "}
+            in Sea Point, Camps Bay, Claremont, and beyond.
           </p>
         </div>
       </section>

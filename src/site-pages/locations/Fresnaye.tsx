@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { MapPin, Clock, Sparkles } from "lucide-react";
+import { LocationSeoExtras } from "@/components/locations/LocationSeoExtras";
 
 const Fresnaye = () => {
   return (
@@ -13,7 +14,7 @@ const Fresnaye = () => {
             <Sparkles className="h-8 w-8" />
           </div>
           <h1 className="font-serif text-4xl md:text-5xl font-bold mb-4 text-center">
-            Mobile Spa in Fresnaye
+            Massage &amp; Mobile Spa Services in Fresnaye, Cape Town
           </h1>
           <p className="text-lg md:text-xl max-w-3xl mx-auto text-center opacity-90">
             Sophisticated spa services for Fresnaye's upscale apartments and homes
@@ -90,6 +91,15 @@ const Fresnaye = () => {
           </div>
         </div>
       </section>
+      <LocationSeoExtras
+        areaLabel="Fresnaye"
+        neighbors={[
+          { href: "/locations/bantry-bay", label: "Bantry Bay" },
+          { href: "/locations/sea-point", label: "Sea Point" },
+          { href: "/locations/green-point", label: "Green Point" },
+          { href: "/locations/camps-bay", label: "Camps Bay" },
+        ]}
+      />
     </div>
   );
 };

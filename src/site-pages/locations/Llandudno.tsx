@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { MapPin, Phone, Clock, Star, CheckCircle } from "lucide-react";
+import { LocationSeoExtras } from "@/components/locations/LocationSeoExtras";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 const heroImage = "/images/massage.jpg";
@@ -17,7 +18,7 @@ const Llandudno = () => {
             <span className="text-primary font-medium">Llandudno</span>
           </div>
           <h1 className="font-serif text-4xl md:text-5xl font-bold mb-4 animate-fade-in">
-            Mobile Spa Services in Llandudno
+            Massage &amp; Mobile Spa Services in Llandudno, Cape Town
           </h1>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
             Exclusive spa experiences in Cape Town's most prestigious beach community
@@ -81,6 +82,15 @@ const Llandudno = () => {
           </div>
         </div>
       </section>
+      <LocationSeoExtras
+        areaLabel="Llandudno"
+        neighbors={[
+          { href: "/locations/camps-bay", label: "Camps Bay" },
+          { href: "/locations/hout-bay", label: "Hout Bay" },
+          { href: "/locations/clifton", label: "Clifton" },
+          { href: "/locations/bantry-bay", label: "Bantry Bay" },
+        ]}
+      />
     </div>
   );
 };

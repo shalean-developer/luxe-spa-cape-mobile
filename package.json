@@ -5,6 +5,9 @@
   "type": "module",
   "scripts": {
     "dev": "next dev",
+    "dev:fresh": "npm run clean && next dev",
+    "dev:turbo": "next dev --turbo",
+    "clean": "node --input-type=module -e \"import fs from 'node:fs'; fs.rmSync('.next',{recursive:true,force:true});\"",
     "build": "next build",
     "start": "next start",
     "lint": "eslint ."
@@ -46,7 +49,7 @@
     "embla-carousel-react": "^8.6.0",
     "input-otp": "^1.4.2",
     "lucide-react": "^0.462.0",
-    "next": "^15.3.5",
+    "next": "^15.2.3",
     "next-themes": "^0.3.0",
     "react": "^18.3.1",
     "react-day-picker": "^8.10.1",
@@ -68,6 +71,7 @@
     "@types/react-dom": "^18.3.7",
     "autoprefixer": "^10.4.21",
     "eslint": "^9.32.0",
+    "eslint-config-next": "^15.2.3",
     "eslint-plugin-react-hooks": "^5.2.0",
     "eslint-plugin-react-refresh": "^0.4.20",
     "globals": "^15.15.0",

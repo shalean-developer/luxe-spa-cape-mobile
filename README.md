@@ -1,73 +1,153 @@
-# Welcome to your Lovable project
+# Luxury Mobile Spa – Cape Town
 
-## Project info
+A premium mobile spa booking platform built with Next.js, designed for performance, SEO, and high conversion.
 
-**URL**: https://lovable.dev/projects/507c14ad-877a-4730-a370-79a73cec4b2f
+---
 
-## How can I edit this code?
+## 🚀 Project Overview
 
-There are several ways of editing your application.
+Luxury Mobile Spa allows customers in Cape Town to book at-home spa treatments including massages, facials, and nail services.
 
-**Use Lovable**
+The platform is optimized for:
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/507c14ad-877a-4730-a370-79a73cec4b2f) and start prompting.
+* Fast performance
+* SEO ranking
+* Mobile-first user experience
+* High booking conversion
 
-Changes made via Lovable will be committed automatically to this repo.
+---
 
-**Use your preferred IDE**
+## 🧱 Tech Stack
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+* Next.js (App Router)
+* React (Server + Client Components)
+* TypeScript
+* Tailwind CSS
+* shadcn-ui
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+---
 
-Follow these steps:
+## 📁 Project Structure
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
+```
+app/                # Routes (App Router)
+  page.tsx          # Homepage
+  booking/          # Booking page
+  services/         # Services pages
+
+src/
+  components/       # UI components
+  site-pages/       # Page compositions
+  lib/              # Utilities
+
+public/
+  images/           # Static assets
+```
+
+---
+
+## ⚙️ Getting Started
+
+### 1. Clone the repository
+
+```bash
 git clone <YOUR_GIT_URL>
+cd luxe-spa-cape-mobile
+```
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+### 2. Install dependencies
 
-# Step 3: Install the necessary dependencies.
-npm i
+```bash
+npm install
+```
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+### 3. Run development server
+
+```bash
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+Open:
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+```
+http://localhost:3000
+```
 
-**Use GitHub Codespaces**
+If you hit a stale cache or dev server errors, use a clean start:
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+```bash
+npm run dev:fresh
+```
 
-## What technologies are used for this project?
+### Internal Server Error (500) in dev
 
-This project is built with:
+Usually a **broken or half-deleted `.next` folder** (Windows + webpack cache). This project disables webpack’s **persistent disk cache in development** to reduce that.
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+**Do this:**
 
-## How can I deploy this project?
+1. Stop **every** `next dev` (all terminals) — only one dev server on port 3000.
+2. Do **not** run `npm run clean` while `next dev` is still running (two terminals will delete files out from under the server).
+3. Start again: `npm run dev:fresh`, wait until you see **“Compiled /”** (or “Ready”), then open the site.
 
-Simply open [Lovable](https://lovable.dev/projects/507c14ad-877a-4730-a370-79a73cec4b2f) and click on Share -> Publish.
+If it still fails, exclude the project folder from aggressive real-time antivirus scanning of `.next` (common on Windows).
 
-## Can I connect a custom domain to my Lovable project?
+---
 
-Yes, you can!
+## 🔐 Environment Variables
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+Create a `.env.local` file:
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+```env
+NEXT_PUBLIC_SUPABASE_URL=
+NEXT_PUBLIC_SUPABASE_ANON_KEY=
+PAYSTACK_SECRET_KEY=
+```
+
+Public client keys use the `NEXT_PUBLIC_` prefix. Keep secrets (e.g. Paystack) server-only.
+
+---
+
+## 🌍 SEO & Performance
+
+* Server Components used for minimal JS
+* Optimized images via Next.js
+* Structured metadata + Open Graph
+* Location-based SEO pages (Cape Town suburbs)
+
+---
+
+## 📦 Deployment
+
+Recommended:
+
+* Vercel (best for Next.js)
+
+```bash
+npm run build
+npm start
+```
+
+---
+
+## 📌 Roadmap
+
+* [ ] Booking system (Supabase)
+* [ ] Payment integration (Paystack)
+* [ ] Admin dashboard
+* [ ] Customer notifications
+
+---
+
+## 🧠 Notes
+
+* This project was migrated from Vite → Next.js
+* Uses App Router (no React Router)
+* Tailwind configured via `app/globals.css`
+
+---
+
+## 📞 Business Goal
+
+To become the leading mobile spa booking platform in Cape Town by combining luxury branding with seamless online booking.
+
+---

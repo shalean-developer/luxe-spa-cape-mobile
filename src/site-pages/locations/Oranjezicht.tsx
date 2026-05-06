@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { MapPin, Clock, Sparkles } from "lucide-react";
+import { LocationSeoExtras } from "@/components/locations/LocationSeoExtras";
 
 const Oranjezicht = () => {
   return (
@@ -12,7 +13,7 @@ const Oranjezicht = () => {
             <Sparkles className="h-8 w-8" />
           </div>
           <h1 className="font-serif text-4xl md:text-5xl font-bold mb-4 text-center">
-            Mobile Spa in Oranjezicht
+            Massage &amp; Mobile Spa Services in Oranjezicht, Cape Town
           </h1>
           <p className="text-lg md:text-xl max-w-3xl mx-auto text-center opacity-90">
             Boutique spa experiences in Cape Town's charming City Bowl neighborhood
@@ -88,6 +89,15 @@ const Oranjezicht = () => {
           </div>
         </div>
       </section>
+      <LocationSeoExtras
+        areaLabel="Oranjezicht"
+        neighbors={[
+          { href: "/locations/gardens", label: "Gardens" },
+          { href: "/locations/higgovale", label: "Higgovale" },
+          { href: "/locations/tamboerskloof", label: "Tamboerskloof" },
+          { href: "/locations/sea-point", label: "Sea Point" },
+        ]}
+      />
     </div>
   );
 };

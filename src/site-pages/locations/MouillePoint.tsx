@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { MapPin, Clock, Sparkles } from "lucide-react";
+import { LocationSeoExtras } from "@/components/locations/LocationSeoExtras";
 
 const MouillePoint = () => {
   return (
@@ -12,7 +13,7 @@ const MouillePoint = () => {
             <Sparkles className="h-8 w-8" />
           </div>
           <h1 className="font-serif text-4xl md:text-5xl font-bold mb-4 text-center">
-            Mobile Spa in Mouille Point
+            Massage &amp; Mobile Spa Services in Mouille Point, Cape Town
           </h1>
           <p className="text-lg md:text-xl max-w-3xl mx-auto text-center opacity-90">
             Oceanfront luxury spa services near the V&A Waterfront
@@ -88,6 +89,15 @@ const MouillePoint = () => {
           </div>
         </div>
       </section>
+      <LocationSeoExtras
+        areaLabel="Mouille Point"
+        neighbors={[
+          { href: "/locations/green-point", label: "Green Point" },
+          { href: "/locations/sea-point", label: "Sea Point" },
+          { href: "/locations/tamboerskloof", label: "Tamboerskloof" },
+          { href: "/locations/bantry-bay", label: "Bantry Bay" },
+        ]}
+      />
     </div>
   );
 };

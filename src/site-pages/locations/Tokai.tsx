@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { MapPin, Phone, Clock, Star, CheckCircle } from "lucide-react";
+import { LocationSeoExtras } from "@/components/locations/LocationSeoExtras";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 const heroImage = "/images/hero-spa.jpg";
@@ -21,7 +22,7 @@ const Tokai = () => {
             <span className="text-primary font-medium">Tokai</span>
           </div>
           <h1 className="font-serif text-4xl md:text-5xl font-bold mb-4 animate-fade-in">
-            Mobile Spa Services in Tokai
+            Massage &amp; Mobile Spa Services in Tokai, Cape Town
           </h1>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
             Forest-inspired wellness at your Tokai residence
@@ -112,6 +113,15 @@ const Tokai = () => {
           </div>
         </div>
       </section>
+      <LocationSeoExtras
+        areaLabel="Tokai"
+        neighbors={[
+          { href: "/locations/constantia", label: "Constantia" },
+          { href: "/locations/bishopscourt", label: "Bishopscourt" },
+          { href: "/locations/claremont", label: "Claremont" },
+          { href: "/locations/hout-bay", label: "Hout Bay" },
+        ]}
+      />
     </div>
   );
 };

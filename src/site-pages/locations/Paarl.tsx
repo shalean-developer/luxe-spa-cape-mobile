@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { MapPin, Clock, Sparkles } from "lucide-react";
+import { LocationSeoExtras } from "@/components/locations/LocationSeoExtras";
 
 const Paarl = () => {
   return (
@@ -12,7 +13,7 @@ const Paarl = () => {
             <Sparkles className="h-8 w-8" />
           </div>
           <h1 className="font-serif text-4xl md:text-5xl font-bold mb-4 text-center">
-            Mobile Spa in Paarl
+            Massage &amp; Mobile Spa Services in Paarl, Western Cape
           </h1>
           <p className="text-lg md:text-xl max-w-3xl mx-auto text-center opacity-90">
             Premium spa treatments in the heart of the Cape Winelands
@@ -88,6 +89,15 @@ const Paarl = () => {
           </div>
         </div>
       </section>
+      <LocationSeoExtras
+        areaLabel="Paarl"
+        neighbors={[
+          { href: "/locations/franschhoek", label: "Franschhoek" },
+          { href: "/locations/stellenbosch", label: "Stellenbosch" },
+          { href: "/locations/somerset-west", label: "Somerset West" },
+          { href: "/locations/durbanville", label: "Durbanville" },
+        ]}
+      />
     </div>
   );
 };

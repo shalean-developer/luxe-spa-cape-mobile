@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { MapPin, Clock, Sparkles } from "lucide-react";
+import { LocationSeoExtras } from "@/components/locations/LocationSeoExtras";
 
 const Clifton = () => {
   return (
@@ -13,7 +14,7 @@ const Clifton = () => {
             <Sparkles className="h-8 w-8" />
           </div>
           <h1 className="font-serif text-4xl md:text-5xl font-bold mb-4 text-center">
-            Mobile Spa in Clifton
+            Massage &amp; Mobile Spa Services in Clifton, Cape Town
           </h1>
           <p className="text-lg md:text-xl max-w-3xl mx-auto text-center opacity-90">
             Exclusive spa treatments for Clifton's most prestigious beachfront properties
@@ -90,6 +91,15 @@ const Clifton = () => {
           </div>
         </div>
       </section>
+      <LocationSeoExtras
+        areaLabel="Clifton"
+        neighbors={[
+          { href: "/locations/camps-bay", label: "Camps Bay" },
+          { href: "/locations/bantry-bay", label: "Bantry Bay" },
+          { href: "/locations/sea-point", label: "Sea Point" },
+          { href: "/locations/fresnaye", label: "Fresnaye" },
+        ]}
+      />
     </div>
   );
 };

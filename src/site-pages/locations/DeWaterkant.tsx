@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { MapPin, Clock, Sparkles } from "lucide-react";
+import { LocationSeoExtras } from "@/components/locations/LocationSeoExtras";
 
 const DeWaterkant = () => {
   return (
@@ -12,7 +13,7 @@ const DeWaterkant = () => {
             <Sparkles className="h-8 w-8" />
           </div>
           <h1 className="font-serif text-4xl md:text-5xl font-bold mb-4 text-center">
-            Mobile Spa in De Waterkant
+            Massage &amp; Mobile Spa Services in De Waterkant, Cape Town
           </h1>
           <p className="text-lg md:text-xl max-w-3xl mx-auto text-center opacity-90">
             Trendy spa experiences in Cape Town's most vibrant village
@@ -88,6 +89,15 @@ const DeWaterkant = () => {
           </div>
         </div>
       </section>
+      <LocationSeoExtras
+        areaLabel="De Waterkant"
+        neighbors={[
+          { href: "/locations/tamboerskloof", label: "Tamboerskloof" },
+          { href: "/locations/gardens", label: "Gardens" },
+          { href: "/locations/sea-point", label: "Sea Point" },
+          { href: "/locations/green-point", label: "Green Point" },
+        ]}
+      />
     </div>
   );
 };

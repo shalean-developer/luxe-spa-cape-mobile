@@ -45,6 +45,16 @@ const Footer = () => {
                   Terms & Conditions
                 </Link>
               </li>
+              <li>
+                <Link href="/locations" className="text-sm text-muted-foreground hover:text-primary transition-smooth">
+                  Service areas
+                </Link>
+              </li>
+              <li>
+                <Link href="/blog" className="text-sm text-muted-foreground hover:text-primary transition-smooth">
+                  Blog
+                </Link>
+              </li>
             </ul>
           </div>
 

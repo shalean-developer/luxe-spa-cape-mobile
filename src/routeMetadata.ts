@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 
 const siteUrl = "https://www.luxurymspa.co.za";
 const defaultKeywords =
-  "luxury mobile spa cape town, mobile spa services, home spa treatments, massage cape town, mobile beauty services, spa at home";
+  "mobile spa Cape Town, at home massage Cape Town, facials Cape Town, mobile beauty services Cape Town, luxury mobile spa, spa at home";
 
 type RouteSeo = {
   title: string;
@@ -14,21 +14,21 @@ type RouteSeo = {
 
 const routeSeoMap: Record<string, RouteSeo> = {
   "": {
-    title: "Luxury Mobile Spa - Cape Town's Premier On-Demand Spa Service",
+    title: "Luxury Mobile Spa Cape Town | At-Home Massage, Facials & Mobile Beauty",
     description:
-      "Experience luxury spa treatments in the comfort of your home with Cape Town's premier mobile spa service.",
+      "Book mobile spa Cape Town visits with hotel-standard massage, facials, and nail treatments at home—Sea Point, Camps Bay, Claremont, Winelands & more.",
     canonical: "/",
   },
   services: {
-    title: "Luxury Mobile Spa Services | Massage, Facials & Beauty",
+    title: "Mobile Spa Cape Town Services | Massage, Facials & Nail Treatments",
     description:
-      "Browse our premium mobile spa services in Cape Town including massage therapy, facials, body treatments and nail care.",
+      "Explore at-home massage, facials Cape Town loves for events, mobile beauty services, waxing, and couples packages—then book your Cape Town mobile spa slot.",
     canonical: "/services",
   },
   locations: {
-    title: "Mobile Spa Locations | Service Areas in Cape Town",
+    title: "Mobile Spa Cape Town Areas | At-Home Massage & Facials by Suburb",
     description:
-      "We serve top Cape Town areas including Camps Bay, Clifton, Constantia, Stellenbosch and more.",
+      "See where we deliver luxury mobile spa Cape Town treatments—from Camps Bay & Sea Point to Claremont, Constantia, Stellenbosch & Northern suburbs.",
     canonical: "/locations",
   },
   blog: {
@@ -44,15 +44,15 @@ const routeSeoMap: Record<string, RouteSeo> = {
     canonical: "/about",
   },
   contact: {
-    title: "Contact Luxury Mobile Spa Cape Town",
+    title: "Contact Mobile Spa Cape Town | Book At-Home Massage & Facials",
     description:
-      "Get in touch to book your mobile spa treatment, ask questions, or confirm service availability in your area.",
+      "WhatsApp, call, or email Luxury Mobile Spa Cape Town for mobile beauty services, facials, and at-home massage routing across the Atlantic Seaboard, City Bowl & Winelands.",
     canonical: "/contact",
   },
   booking: {
-    title: "Book Mobile Spa Treatments | Luxury Mobile Spa",
+    title: "Book Mobile Spa Cape Town | At-Home Massage, Facials & Nails",
     description:
-      "Book a professional mobile spa treatment in Cape Town. Easy booking for massage, facials and beauty services.",
+      "Reserve luxury mobile spa Cape Town appointments—same-day when available. Secure facials, massage, couples rituals & mobile beauty services at your address.",
     canonical: "/booking",
   },
   terms: {
@@ -62,8 +62,9 @@ const routeSeoMap: Record<string, RouteSeo> = {
     canonical: "/terms",
   },
   "locations/camps-bay": {
-    title: "Mobile Spa in Camps Bay | Luxury Spa Cape Town",
-    description: "Beachfront mobile spa treatments in Camps Bay, including massage, facials and body therapies at your villa or hotel.",
+    title: "Mobile Spa Camps Bay Cape Town | At-Home Massage, Facials & Nails",
+    description:
+      "Book luxury mobile spa services in Camps Bay, Cape Town. Enjoy at-home massage, facials, and nail treatments delivered to your beachfront villa, hotel, or Airbnb on the Atlantic Seaboard.",
     canonical: "/locations/camps-bay",
   },
   "locations/clifton": {
@@ -82,8 +83,9 @@ const routeSeoMap: Record<string, RouteSeo> = {
     canonical: "/locations/hout-bay",
   },
   "locations/constantia": {
-    title: "Mobile Spa in Constantia | Luxury Spa Cape Town",
-    description: "Luxury mobile massage and beauty treatments in Constantia, perfect for estate homes and wellness weekends.",
+    title: "Mobile Spa Constantia Cape Town | At-Home Massage, Facials & Nails",
+    description:
+      "Book luxury mobile spa services in Constantia, Cape Town. Enjoy at-home massage, facials, and nail treatments delivered to your wine estate, villa, or guest cottage in the Constantia Valley.",
     canonical: "/locations/constantia",
   },
   "locations/bishopscourt": {
@@ -102,13 +104,15 @@ const routeSeoMap: Record<string, RouteSeo> = {
     canonical: "/locations/bantry-bay",
   },
   "locations/sea-point": {
-    title: "Mobile Spa in Sea Point | Luxury Spa Cape Town",
-    description: "Convenient at-home spa appointments in Sea Point with professional massage, facials and beauty services.",
+    title: "Mobile Spa Sea Point Cape Town | At-Home Massage, Facials & Nails",
+    description:
+      "Book luxury mobile spa services in Sea Point, Cape Town. Enjoy at-home massage, facials, and nail treatments delivered to your home, hotel, or Airbnb.",
     canonical: "/locations/sea-point",
   },
   "locations/green-point": {
-    title: "Mobile Spa in Green Point | Luxury Spa Cape Town",
-    description: "Urban wellness made simple with mobile spa treatments in Green Point for residents, guests and events.",
+    title: "Mobile Spa Green Point Cape Town | At-Home Massage, Facials & Nails",
+    description:
+      "Book luxury mobile spa services in Green Point, Cape Town. Enjoy at-home massage, facials, and nail treatments delivered to your apartment, hotel, or Airbnb near the V&A Waterfront and Atlantic Seaboard.",
     canonical: "/locations/green-point",
   },
   "locations/newlands": {
@@ -117,8 +121,9 @@ const routeSeoMap: Record<string, RouteSeo> = {
     canonical: "/locations/newlands",
   },
   "locations/claremont": {
-    title: "Mobile Spa in Claremont | Luxury Spa Cape Town",
-    description: "Book mobile spa and massage services in Claremont for stress relief, skincare and relaxation at your convenience.",
+    title: "Mobile Spa Claremont Cape Town | At-Home Massage, Facials & Nails",
+    description:
+      "Book luxury mobile spa services in Claremont, Cape Town. Enjoy at-home massage, facials, and nail treatments delivered to your home, townhouse, or guest suite near Cavendish and the Southern Suburbs.",
     canonical: "/locations/claremont",
   },
   "locations/rondebosch": {
@@ -142,8 +147,9 @@ const routeSeoMap: Record<string, RouteSeo> = {
     canonical: "/locations/tokai",
   },
   "locations/goodwood": {
-    title: "Mobile Spa in Goodwood | Luxury Spa Cape Town",
-    description: "Affordable-luxury mobile spa services in Goodwood including massage, facials and beauty treatments.",
+    title: "Mobile Spa Goodwood Cape Town | At-Home Massage, Facials & Nails",
+    description:
+      "Book luxury mobile spa Goodwood — at-home massage, facials & nails for Northern Suburbs homes and apartments. Available today; limited slots. Parow, Bellville corridor & greater Cape Town.",
     canonical: "/locations/goodwood",
   },
   "locations/higgovale": {
@@ -187,13 +193,15 @@ const routeSeoMap: Record<string, RouteSeo> = {
     canonical: "/locations/paarl",
   },
   "locations/durbanville": {
-    title: "Mobile Spa in Durbanville | Luxury Spa Cape Town",
-    description: "Convenient in-home wellness in Durbanville with luxury massage, facials and restorative treatments.",
+    title: "Mobile Spa Durbanville Cape Town | At-Home Massage, Facials & Nails",
+    description:
+      "Book luxury mobile spa Durbanville — at-home massage, facials & nails for Northern Suburbs estates and family homes. Available today; limited slots. Serving Durbanville, Bellville corridor & greater Cape Town.",
     canonical: "/locations/durbanville",
   },
   "locations/bloubergstrand": {
-    title: "Mobile Spa in Bloubergstrand | Luxury Spa Cape Town",
-    description: "Relaxing mobile spa services in Bloubergstrand with ocean-view treatments and professional therapists.",
+    title: "Mobile Spa Bloubergstrand Cape Town | At-Home Massage, Facials & Nails",
+    description:
+      "Book luxury mobile spa Bloubergstrand — at-home massage, facials & nails for beach homes & apartments. Table Bay & West Coast. Available today; limited slots. Big Bay, Table View & greater Cape Town.",
     canonical: "/locations/bloubergstrand",
   },
 };
@@ -212,8 +220,8 @@ export function getRouteMetadata(routeKey: string): Metadata {
     base ??
     (routeKey.startsWith("locations/")
       ? {
-          title: `Mobile Spa in ${locationTitleFromSlug(routeKey)} | Luxury Spa Cape Town`,
-          description: `Luxury mobile spa services in ${locationTitleFromSlug(routeKey)}, Cape Town. Professional massages, facials and beauty treatments at your home or hotel.`,
+          title: `Mobile Spa ${locationTitleFromSlug(routeKey)} Cape Town | At-Home Massage & Facials`,
+          description: `Book mobile spa Cape Town therapists in ${locationTitleFromSlug(routeKey)}—at-home massage, facials, nails & mobile beauty services with discreet arrival & premium kits.`,
           canonical: `/${routeKey}`,
         }
       : {

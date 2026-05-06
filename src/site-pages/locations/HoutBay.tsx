@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { MapPin, Phone, Clock, Star, CheckCircle } from "lucide-react";
+import { LocationSeoExtras } from "@/components/locations/LocationSeoExtras";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 const heroImage = "/images/massage.jpg";
@@ -17,7 +18,7 @@ const HoutBay = () => {
             <span className="text-primary font-medium">Hout Bay</span>
           </div>
           <h1 className="font-serif text-4xl md:text-5xl font-bold mb-4 animate-fade-in">
-            Mobile Spa Services in Hout Bay
+            Massage &amp; Mobile Spa Services in Hout Bay, Cape Town
           </h1>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
             Luxury spa treatments in the picturesque Hout Bay valley
@@ -81,6 +82,15 @@ const HoutBay = () => {
           </div>
         </div>
       </section>
+      <LocationSeoExtras
+        areaLabel="Hout Bay"
+        neighbors={[
+          { href: "/locations/llandudno", label: "Llandudno" },
+          { href: "/locations/camps-bay", label: "Camps Bay" },
+          { href: "/locations/constantia", label: "Constantia" },
+          { href: "/locations/tokai", label: "Tokai" },
+        ]}
+      />
     </div>
   );
 };

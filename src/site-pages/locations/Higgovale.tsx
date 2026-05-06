@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { MapPin, Clock, Sparkles } from "lucide-react";
+import { LocationSeoExtras } from "@/components/locations/LocationSeoExtras";
 
 const Higgovale = () => {
   return (
@@ -12,7 +13,7 @@ const Higgovale = () => {
             <Sparkles className="h-8 w-8" />
           </div>
           <h1 className="font-serif text-4xl md:text-5xl font-bold mb-4 text-center">
-            Mobile Spa in Higgovale
+            Massage &amp; Mobile Spa Services in Higgovale, Cape Town
           </h1>
           <p className="text-lg md:text-xl max-w-3xl mx-auto text-center opacity-90">
             Luxury spa treatments in Cape Town's most exclusive mountainside enclave
@@ -88,6 +89,15 @@ const Higgovale = () => {
           </div>
         </div>
       </section>
+      <LocationSeoExtras
+        areaLabel="Higgovale"
+        neighbors={[
+          { href: "/locations/gardens", label: "Gardens" },
+          { href: "/locations/oranjezicht", label: "Oranjezicht" },
+          { href: "/locations/tamboerskloof", label: "Tamboerskloof" },
+          { href: "/locations/sea-point", label: "Sea Point" },
+        ]}
+      />
     </div>
   );
 };

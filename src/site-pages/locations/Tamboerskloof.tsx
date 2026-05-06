@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { MapPin, Clock, Sparkles } from "lucide-react";
+import { LocationSeoExtras } from "@/components/locations/LocationSeoExtras";
 
 const Tamboerskloof = () => {
   return (
@@ -12,7 +13,7 @@ const Tamboerskloof = () => {
             <Sparkles className="h-8 w-8" />
           </div>
           <h1 className="font-serif text-4xl md:text-5xl font-bold mb-4 text-center">
-            Mobile Spa in Tamboerskloof
+            Massage &amp; Mobile Spa Services in Tamboerskloof, Cape Town
           </h1>
           <p className="text-lg md:text-xl max-w-3xl mx-auto text-center opacity-90">
             Refined spa services for Tamboerskloof's discerning residents
@@ -88,6 +89,15 @@ const Tamboerskloof = () => {
           </div>
         </div>
       </section>
+      <LocationSeoExtras
+        areaLabel="Tamboerskloof"
+        neighbors={[
+          { href: "/locations/de-waterkant", label: "De Waterkant" },
+          { href: "/locations/gardens", label: "Gardens" },
+          { href: "/locations/oranjezicht", label: "Oranjezicht" },
+          { href: "/locations/sea-point", label: "Sea Point" },
+        ]}
+      />
     </div>
   );
 };

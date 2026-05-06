@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { MapPin, Clock, Sparkles } from "lucide-react";
+import { LocationSeoExtras } from "@/components/locations/LocationSeoExtras";
 
 const Gardens = () => {
   return (
@@ -12,7 +13,7 @@ const Gardens = () => {
             <Sparkles className="h-8 w-8" />
           </div>
           <h1 className="font-serif text-4xl md:text-5xl font-bold mb-4 text-center">
-            Mobile Spa in Gardens
+            Massage &amp; Mobile Spa Services in Gardens, Cape Town
           </h1>
           <p className="text-lg md:text-xl max-w-3xl mx-auto text-center opacity-90">
             Sophisticated spa services in Cape Town's historic Gardens district
@@ -88,6 +89,15 @@ const Gardens = () => {
           </div>
         </div>
       </section>
+      <LocationSeoExtras
+        areaLabel="Gardens"
+        neighbors={[
+          { href: "/locations/oranjezicht", label: "Oranjezicht" },
+          { href: "/locations/tamboerskloof", label: "Tamboerskloof" },
+          { href: "/locations/rondebosch", label: "Rondebosch" },
+          { href: "/locations/sea-point", label: "Sea Point" },
+        ]}
+      />
     </div>
   );
 };

@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { MapPin, Clock, Sparkles } from "lucide-react";
+import { LocationSeoExtras } from "@/components/locations/LocationSeoExtras";
 
 const Franschhoek = () => {
   return (
@@ -12,7 +13,7 @@ const Franschhoek = () => {
             <Sparkles className="h-8 w-8" />
           </div>
           <h1 className="font-serif text-4xl md:text-5xl font-bold mb-4 text-center">
-            Mobile Spa in Franschhoek
+            Massage &amp; Mobile Spa Services in Franschhoek, Western Cape
           </h1>
           <p className="text-lg md:text-xl max-w-3xl mx-auto text-center opacity-90">
             Wine country spa experiences in South Africa's culinary capital
@@ -88,6 +89,15 @@ const Franschhoek = () => {
           </div>
         </div>
       </section>
+      <LocationSeoExtras
+        areaLabel="Franschhoek"
+        neighbors={[
+          { href: "/locations/stellenbosch", label: "Stellenbosch" },
+          { href: "/locations/paarl", label: "Paarl" },
+          { href: "/locations/somerset-west", label: "Somerset West" },
+          { href: "/locations/constantia", label: "Constantia" },
+        ]}
+      />
     </div>
   );
 };

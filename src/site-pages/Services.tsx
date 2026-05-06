@@ -1,13 +1,48 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Clock, Sparkles } from "lucide-react";
+import { FaqJsonLd } from "@/components/seo/FaqJsonLd";
 const massageImage = "/images/massage.jpg";
 const facialImage = "/images/facial.jpg";
 const nailsImage = "/images/nails.jpg";
 const waxingImage = "/images/waxing.jpg";
 const hotStonesImage = "/images/hot-stones.jpg";
 const spaSetupImage = "/images/spa-setup.jpg";
+
+const SERVICES_FAQ = [
+  {
+    question: "What makes your mobile spa Cape Town team different?",
+    answer:
+      "We choreograph every detail — punctual arrivals, refined sanitation, premium oils for massage, and facial protocols suited to Cape Town's climate. Expect the polish of a boutique hotel delivered quietly in your living room.",
+  },
+  {
+    question: "Do you offer at-home massage and facials on the same visit?",
+    answer:
+      "Yes. Many guests pair therapeutic massage with hydrating or anti-aging facials during one appointment window. Tell us your priorities when you book so we sequence timing and bring the correct kits.",
+  },
+  {
+    question: "Which mobile beauty services Cape Town suburbs do you reach?",
+    answer:
+      "We travel across the Atlantic Seaboard, City Bowl, Southern Suburbs, Northern suburbs, and selected Winelands routes. Browse every neighbourhood on our locations page or confirm your pin on WhatsApp.",
+  },
+  {
+    question: "How should I prepare my space before arrival?",
+    answer:
+      "Reserve a calm room with airflow, arrange parking or estate access, and keep pets comfortable elsewhere. Your therapist supplies the treatment bed where needed, linens, and facial or nail products.",
+  },
+  {
+    question: "Can I book couples massage or event spa blocks?",
+    answer:
+      "Absolutely — couples massage and multi-hour itineraries are popular for celebrations and executive hosting. Share party size, dates, and desired treatments so we coordinate therapists and equipment.",
+  },
+  {
+    question: "How do payments work for mobile spa bookings?",
+    answer:
+      "Pricing is confirmed upfront per treatment or package. Major cards, cash, and agreed EFT arrangements are accepted unless your confirmation states otherwise — ideal for hospitality or corporate planners.",
+  },
+] as const;
 
 const Services = () => {
   const services = [
@@ -145,25 +180,70 @@ const Services = () => {
 
   return (
     <div className="min-h-screen">
+      <FaqJsonLd items={SERVICES_FAQ} />
       {/* Hero */}
       <section className="py-20 luxury-gradient text-white">
         <div className="container mx-auto px-4 text-center">
           <Sparkles className="h-12 w-12 mx-auto mb-4" />
-          <h1 className="font-serif text-4xl md:text-5xl font-bold mb-4">Our Services</h1>
-          <p className="text-lg md:text-xl max-w-2xl mx-auto opacity-90">
-            Professional spa treatments delivered to your home by certified therapists
+          <h1 className="font-serif text-4xl md:text-5xl font-bold mb-4">
+            Luxury Mobile Spa Cape Town — Massage, Facials &amp; At-Home Beauty
+          </h1>
+          <p className="text-lg md:text-xl max-w-3xl mx-auto opacity-90">
+            Premium mobile spa Cape Town menus crafted for recovery, radiance, and polished nails — delivered by
+            discreet therapists who bring five-star rituals to your door.
           </p>
         </div>
       </section>
 
+      {/* Benefits + keyword-rich intro */}
+      <section className="border-b border-border/60 bg-muted/20 py-16 md:py-20" aria-labelledby="services-benefits-heading">
+        <div className="container mx-auto max-w-4xl px-4">
+          <h2 id="services-benefits-heading" className="font-serif text-2xl font-bold tracking-tight md:text-3xl">
+            Why guests choose our at-home massage and facial rituals
+          </h2>
+          <div className="mt-6 space-y-4 text-muted-foreground md:text-lg leading-relaxed">
+            <p>
+              Searching for <strong className="font-medium text-foreground">mobile spa Cape Town</strong> experiences
+              usually means juggling traffic, parking, and crowded reception areas. We eliminate the friction: your
+              therapist arrives with spa-grade equipment, curated oils, and facial formulations suited to coastal wind,
+              mountain dryness, or inner-city humidity — so every{" "}
+              <strong className="font-medium text-foreground">at-home massage</strong> feels intentional rather than
+              improvised.
+            </p>
+            <p>
+              Skincare-focused guests looking for <strong className="font-medium text-foreground">facials Cape Town</strong>{" "}
+              therapists trust benefit from calm environments where LED glare, noise, and locker-room rushing never
+              interrupt lymphatic drainage or peel timing. Nail artistry sits alongside massage and facial protocols as
+              part of our broader <strong className="font-medium text-foreground">mobile beauty services Cape Town</strong>{" "}
+              calendar — ideal before weddings, editorial shoots, wine weekends, or executive recovery blocks.
+            </p>
+            <p className="text-center pt-2">
+              <Link href="/booking" className="font-semibold text-primary underline-offset-4 hover:underline">
+                Reserve your treatment window
+              </Link>
+              <span className="text-muted-foreground"> · </span>
+              <Link href="/locations" className="font-semibold text-primary underline-offset-4 hover:underline">
+                View Cape Town service areas
+              </Link>
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* Services by Category */}
-      <section className="py-20">
+      <section className="py-20" aria-labelledby="services-menu-heading">
         <div className="container mx-auto px-4">
+          <div className="mx-auto mb-12 max-w-3xl text-center">
+            <h2 id="services-menu-heading" className="font-serif text-3xl font-bold md:text-4xl">
+              Massage, facials &amp; nail treatments
+            </h2>
+            <p className="mt-4 text-muted-foreground md:text-lg">
+              Each card links straight to booking so you can secure your preferred therapist band and arrival window.
+            </p>
+          </div>
           {categories.map((category, catIndex) => (
             <div key={catIndex} className="mb-16">
-              <h2 className="font-serif text-2xl md:text-3xl font-bold mb-8 text-center">
-                {category}
-              </h2>
+              <h3 className="font-serif text-2xl md:text-3xl font-bold mb-8 text-center">{category}</h3>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {services
                   .filter(s => s.category === category)
@@ -178,7 +258,7 @@ const Services = () => {
                       </div>
                       <CardContent className="p-6 flex-1">
                         <div className="flex items-start justify-between mb-3">
-                          <h3 className="font-serif text-xl font-semibold">{service.title}</h3>
+                          <h4 className="font-serif text-xl font-semibold">{service.title}</h4>
                           <span className="text-lg font-semibold text-primary">{service.price}</span>
                         </div>
                         <div className="flex items-center gap-2 text-sm text-muted-foreground mb-3">
@@ -202,11 +282,48 @@ const Services = () => {
         </div>
       </section>
 
+      {/* Locations */}
+      <section className="border-t border-border/60 py-12 md:py-16" aria-labelledby="services-locations-heading">
+        <div className="container mx-auto max-w-4xl px-4 text-center">
+          <h2 id="services-locations-heading" className="font-serif text-2xl font-bold tracking-tight md:text-3xl">
+            Mobile spa coverage across Cape Town
+          </h2>
+          <p className="mt-4 text-muted-foreground md:text-lg leading-relaxed">
+            From Sea Point and Camps Bay to Claremont, Constantia, the Winelands, and Northern growth suburbs, we route
+            therapists efficiently so your appointment starts on time. Explore suburb-specific guides for hyper-local
+            tips, then return here to match treatments to your itinerary.
+          </p>
+          <div className="mt-6 flex flex-wrap justify-center gap-3 text-sm font-medium">
+            <Link href="/locations/sea-point" className="text-primary underline-offset-4 hover:underline">
+              Sea Point
+            </Link>
+            <span className="text-muted-foreground">·</span>
+            <Link href="/locations/camps-bay" className="text-primary underline-offset-4 hover:underline">
+              Camps Bay
+            </Link>
+            <span className="text-muted-foreground">·</span>
+            <Link href="/locations/claremont" className="text-primary underline-offset-4 hover:underline">
+              Claremont
+            </Link>
+            <span className="text-muted-foreground">·</span>
+            <Link href="/locations/constantia" className="text-primary underline-offset-4 hover:underline">
+              Constantia
+            </Link>
+            <span className="text-muted-foreground">·</span>
+            <Link href="/locations" className="text-primary underline-offset-4 hover:underline">
+              All areas
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* Packages Section */}
-      <section className="py-20 bg-muted/30">
+      <section className="py-20 bg-muted/30" aria-labelledby="services-packages-heading">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="font-serif text-3xl md:text-4xl font-bold mb-4">Special Packages</h2>
+            <h2 id="services-packages-heading" className="font-serif text-3xl md:text-4xl font-bold mb-4">
+              Special packages
+            </h2>
             <p className="text-muted-foreground text-lg">Save more with our curated spa packages</p>
           </div>
 
@@ -263,6 +380,41 @@ const Services = () => {
               </CardContent>
             </Card>
           </div>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section className="border-t border-border/60 bg-background py-16 md:py-24" aria-labelledby="services-faq-heading">
+        <div className="container mx-auto px-4">
+          <div className="mx-auto mb-10 max-w-2xl text-center">
+            <h2 id="services-faq-heading" className="font-serif text-2xl font-bold md:text-3xl">
+              Frequently asked questions
+            </h2>
+            <p className="mt-3 text-muted-foreground md:text-lg">
+              Straight answers about mobile spa Cape Town bookings, facials, and at-home massage logistics.
+            </p>
+          </div>
+          <div className="mx-auto max-w-3xl rounded-2xl border border-border/80 bg-card px-4 py-2 shadow-sm md:px-8">
+            <Accordion type="single" collapsible className="w-full">
+              {SERVICES_FAQ.map((item, index) => (
+                <AccordionItem key={item.question} value={`svc-faq-${index}`}>
+                  <AccordionTrigger className="py-5 text-left font-serif text-base font-semibold md:text-lg hover:no-underline">
+                    {item.question}
+                  </AccordionTrigger>
+                  <AccordionContent>
+                    <p className="pb-2 text-sm leading-relaxed text-muted-foreground md:text-base">{item.answer}</p>
+                  </AccordionContent>
+                </AccordionItem>
+              ))}
+            </Accordion>
+          </div>
+          <p className="mx-auto mt-10 max-w-2xl text-center text-sm text-muted-foreground">
+            Ready to experience luxury mobile spa Cape Town service?{" "}
+            <Link href="/booking" className="font-semibold text-primary underline-offset-4 hover:underline">
+              Start your booking
+            </Link>{" "}
+            or speak with our team on WhatsApp for bespoke itineraries.
+          </p>
         </div>
       </section>
     </div>

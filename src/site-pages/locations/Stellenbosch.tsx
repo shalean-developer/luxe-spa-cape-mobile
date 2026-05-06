@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { MapPin, Phone, Clock, Star, CheckCircle } from "lucide-react";
+import { LocationSeoExtras } from "@/components/locations/LocationSeoExtras";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 const heroImage = "/images/hero-spa.jpg";
@@ -21,7 +22,7 @@ const Stellenbosch = () => {
             <span className="text-primary font-medium">Stellenbosch</span>
           </div>
           <h1 className="font-serif text-4xl md:text-5xl font-bold mb-4 animate-fade-in">
-            Mobile Spa Services in Stellenbosch
+            Massage &amp; Mobile Spa Services in Stellenbosch, Western Cape
           </h1>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
             Luxury spa treatments in the heart of the Cape Winelands
@@ -112,6 +113,15 @@ const Stellenbosch = () => {
           </div>
         </div>
       </section>
+      <LocationSeoExtras
+        areaLabel="Stellenbosch"
+        neighbors={[
+          { href: "/locations/somerset-west", label: "Somerset West" },
+          { href: "/locations/franschhoek", label: "Franschhoek" },
+          { href: "/locations/paarl", label: "Paarl" },
+          { href: "/locations/constantia", label: "Constantia" },
+        ]}
+      />
     </div>
   );
 };

@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { MapPin, Clock, Sparkles } from "lucide-react";
+import { LocationSeoExtras } from "@/components/locations/LocationSeoExtras";
 
 const Bishopscourt = () => {
   return (
@@ -13,7 +14,7 @@ const Bishopscourt = () => {
             <Sparkles className="h-8 w-8" />
           </div>
           <h1 className="font-serif text-4xl md:text-5xl font-bold mb-4 text-center">
-            Mobile Spa in Bishopscourt
+            Massage &amp; Mobile Spa Services in Bishopscourt, Cape Town
           </h1>
           <p className="text-lg md:text-xl max-w-3xl mx-auto text-center opacity-90">
             Ultra-exclusive spa services for Bishopscourt's most prestigious estates
@@ -90,6 +91,15 @@ const Bishopscourt = () => {
           </div>
         </div>
       </section>
+      <LocationSeoExtras
+        areaLabel="Bishopscourt"
+        neighbors={[
+          { href: "/locations/constantia", label: "Constantia" },
+          { href: "/locations/claremont", label: "Claremont" },
+          { href: "/locations/newlands", label: "Newlands" },
+          { href: "/locations/tokai", label: "Tokai" },
+        ]}
+      />
     </div>
   );
 };

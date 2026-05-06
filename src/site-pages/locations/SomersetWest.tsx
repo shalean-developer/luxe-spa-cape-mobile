@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { MapPin, Phone, Clock, Star, CheckCircle } from "lucide-react";
+import { LocationSeoExtras } from "@/components/locations/LocationSeoExtras";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 const heroImage = "/images/hero-spa.jpg";
@@ -21,7 +22,7 @@ const SomersetWest = () => {
             <span className="text-primary font-medium">Somerset West</span>
           </div>
           <h1 className="font-serif text-4xl md:text-5xl font-bold mb-4 animate-fade-in">
-            Mobile Spa Services in Somerset West
+            Massage &amp; Mobile Spa Services in Somerset West, Western Cape
           </h1>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
             Luxury spa treatments at your doorstep in the heart of Helderberg
@@ -112,6 +113,15 @@ const SomersetWest = () => {
           </div>
         </div>
       </section>
+      <LocationSeoExtras
+        areaLabel="Somerset West"
+        neighbors={[
+          { href: "/locations/stellenbosch", label: "Stellenbosch" },
+          { href: "/locations/franschhoek", label: "Franschhoek" },
+          { href: "/locations/constantia", label: "Constantia" },
+          { href: "/locations/paarl", label: "Paarl" },
+        ]}
+      />
     </div>
   );
 };

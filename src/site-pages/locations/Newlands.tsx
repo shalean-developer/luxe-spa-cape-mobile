@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { MapPin, Phone, Clock, Star, CheckCircle } from "lucide-react";
+import { LocationSeoExtras } from "@/components/locations/LocationSeoExtras";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 const heroImage = "/images/spa-setup.jpg";
@@ -17,7 +18,7 @@ const Newlands = () => {
             <span className="text-primary font-medium">Newlands</span>
           </div>
           <h1 className="font-serif text-4xl md:text-5xl font-bold mb-4 animate-fade-in">
-            Mobile Spa Services in Newlands
+            Massage &amp; Mobile Spa Services in Newlands, Cape Town
           </h1>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
             Leafy suburb luxury spa treatments
@@ -81,6 +82,15 @@ const Newlands = () => {
           </div>
         </div>
       </section>
+      <LocationSeoExtras
+        areaLabel="Newlands"
+        neighbors={[
+          { href: "/locations/claremont", label: "Claremont" },
+          { href: "/locations/rondebosch", label: "Rondebosch" },
+          { href: "/locations/bishopscourt", label: "Bishopscourt" },
+          { href: "/locations/constantia", label: "Constantia" },
+        ]}
+      />
     </div>
   );
 };
