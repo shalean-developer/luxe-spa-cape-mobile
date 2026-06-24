@@ -1,45 +1,48 @@
+import Link from "next/link";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import { ArrowRight, HelpCircle } from "lucide-react";
+import { SectionHeader } from "./SectionHeader";
 
 const FAQ_ITEMS = [
   {
-    question: "Do you offer mobile spa services across Cape Town?",
+    question: "How far in advance should I book?",
     answer:
-      "Yes. Luxury Mobile Spa Cape Town brings five-star treatments to homes, apartments, hotels, and Airbnbs throughout the city and surrounds. Our mobile spa Cape Town team specialises in discreet, hotel-quality experiences wherever you are staying—from the Atlantic Seaboard to the Southern Suburbs and beyond.",
+      "We recommend booking 24–48 hours ahead for your preferred time slot. Popular evenings and weekends fill quickly — same-day bookings are often possible for shorter treatments when therapists are available.",
   },
   {
-    question: "What areas do you cover—Sea Point, Camps Bay, Claremont, and elsewhere?",
+    question: "What areas do you cover?",
     answer:
-      "We travel widely across the metro and frequently serve Sea Point, Camps Bay, Claremont, Constantia, Green Point, Bishopscourt, Hout Bay, Stellenbosch, and many other suburbs. If you are unsure whether your address is covered, send us your suburb or pin—we will confirm availability for your preferred date and treatment.",
+      "We serve Cape Town metro-wide — Sea Point, Camps Bay, Clifton, Green Point, the CBD, Southern Suburbs, Northern Suburbs, and Winelands. Share your suburb or pin and we'll confirm coverage.",
   },
   {
-    question: "Can I book a same-day mobile spa appointment?",
+    question: "Can I book a same-day appointment?",
     answer:
-      "Often yes, subject to therapist availability. Same-day bookings work best for shorter treatments such as at-home massage or express facials. For couples massage or combined nail care and facial appointments, we recommend booking ahead so we can match your preferred time and bring the right kit.",
-  },
-  {
-    question: "What should I prepare before my therapist arrives?",
-    answer:
-      "Clear a calm space with room for a portable treatment bed where possible, ensure parking or estate access is arranged, and keep pets in another room during your session. Have fresh towels on hand if you prefer your own; otherwise your therapist arrives with professional linens and hygiene essentials so your mobile spa experience feels effortless.",
-  },
-  {
-    question: "Do you bring all equipment and products?",
-    answer:
-      "Absolutely. We arrive with a full mobile spa setup—treatment table where suitable, premium oils and creams for massage and facials, sanitation supplies, and tools for manicures and pedicures. Products are chosen for luxury results and safe home use, without compromising the serene atmosphere you expect from an at-home spa.",
+      "Often yes, subject to therapist availability. Same-day works best for shorter treatments like massage or express facials. For couples or group bookings, we recommend booking ahead.",
   },
   {
     question: "What payment methods do you accept?",
     answer:
-      "We accept major cards and other convenient methods confirmed at booking time (including secure arrangements for corporate or hospitality guests). Your quote reflects travel within Cape Town as quoted—there are no surprise fees when your appointment details stay as agreed.",
+      "We accept major cards and other convenient methods confirmed at booking. Your quote reflects travel within Cape Town — no surprise fees when appointment details stay as agreed.",
+  },
+  {
+    question: "Do you bring all the equipment and products?",
+    answer:
+      "Yes. We arrive with a full mobile setup — treatment table, premium oils and creams, sanitation supplies, and nail tools. You supply a calm space; we bring the spa.",
+  },
+  {
+    question: "Are your therapists qualified?",
+    answer:
+      "All therapists are certified, vetted professionals with experience matching top Cape Town spas. Hygiene protocols, fresh linens, and sanitised tools are standard on every visit.",
   },
   {
     question: "Can I book for couples or groups?",
     answer:
-      "Yes. Couples massage and small-group celebrations are among our most requested experiences—perfect for anniversaries, bridal mornings, or executive recovery days. Tell us your party size and desired treatments (massage, facials, nails), and we will coordinate therapists and timing so everyone enjoys the same elevated standard.",
+      "Yes. Couples massage and small-group celebrations are popular — perfect for anniversaries, bridal mornings, or recovery days. Tell us your party size and we'll coordinate therapists and timing.",
   },
   {
     question: "How long does a typical session last?",
     answer:
-      "Most mobile appointments range from 60 to 90 minutes per treatment; couples packages or combinations—such as massage followed by facials or nail care—naturally run longer. We build buffer time for setup and breakdown so your luxury mobile spa Cape Town visit feels unrushed from knock-on-door to final goodbye.",
+      "Most appointments run 60–90 minutes per treatment. Couples packages or combined treatments naturally run longer. We build buffer time for setup so your session feels unrushed.",
   },
 ] as const;
 
@@ -60,38 +63,54 @@ function faqJsonLd() {
 
 export function HomeFAQ() {
   const jsonLd = faqJsonLd();
+  const midpoint = Math.ceil(FAQ_ITEMS.length / 2);
+  const leftColumn = FAQ_ITEMS.slice(0, midpoint);
+  const rightColumn = FAQ_ITEMS.slice(midpoint);
 
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-      />
-      <section className="border-t border-border/60 bg-muted/15 py-20 md:py-28" aria-labelledby="home-faq-heading">
-        <div className="container mx-auto px-4">
-          <div className="mx-auto mb-12 max-w-2xl text-center md:mb-16">
-            <h2 id="home-faq-heading" className="font-serif text-2xl font-bold tracking-tight md:text-3xl lg:text-4xl">
-              Frequently Asked Questions
-            </h2>
-            <p className="mt-4 text-base leading-relaxed text-muted-foreground md:text-lg">
-              Everything you need to know about our mobile spa services in Cape Town
-            </p>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      <section className="bg-white py-20 md:py-28" aria-labelledby="home-faq-heading">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <SectionHeader
+            eyebrow="FAQ"
+            title="Frequently asked questions"
+            description="Quick answers before you book your treatment."
+          />
+
+          <div className="mx-auto mt-14 grid max-w-5xl gap-6 md:grid-cols-2 md:gap-x-8">
+            {[leftColumn, rightColumn].map((column, colIndex) => (
+              <Accordion key={colIndex} type="single" collapsible className="space-y-3">
+                {column.map((item, index) => (
+                  <AccordionItem
+                    key={item.question}
+                    value={`faq-${colIndex}-${index}`}
+                    className="overflow-hidden rounded-2xl border border-border/70 bg-slate-50/50 px-5 shadow-sm data-[state=open]:border-primary/30 data-[state=open]:bg-white data-[state=open]:shadow-md"
+                  >
+                    <AccordionTrigger className="py-4 text-left text-sm font-semibold leading-snug text-foreground hover:no-underline md:text-base [&>svg]:text-primary">
+                      <span className="flex items-start gap-3">
+                        <HelpCircle className="mt-0.5 h-4 w-4 shrink-0 text-primary" aria-hidden />
+                        {item.question}
+                      </span>
+                    </AccordionTrigger>
+                    <AccordionContent className="pb-4 pl-7">
+                      <p className="text-sm leading-relaxed text-muted-foreground">{item.answer}</p>
+                    </AccordionContent>
+                  </AccordionItem>
+                ))}
+              </Accordion>
+            ))}
           </div>
 
-          <div className="mx-auto max-w-3xl rounded-2xl border border-border/80 bg-card px-4 py-2 shadow-sm md:px-8 md:py-4">
-            <Accordion type="single" collapsible className="w-full">
-              {FAQ_ITEMS.map((item, index) => (
-                <AccordionItem key={item.question} value={`faq-${index}`} className="border-border/70">
-                  <AccordionTrigger className="py-5 text-left font-serif text-base font-semibold leading-snug text-foreground hover:no-underline md:text-lg">
-                    {item.question}
-                  </AccordionTrigger>
-                  <AccordionContent>
-                    <p className="pb-2 text-sm leading-relaxed text-muted-foreground md:text-base">{item.answer}</p>
-                  </AccordionContent>
-                </AccordionItem>
-              ))}
-            </Accordion>
-          </div>
+          <p className="mt-10 text-center">
+            <Link
+              href="/contact"
+              className="inline-flex items-center gap-2 rounded-2xl border border-primary/20 bg-primary/5 px-6 py-3 text-sm font-semibold text-primary transition-colors hover:bg-primary/10"
+            >
+              View all FAQs
+              <ArrowRight className="h-4 w-4" aria-hidden />
+            </Link>
+          </p>
         </div>
       </section>
     </>

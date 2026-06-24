@@ -25,14 +25,14 @@ const capeTownPlace = (neighbourhood: string) => ({
 const GREEN_POINT_SERVICE_JSON_LD = {
   "@context": "https://schema.org",
   "@type": "Service",
-  name: "Luxury mobile spa Green Point — at-home massage, facials & nails",
+  name: "Rejuvenation mobile massage Green Point — at-home massage, facials & nails",
   description:
     "Five-star mobile spa Green Point visits for Atlantic Seaboard apartments, Waterfront-adjacent hotels, and urban townhouses — massage, facials, gel nails, and couples rituals minutes from the V&A Waterfront.",
   url: `${SITE_URL}/locations/green-point`,
   serviceType: ["Mobile massage therapy", "Facial skincare treatments", "Manicure and pedicure", "Couples spa rituals"],
   provider: {
     "@type": "HealthAndBeautyBusiness",
-    name: "Luxury Mobile Spa Cape Town",
+    name: "Rejuvenation Mobile Massage Cape Town",
     url: SITE_URL,
     telephone: "+27681849866",
   },
@@ -143,7 +143,7 @@ const GreenPoint = () => {
             <span className="font-medium text-primary">Green Point · Atlantic Seaboard</span>
           </div>
           <h1 className="mx-auto mb-4 max-w-4xl animate-fade-in font-serif text-4xl font-bold leading-tight md:text-5xl">
-            Luxury Mobile Spa Services in Green Point, Cape Town
+            Rejuvenation Mobile Massage Services in Green Point, Cape Town
           </h1>
           <p className="mx-auto max-w-2xl text-lg text-muted-foreground md:text-xl">
             <span className="font-medium text-foreground">Available today in Green Point</span> when calendars align ·{" "}
@@ -378,7 +378,7 @@ const GreenPoint = () => {
         skipDefaultArticle
         customFaqs={GREEN_POINT_FAQS}
         localLead={
-          "Whether you're in a Green Point penthouse, a Waterfront-adjacent hotel, or a townhouse between Somerset and Main, we deliver luxury mobile spa Green Point treatments — massage, facials, and nails — with Atlantic Seaboard routing and concierge-grade discretion."
+          "Whether you're in a Green Point penthouse, a Waterfront-adjacent hotel, or a townhouse between Somerset and Main, we deliver rejuvenation mobile massage Green Point treatments — massage, facials, and nails — with Atlantic Seaboard routing and concierge-grade discretion."
         }
         neighbors={[
           { href: "/locations/sea-point", label: "Sea Point" },

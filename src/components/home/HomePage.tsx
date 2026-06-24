@@ -8,16 +8,14 @@ import { HomeFinalCta } from "./HomeFinalCta";
 
 export default function HomePage() {
   return (
-    <div className="min-h-screen scroll-smooth">
+    <div className="scroll-smooth">
       <HomeHero />
-      <div className="flex flex-col">
-        <HomeServicesPreview />
-        <HomeHowItWorks />
-        <HomeTrustSection />
-        <HomeLocationBlock />
-        <HomeFAQ />
-        <HomeFinalCta />
-      </div>
+      <HomeServicesPreview />
+      <HomeHowItWorks />
+      <HomeTrustSection />
+      <HomeLocationBlock />
+      <HomeFAQ />
+      <HomeFinalCta />
     </div>
   );
 }

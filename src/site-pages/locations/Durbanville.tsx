@@ -25,14 +25,14 @@ const capeTownPlace = (neighbourhood: string) => ({
 const DURBANVILLE_SERVICE_JSON_LD = {
   "@context": "https://schema.org",
   "@type": "Service",
-  name: "Luxury mobile spa Durbanville — at-home massage, facials & nails",
+  name: "Rejuvenation mobile massage Durbanville — at-home massage, facials & nails",
   description:
     "Northern Suburbs mobile spa Durbanville visits for family homes and estates: therapeutic massage, luxury facials, gel nails, and couples rituals — quiet driveways, estate protocols, and repeat-friendly scheduling toward Bellville and central Cape Town.",
   url: `${SITE_URL}/locations/durbanville`,
   serviceType: ["Mobile massage therapy", "Facial skincare treatments", "Manicure and pedicure", "Couples spa rituals"],
   provider: {
     "@type": "HealthAndBeautyBusiness",
-    name: "Luxury Mobile Spa Cape Town",
+    name: "Rejuvenation Mobile Massage Cape Town",
     url: SITE_URL,
     telephone: "+27681849866",
   },
@@ -130,7 +130,7 @@ const Durbanville = () => {
         <div className="absolute inset-0">
           <Image
             src={heroImage}
-            alt="Luxury mobile spa setup at home in Durbanville estate, Northern Suburbs Cape Town"
+            alt="Rejuvenation mobile massage setup at home in Durbanville estate, Northern Suburbs Cape Town"
             fill
             priority
             className="object-cover object-center"
@@ -144,7 +144,7 @@ const Durbanville = () => {
             <span className="font-medium text-primary">Durbanville · Northern Suburbs, Cape Town</span>
           </div>
           <h1 className="mx-auto mb-4 max-w-4xl animate-fade-in font-serif text-4xl font-bold leading-tight md:text-5xl">
-            Luxury Mobile Spa Services in Durbanville, Cape Town
+            Rejuvenation Mobile Massage Services in Durbanville, Cape Town
           </h1>
           <p className="mx-auto max-w-2xl text-lg text-muted-foreground md:text-xl">
             <span className="font-medium text-foreground">Available today in Durbanville</span> when calendars align ·{" "}
@@ -335,7 +335,7 @@ const Durbanville = () => {
                     metro-wide
                   </p>
                   <p className="text-sm italic leading-relaxed text-muted-foreground">
-                    &ldquo;Finally a mobile spa that respects our estate boom — luxury mobile spa Durbanville visits feel calm,
+                    &ldquo;Finally a mobile spa that respects our estate boom — rejuvenation mobile massage Durbanville visits feel calm,
                     punctual, and completely private.&rdquo;
                   </p>
                   <p className="mt-2 text-xs font-medium text-primary">— Nicole R., Durbanville Hills</p>
@@ -379,7 +379,7 @@ const Durbanville = () => {
         skipDefaultArticle
         customFaqs={DURBANVILLE_FAQS}
         localLead={
-          "Whether you are unwinding in a Durbanville estate after Bellville meetings, hosting family from across Cape Town, or stacking self-care around school calendars, we deliver luxury mobile spa Durbanville treatments — massage, facials, and nails — with suburban discretion and Northern Suburbs routing expertise."
+          "Whether you are unwinding in a Durbanville estate after Bellville meetings, hosting family from across Cape Town, or stacking self-care around school calendars, we deliver rejuvenation mobile massage Durbanville treatments — massage, facials, and nails — with suburban discretion and Northern Suburbs routing expertise."
         }
         neighbors={[
           { href: "/locations/sea-point", label: "Sea Point" },

@@ -1,62 +1,54 @@
 import { CalendarDays, Clock, Home } from "lucide-react";
-import { Card, CardContent } from "@/components/ui/card";
+import { SectionHeader } from "./SectionHeader";
 
 const STEPS = [
   {
     step: 1,
     title: "Choose Service",
-    description:
-      "Select massage, facials, nails, or more — we confirm availability for your Cape Town area.",
-    micro: "Takes under 2 minutes online or on WhatsApp.",
+    description: "Pick massage, facials, nails, or more — we confirm availability for your area.",
     icon: CalendarDays,
   },
   {
     step: 2,
     title: "Pick Date & Time",
-    description: "Choose a slot that suits you. We coordinate discreetly around your schedule.",
-    micro: "Evenings & weekends available — we work around you.",
+    description: "Select a slot that suits you. Evenings and weekends available.",
     icon: Clock,
   },
   {
     step: 3,
     title: "Relax at Home",
-    description: "We arrive with everything needed. You unwind while we handle setup and care.",
-    micro: "You supply the space — we bring the spa.",
+    description: "We arrive with everything needed. You unwind — we handle the rest.",
     icon: Home,
   },
 ] as const;
 
 export function HomeHowItWorks() {
   return (
-    <section className="py-20 md:py-28" aria-labelledby="how-it-works-heading">
-      <div className="container mx-auto px-4">
-        <div className="mx-auto max-w-2xl text-center">
-          <h2 id="how-it-works-heading" className="font-serif text-3xl font-bold tracking-tight md:text-4xl">
-            How it works
-          </h2>
-          <p className="mt-4 text-lg text-muted-foreground">Three simple steps from enquiry to bliss.</p>
-        </div>
+    <section className="relative overflow-hidden bg-gradient-to-b from-[#eef4fc] to-[#f4f8fd] py-20 md:py-28" aria-labelledby="how-it-works-heading">
+      <div className="pointer-events-none absolute left-1/2 top-1/2 h-px w-full max-w-3xl -translate-x-1/2 -translate-y-1/2 bg-gradient-to-r from-transparent via-primary/20 to-transparent max-md:hidden" aria-hidden />
 
-        <div className="mt-16 grid gap-10 md:grid-cols-3 md:gap-8">
+      <div className="container relative mx-auto px-4 sm:px-6 lg:px-8">
+        <SectionHeader
+          eyebrow="Simple Process"
+          title="Your spa moment in 3 simple steps"
+          description="From booking to bliss — we make at-home wellness effortless."
+        />
+
+        <div className="mt-14 grid gap-6 md:grid-cols-3 md:gap-8">
           {STEPS.map((item) => (
-            <Card
+            <div
               key={item.step}
-              className="group relative border-border/80 bg-card/90 text-center shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-primary/35 hover:shadow-lg"
+              className="relative rounded-3xl border border-white/80 bg-white p-8 text-center shadow-sm transition-shadow hover:shadow-md"
             >
-              <CardContent className="px-6 pb-10 pt-12 md:px-8">
-                <div className="absolute -top-4 left-1/2 flex h-9 w-9 -translate-x-1/2 items-center justify-center rounded-full bg-primary text-sm font-bold text-primary-foreground shadow-md ring-4 ring-background">
-                  {item.step}
-                </div>
-                <div className="mx-auto mb-5 flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 text-primary transition-colors group-hover:bg-primary/20">
-                  <item.icon className="h-8 w-8" aria-hidden />
-                </div>
-                <h3 className="font-serif text-xl font-semibold tracking-tight">{item.title}</h3>
-                <p className="mt-4 text-sm leading-relaxed text-muted-foreground md:text-[0.9375rem]">{item.description}</p>
-                <p className="mt-3 border-t border-border/60 pt-3 text-xs font-medium text-primary/90 md:text-sm">
-                  {item.micro}
-                </p>
-              </CardContent>
-            </Card>
+              <div className="mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-primary to-secondary text-white shadow-lg">
+                <item.icon className="h-7 w-7" aria-hidden />
+              </div>
+              <span className="absolute right-6 top-6 font-serif text-4xl font-bold text-primary/10">
+                0{item.step}
+              </span>
+              <h3 className="font-serif text-xl font-bold text-foreground">{item.title}</h3>
+              <p className="mx-auto mt-3 max-w-xs text-sm leading-relaxed text-muted-foreground">{item.description}</p>
+            </div>
           ))}
         </div>
       </div>

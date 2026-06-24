@@ -43,7 +43,7 @@ const blogPosts: BlogPostCard[] = [
   {
     title: "Best Mobile Spa Services in Cape Town",
     excerpt:
-      "What to look for in a luxury mobile spa — therapist credentials, hygiene, products, and areas served from the Atlantic Seaboard to the Southern Suburbs.",
+      "What to look for in a rejuvenation mobile massage — therapist credentials, hygiene, products, and areas served from the Atlantic Seaboard to the Southern Suburbs.",
     image: spaSetupImage,
     date: "January 8, 2026",
     readTime: "7 min read",

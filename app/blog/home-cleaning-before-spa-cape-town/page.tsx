@@ -42,7 +42,7 @@ export default function HomeCleaningBeforeSpaPostPage() {
           className="prose prose-lg max-w-none text-muted-foreground prose-headings:font-serif prose-headings:text-foreground prose-strong:text-foreground prose-a:text-primary prose-li:marker:text-primary"
         >
           <p className="text-xl text-muted-foreground">
-            There&apos;s nothing quite like enjoying a luxury mobile spa experience in the comfort of your own home.
+            There&apos;s nothing quite like enjoying a rejuvenation mobile massage experience in the comfort of your own home.
             Whether you&apos;re booking a deep tissue massage, a relaxing facial, or a full spa session, your environment
             plays a huge role in how you feel.
           </p>
@@ -97,7 +97,7 @@ export default function HomeCleaningBeforeSpaPostPage() {
 
           <h2>Book your spa experience</h2>
           <p>
-            At Luxury Mobile Spa Cape Town, we bring massages, facials, and beauty treatments directly to your home.
+            At Rejuvenation Mobile Massage Cape Town, we bring massages, facials, and beauty treatments directly to your home.
           </p>
           <p>
             Whether you&apos;re in{" "}

@@ -25,14 +25,14 @@ const capeTownPlace = (neighbourhood: string) => ({
 const CONSTANTIA_SERVICE_JSON_LD = {
   "@context": "https://schema.org",
   "@type": "Service",
-  name: "Luxury mobile spa Constantia — at-home massage, facials & nails",
+  name: "Rejuvenation mobile massage Constantia — at-home massage, facials & nails",
   description:
     "Estate-grade mobile spa Constantia visits across the Constantia Valley wine route: therapeutic massage, luxury facials, gel nails, and couples rituals for vineyard-adjacent homes, guest cottages, and heritage properties.",
   url: `${SITE_URL}/locations/constantia`,
   serviceType: ["Mobile massage therapy", "Facial skincare treatments", "Manicure and pedicure", "Couples spa rituals"],
   provider: {
     "@type": "HealthAndBeautyBusiness",
-    name: "Luxury Mobile Spa Cape Town",
+    name: "Rejuvenation Mobile Massage Cape Town",
     url: SITE_URL,
     telephone: "+27681849866",
   },
@@ -144,7 +144,7 @@ const Constantia = () => {
             <span className="font-medium text-primary">Constantia · Cape Town wine valley</span>
           </div>
           <h1 className="mx-auto mb-4 max-w-4xl animate-fade-in font-serif text-4xl font-bold leading-tight md:text-5xl">
-            Luxury Mobile Spa Services in Constantia, Cape Town
+            Rejuvenation Mobile Massage Services in Constantia, Cape Town
           </h1>
           <p className="mx-auto max-w-2xl text-lg text-muted-foreground md:text-xl">
             <span className="font-medium text-foreground">Available today in Constantia</span> when calendars align ·{" "}
@@ -380,7 +380,7 @@ const Constantia = () => {
         skipDefaultArticle
         customFaqs={CONSTANTIA_FAQS}
         localLead={
-          "Whether you're hosting on a Constantia wine estate, recovering between tastings, or unwinding in a valley guest cottage, we deliver luxury mobile spa Constantia treatments — massage, facials, and nails — with estate-aware routing and vineyard-country discretion."
+          "Whether you're hosting on a Constantia wine estate, recovering between tastings, or unwinding in a valley guest cottage, we deliver rejuvenation mobile massage Constantia treatments — massage, facials, and nails — with estate-aware routing and vineyard-country discretion."
         }
         neighbors={[
           { href: "/locations/tokai", label: "Tokai" },

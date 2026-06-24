@@ -50,7 +50,7 @@ function buildFaqs(area: string) {
     },
     {
       question: `Do you supply professional products and equipment?`,
-      answer: `Absolutely. Every appointment includes premium oils and creams for massage and facials, professional nail-care kits, and hygiene supplies suited to private residences, boutique hotels, and Airbnbs — matching the polish guests expect from luxury mobile spa Cape Town teams.`,
+      answer: `Absolutely. Every appointment includes premium oils and creams for massage and facials, professional nail-care kits, and hygiene supplies suited to private residences, boutique hotels, and Airbnbs — matching the polish guests expect from rejuvenation mobile massage Cape Town teams.`,
     },
     {
       question: `How do I book facials, nails, or massage in ${area}?`,
@@ -75,7 +75,7 @@ function LocationSeoArticle({ areaLabel }: { areaLabel: string }) {
           id={`local-guide-${areaLabel.replace(/\s+/g, "-").toLowerCase()}`}
           className="font-serif text-2xl font-bold tracking-tight md:text-3xl"
         >
-          Luxury mobile spa Cape Town — tailored for {areaLabel}
+          Rejuvenation mobile massage Cape Town — tailored for {areaLabel}
         </h2>
         <div className="mt-6 space-y-5 text-base leading-relaxed text-muted-foreground md:text-lg">
           <p>
@@ -165,7 +165,7 @@ export function LocationSeoExtras({
           </h2>
           <p className="mt-4 leading-relaxed text-muted-foreground md:text-lg">
             {localLead ??
-              `We provide luxury mobile spa services in ${areaLabel}, including at-home massages, facials, and nail treatments. Our therapists travel to your home, hotel, or Airbnb with a full professional setup.`}
+              `We provide rejuvenation mobile massage services in ${areaLabel}, including at-home massages, facials, and nail treatments. Our therapists travel to your home, hotel, or Airbnb with a full professional setup.`}
           </p>
           <LocationTrustStrip />
           <PopularTreatmentsBlock areaLabel={areaLabel} />

@@ -40,7 +40,7 @@ const SomersetWest = () => {
               </h2>
               <p className="text-muted-foreground mb-6">
                 Somerset West, nestled at the foot of the Helderberg Mountain, offers the perfect backdrop 
-                for our luxury mobile spa services. We bring professional treatments directly to your 
+                for our rejuvenation mobile massage services. We bring professional treatments directly to your 
                 home, office, or accommodation in this beautiful Helderberg region.
               </p>
               <p className="text-muted-foreground mb-6">

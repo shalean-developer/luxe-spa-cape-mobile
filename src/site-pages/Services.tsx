@@ -186,7 +186,7 @@ const Services = () => {
         <div className="container mx-auto px-4 text-center">
           <Sparkles className="h-12 w-12 mx-auto mb-4" />
           <h1 className="font-serif text-4xl md:text-5xl font-bold mb-4">
-            Luxury Mobile Spa Cape Town — Massage, Facials &amp; At-Home Beauty
+            Rejuvenation Mobile Massage Cape Town — Massage, Facials &amp; At-Home Beauty
           </h1>
           <p className="text-lg md:text-xl max-w-3xl mx-auto opacity-90">
             Premium mobile spa Cape Town menus crafted for recovery, radiance, and polished nails — delivered by
@@ -409,7 +409,7 @@ const Services = () => {
             </Accordion>
           </div>
           <p className="mx-auto mt-10 max-w-2xl text-center text-sm text-muted-foreground">
-            Ready to experience luxury mobile spa Cape Town service?{" "}
+            Ready to experience rejuvenation mobile massage Cape Town service?{" "}
             <Link href="/booking" className="font-semibold text-primary underline-offset-4 hover:underline">
               Start your booking
             </Link>{" "}

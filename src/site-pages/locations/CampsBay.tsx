@@ -25,14 +25,14 @@ const capeTownPlace = (neighbourhood: string) => ({
 const CAMPS_BAY_SERVICE_JSON_LD = {
   "@context": "https://schema.org",
   "@type": "Service",
-  name: "Luxury mobile spa Camps Bay — at-home massage, facials & nails",
+  name: "Rejuvenation mobile massage Camps Bay — at-home massage, facials & nails",
   description:
     "Five-star mobile spa Camps Bay visits for beachfront villas, luxury hotels, and holiday lets: massage, facials, gel nails, and couples rituals along Victoria Road and the Atlantic Seaboard.",
   url: `${SITE_URL}/locations/camps-bay`,
   serviceType: ["Mobile massage therapy", "Facial skincare treatments", "Manicure and pedicure", "Couples spa rituals"],
   provider: {
     "@type": "HealthAndBeautyBusiness",
-    name: "Luxury Mobile Spa Cape Town",
+    name: "Rejuvenation Mobile Massage Cape Town",
     url: SITE_URL,
     telephone: "+27681849866",
   },
@@ -129,7 +129,7 @@ const CampsBay = () => {
         <div className="absolute inset-0">
           <Image
             src={heroImage}
-            alt="Luxury mobile spa setup in Camps Bay beachfront villa — massage and facial treatment at home, Cape Town Atlantic Seaboard"
+            alt="Rejuvenation mobile massage setup in Camps Bay beachfront villa — massage and facial treatment at home, Cape Town Atlantic Seaboard"
             fill
             priority
             className="object-cover object-center"
@@ -143,7 +143,7 @@ const CampsBay = () => {
             <span className="font-medium text-primary">Camps Bay · Atlantic Seaboard</span>
           </div>
           <h1 className="mx-auto mb-4 max-w-4xl animate-fade-in font-serif text-4xl font-bold leading-tight md:text-5xl">
-            Luxury Mobile Spa Services in Camps Bay, Cape Town
+            Rejuvenation Mobile Massage Services in Camps Bay, Cape Town
           </h1>
           <p className="mx-auto max-w-2xl text-lg text-muted-foreground md:text-xl">
             <span className="font-medium text-foreground">Available today in Camps Bay</span> when calendars align ·{" "}
@@ -374,7 +374,7 @@ const CampsBay = () => {
         skipDefaultArticle
         customFaqs={CAMPS_BAY_FAQS}
         localLead={
-          "Whether you're hosting tourists in a Camps Bay villa or unwinding after a beach day on the Atlantic Seaboard, we deliver luxury mobile spa Camps Bay treatments — massage, facials, and nails — with villa-savvy routing and hotel-grade polish."
+          "Whether you're hosting tourists in a Camps Bay villa or unwinding after a beach day on the Atlantic Seaboard, we deliver rejuvenation mobile massage Camps Bay treatments — massage, facials, and nails — with villa-savvy routing and hotel-grade polish."
         }
         neighbors={[
           { href: "/locations/clifton", label: "Clifton" },

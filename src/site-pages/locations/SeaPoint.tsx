@@ -25,14 +25,14 @@ const capeTownPlace = (neighbourhood: string) => ({
 const SEA_POINT_SERVICE_JSON_LD = {
   "@context": "https://schema.org",
   "@type": "Service",
-  name: "Luxury mobile spa Sea Point — at-home massage, facials & nails",
+  name: "Rejuvenation mobile massage Sea Point — at-home massage, facials & nails",
   description:
     "Five-star mobile spa Sea Point appointments: therapeutic massage, hydrating and anti-aging facials, gel manicures, and pedicures delivered to apartments, hotels, and Airbnbs along the Atlantic Seaboard.",
   url: `${SITE_URL}/locations/sea-point`,
   serviceType: ["Mobile massage therapy", "Facial skincare treatments", "Manicure and pedicure", "Couples spa rituals"],
   provider: {
     "@type": "HealthAndBeautyBusiness",
-    name: "Luxury Mobile Spa Cape Town",
+    name: "Rejuvenation Mobile Massage Cape Town",
     url: SITE_URL,
     telephone: "+27681849866",
   },
@@ -143,7 +143,7 @@ const SeaPoint = () => {
             <span className="font-medium text-primary">Sea Point · Atlantic Seaboard</span>
           </div>
           <h1 className="mx-auto mb-4 max-w-4xl animate-fade-in font-serif text-4xl font-bold leading-tight md:text-5xl">
-            Luxury Mobile Spa Services in Sea Point, Cape Town
+            Rejuvenation Mobile Massage Services in Sea Point, Cape Town
           </h1>
           <p className="mx-auto max-w-2xl text-lg text-muted-foreground md:text-xl">
             <span className="font-medium text-foreground">Available today in Sea Point</span> when calendars align ·{" "}
@@ -389,7 +389,7 @@ const SeaPoint = () => {
         skipDefaultArticle
         customFaqs={SEA_POINT_FAQS}
         localLead={
-          "Whether you're staying near the Sea Point promenade or hosting guests in a Sea Point apartment, we deliver luxury mobile spa Sea Point treatments — massage, facials, and nails — with punctual Atlantic Seaboard routing and hotel-grade discretion."
+          "Whether you're staying near the Sea Point promenade or hosting guests in a Sea Point apartment, we deliver rejuvenation mobile massage Sea Point treatments — massage, facials, and nails — with punctual Atlantic Seaboard routing and hotel-grade discretion."
         }
         neighbors={[
           { href: "/locations/camps-bay", label: "Camps Bay" },

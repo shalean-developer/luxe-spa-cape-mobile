@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
+import { BookButton } from "@/components/BookButton";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Card, CardContent } from "@/components/ui/card";
@@ -108,7 +109,7 @@ const Contact = () => {
         <div className="container mx-auto px-4 text-center">
           <MessageSquare className="h-12 w-12 mx-auto mb-4" />
           <h1 className="font-serif text-4xl md:text-5xl font-bold mb-4">
-            Contact Luxury Mobile Spa Cape Town — At-Home Massage &amp; Facials
+            Contact Rejuvenation Mobile Massage Cape Town — At-Home Massage &amp; Facials
           </h1>
           <p className="text-lg md:text-xl max-w-3xl mx-auto opacity-90 leading-relaxed">
             Speak with our concierge team about{" "}
@@ -290,9 +291,7 @@ const Contact = () => {
                         Call 068 184 9866
                       </Button>
                     </a>
-                    <Link href="/booking">
-                      <Button className="w-full luxury-gradient luxury-glow">Open booking page</Button>
-                    </Link>
+                    <BookButton className="w-full luxury-gradient luxury-glow">Book now</BookButton>
                   </div>
                 </CardContent>
               </Card>

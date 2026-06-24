@@ -25,14 +25,14 @@ const capeTownPlace = (neighbourhood: string) => ({
 const CLAREMONT_SERVICE_JSON_LD = {
   "@context": "https://schema.org",
   "@type": "Service",
-  name: "Luxury mobile spa Claremont — at-home massage, facials & nails",
+  name: "Rejuvenation mobile massage Claremont — at-home massage, facials & nails",
   description:
     "Premium mobile spa Claremont appointments for Southern Suburbs homes, townhouses, and guest cottages: therapeutic massage, skincare facials, gel nails, and couples treatments near Cavendish and surrounds.",
   url: `${SITE_URL}/locations/claremont`,
   serviceType: ["Mobile massage therapy", "Facial skincare treatments", "Manicure and pedicure", "Couples spa rituals"],
   provider: {
     "@type": "HealthAndBeautyBusiness",
-    name: "Luxury Mobile Spa Cape Town",
+    name: "Rejuvenation Mobile Massage Cape Town",
     url: SITE_URL,
     telephone: "+27681849866",
   },
@@ -143,7 +143,7 @@ const Claremont = () => {
             <span className="font-medium text-primary">Claremont · Southern Suburbs</span>
           </div>
           <h1 className="mx-auto mb-4 max-w-4xl animate-fade-in font-serif text-4xl font-bold leading-tight md:text-5xl">
-            Luxury Mobile Spa Services in Claremont, Cape Town
+            Rejuvenation Mobile Massage Services in Claremont, Cape Town
           </h1>
           <p className="mx-auto max-w-2xl text-lg text-muted-foreground md:text-xl">
             <span className="font-medium text-foreground">Available today in Claremont</span> when calendars align ·{" "}
@@ -381,7 +381,7 @@ const Claremont = () => {
         skipDefaultArticle
         customFaqs={CLAREMONT_FAQS}
         localLead={
-          "Whether you're near Cavendish or tucked into Upper Claremont, we deliver luxury mobile spa Claremont treatments — massage, facials, and nails — with Southern Suburbs routing savvy and quiet estate etiquette."
+          "Whether you're near Cavendish or tucked into Upper Claremont, we deliver rejuvenation mobile massage Claremont treatments — massage, facials, and nails — with Southern Suburbs routing savvy and quiet estate etiquette."
         }
         neighbors={[
           { href: "/locations/newlands", label: "Newlands" },

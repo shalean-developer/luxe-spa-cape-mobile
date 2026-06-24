@@ -45,7 +45,7 @@ const Terms = () => {
 
             <h2 className="font-serif text-2xl font-bold mb-4">6. Liability</h2>
             <p className="text-muted-foreground mb-6">
-              While we take every precaution, Luxury Mobile Spa is not liable for any allergic reactions, injuries, or complications arising from treatments. Clients are responsible for disclosing all relevant health information.
+              While we take every precaution, Rejuvenation Mobile Massage is not liable for any allergic reactions, injuries, or complications arising from treatments. Clients are responsible for disclosing all relevant health information.
             </p>
 
             <h2 className="font-serif text-2xl font-bold mb-4">7. Product Usage</h2>
@@ -55,7 +55,7 @@ const Terms = () => {
 
             <h2 className="font-serif text-2xl font-bold mb-4">8. Changes to Terms</h2>
             <p className="text-muted-foreground mb-6">
-              Luxury Mobile Spa reserves the right to update these terms and conditions at any time. Continued use of our services constitutes acceptance of any changes.
+              Rejuvenation Mobile Massage reserves the right to update these terms and conditions at any time. Continued use of our services constitutes acceptance of any changes.
             </p>
 
             <h2 className="font-serif text-2xl font-bold mb-4">9. Contact</h2>

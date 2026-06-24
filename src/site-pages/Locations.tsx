@@ -79,7 +79,7 @@ const Locations = () => {
             Mobile Spa Cape Town Service Areas — At-Home Massage &amp; Facials
           </h1>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto animate-fade-in leading-relaxed">
-            Luxury Mobile Spa routes therapists across the Atlantic Seaboard, City Bowl, Southern Suburbs, Winelands, and
+            Rejuvenation Mobile Massage routes therapists across the Atlantic Seaboard, City Bowl, Southern Suburbs, Winelands, and
             Northern growth corridors so every{" "}
             <strong className="font-medium text-foreground">mobile spa Cape Town</strong> appointment arrives composed —
             whether you crave deep{" "}

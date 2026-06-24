@@ -25,14 +25,14 @@ const capeTownPlace = (neighbourhood: string) => ({
 const GOODWOOD_SERVICE_JSON_LD = {
   "@context": "https://schema.org",
   "@type": "Service",
-  name: "Luxury mobile spa Goodwood — at-home massage, facials & nails",
+  name: "Rejuvenation mobile massage Goodwood — at-home massage, facials & nails",
   description:
     "Northern Suburbs mobile spa Goodwood visits for family homes and apartments: therapeutic massage, facials, gel nails, and couples rituals — Parow and Bellville corridor routing with metro-wide Cape Town coverage.",
   url: `${SITE_URL}/locations/goodwood`,
   serviceType: ["Mobile massage therapy", "Facial skincare treatments", "Manicure and pedicure", "Couples spa rituals"],
   provider: {
     "@type": "HealthAndBeautyBusiness",
-    name: "Luxury Mobile Spa Cape Town",
+    name: "Rejuvenation Mobile Massage Cape Town",
     url: SITE_URL,
     telephone: "+27681849866",
   },
@@ -130,7 +130,7 @@ const Goodwood = () => {
         <div className="absolute inset-0">
           <Image
             src={heroImage}
-            alt="Luxury mobile spa treatment at home in Goodwood, Northern Suburbs Cape Town"
+            alt="Rejuvenation mobile massage treatment at home in Goodwood, Northern Suburbs Cape Town"
             fill
             priority
             className="object-cover object-center"
@@ -144,7 +144,7 @@ const Goodwood = () => {
             <span className="font-medium text-primary">Goodwood · Northern Suburbs, Cape Town</span>
           </div>
           <h1 className="mx-auto mb-4 max-w-4xl animate-fade-in font-serif text-4xl font-bold leading-tight md:text-5xl">
-            Luxury Mobile Spa Services in Goodwood, Cape Town
+            Rejuvenation Mobile Massage Services in Goodwood, Cape Town
           </h1>
           <p className="mx-auto max-w-2xl text-lg text-muted-foreground md:text-xl">
             <span className="font-medium text-foreground">Available today in Goodwood</span> when calendars align ·{" "}
@@ -332,7 +332,7 @@ const Goodwood = () => {
                     metro-wide
                   </p>
                   <p className="text-sm italic leading-relaxed text-muted-foreground">
-                    &ldquo;Professional, punctual, and beautifully equipped — luxury mobile spa Goodwood visits finally match how
+                    &ldquo;Professional, punctual, and beautifully equipped — rejuvenation mobile massage Goodwood visits finally match how
                     we like to unwind at home.&rdquo;
                   </p>
                   <p className="mt-2 text-xs font-medium text-primary">— Michelle R., Goodwood</p>
@@ -376,7 +376,7 @@ const Goodwood = () => {
         skipDefaultArticle
         customFaqs={GOODWOOD_FAQS}
         localLead={
-          "Whether you are recovering after Bellville meetings, juggling school-term logistics, or hosting family from elsewhere in Cape Town, we deliver luxury mobile spa Goodwood treatments — massage, facials, and nails — with Northern Suburbs routing discipline and the same five-star standards as our seaboard routes."
+          "Whether you are recovering after Bellville meetings, juggling school-term logistics, or hosting family from elsewhere in Cape Town, we deliver rejuvenation mobile massage Goodwood treatments — massage, facials, and nails — with Northern Suburbs routing discipline and the same five-star standards as our seaboard routes."
         }
         neighbors={[
           { href: "/locations/durbanville", label: "Durbanville" },

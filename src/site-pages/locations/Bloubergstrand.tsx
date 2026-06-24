@@ -25,14 +25,14 @@ const capeTownPlace = (neighbourhood: string) => ({
 const BLOUBERG_SERVICE_JSON_LD = {
   "@context": "https://schema.org",
   "@type": "Service",
-  name: "Luxury mobile spa Bloubergstrand — at-home massage, facials & nails",
+  name: "Rejuvenation mobile massage Bloubergstrand — at-home massage, facials & nails",
   description:
     "West Coast mobile spa Bloubergstrand visits for beach homes, apartments, and holiday lets: massage, facials, gel nails, and couples rituals — Table Mountain views, sea-air recovery, and discreet arrivals across Big Bay and Table View.",
   url: `${SITE_URL}/locations/bloubergstrand`,
   serviceType: ["Mobile massage therapy", "Facial skincare treatments", "Manicure and pedicure", "Couples spa rituals"],
   provider: {
     "@type": "HealthAndBeautyBusiness",
-    name: "Luxury Mobile Spa Cape Town",
+    name: "Rejuvenation Mobile Massage Cape Town",
     url: SITE_URL,
     telephone: "+27681849866",
   },
@@ -130,7 +130,7 @@ const Bloubergstrand = () => {
         <div className="absolute inset-0">
           <Image
             src={heroImage}
-            alt="Luxury mobile spa and hot stone massage at home in Bloubergstrand with Table Bay views, Cape Town"
+            alt="Rejuvenation mobile massage and hot stone massage at home in Bloubergstrand with Table Bay views, Cape Town"
             fill
             priority
             className="object-cover object-center"
@@ -144,7 +144,7 @@ const Bloubergstrand = () => {
             <span className="font-medium text-primary">Bloubergstrand · West Coast, Cape Town</span>
           </div>
           <h1 className="mx-auto mb-4 max-w-4xl animate-fade-in font-serif text-4xl font-bold leading-tight md:text-5xl">
-            Luxury Mobile Spa Services in Bloubergstrand, Cape Town
+            Rejuvenation Mobile Massage Services in Bloubergstrand, Cape Town
           </h1>
           <p className="mx-auto max-w-2xl text-lg text-muted-foreground md:text-xl">
             <span className="font-medium text-foreground">Available today in Bloubergstrand</span> when calendars align ·{" "}
@@ -330,7 +330,7 @@ const Bloubergstrand = () => {
                     metro-wide
                   </p>
                   <p className="text-sm italic leading-relaxed text-muted-foreground">
-                    &ldquo;They set up facing the bay without fuss — true luxury mobile spa Bloubergstrand polish for our
+                    &ldquo;They set up facing the bay without fuss — true rejuvenation mobile massage Bloubergstrand polish for our
                     apartment.&rdquo;
                   </p>
                   <p className="mt-2 text-xs font-medium text-primary">— Jason M., Big Bay</p>
@@ -374,7 +374,7 @@ const Bloubergstrand = () => {
         skipDefaultArticle
         customFaqs={BLOUBERG_FAQS}
         localLead={
-          "Whether you are cooling down after kitesurfing, hosting guests in a sea-view rental, or balancing remote work above Table Bay, we deliver luxury mobile spa Bloubergstrand treatments — massage, facials, and nails — with coastal-aware routing and apartment-smart etiquette."
+          "Whether you are cooling down after kitesurfing, hosting guests in a sea-view rental, or balancing remote work above Table Bay, we deliver rejuvenation mobile massage Bloubergstrand treatments — massage, facials, and nails — with coastal-aware routing and apartment-smart etiquette."
         }
         neighbors={[
           { href: "/locations/durbanville", label: "Durbanville" },

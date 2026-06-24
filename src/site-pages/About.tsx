@@ -49,7 +49,7 @@ const About = () => {
             <h2 className="font-serif text-3xl md:text-4xl font-bold mb-6 text-center">Our Story</h2>
             <div className="space-y-4 text-muted-foreground text-lg leading-relaxed">
               <p>
-                Luxury Mobile Spa was born from a simple belief: everyone deserves to experience the
+                Rejuvenation Mobile Massage was born from a simple belief: everyone deserves to experience the
                 rejuvenating power of professional spa treatments, without the hassle of traveling to a spa.
               </p>
               <p>
@@ -58,8 +58,8 @@ const About = () => {
                 wellness accessible, convenient, and personalized.
               </p>
               <p>
-                What started as a small team of passionate therapists has grown into Cape Town's premier mobile
-                spa service, serving hundreds of satisfied clients who trust us with their wellness and relaxation needs.
+                What started as a small team of passionate therapists has grown into Cape Town&apos;s premier mobile
+                massage service, serving hundreds of satisfied clients who trust us with their wellness and relaxation needs.
               </p>
               <p className="font-semibold text-foreground">
                 We bring the spa experience to your doorstep, so you can relax in your own sanctuary.
@@ -98,7 +98,7 @@ const About = () => {
       <section className="py-20 bg-muted/30">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
-            <h2 className="font-serif text-3xl md:text-4xl font-bold mb-6">Why Choose Luxury Mobile Spa?</h2>
+            <h2 className="font-serif text-3xl md:text-4xl font-bold mb-6">Why Choose Rejuvenation Mobile Massage?</h2>
             <div className="space-y-4 text-left text-muted-foreground">
               <div className="flex gap-3">
                 <span className="text-primary font-bold">✓</span>

@@ -1,4 +1,4 @@
-# Luxury Mobile Spa – Cape Town
+# Rejuvenation Mobile Massage – Cape Town
 
 A premium mobile spa booking platform built with Next.js, designed for performance, SEO, and high conversion.
 
@@ -6,7 +6,7 @@ A premium mobile spa booking platform built with Next.js, designed for performan
 
 ## 🚀 Project Overview
 
-Luxury Mobile Spa allows customers in Cape Town to book at-home spa treatments including massages, facials, and nail services.
+Rejuvenation Mobile Massage allows customers in Cape Town to book at-home spa treatments including massages, facials, and nail services.
 
 The platform is optimized for:
 

@@ -1,96 +1,81 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Button } from "@/components/ui/button";
-import { MessageCircle, Phone } from "lucide-react";
+import { BookButton } from "@/components/BookButton";
+import { ArrowRight } from "lucide-react";
 
-const HERO_IMAGE = "/images/hero-spa.jpg";
-const WHATSAPP_HREF =
-  "https://wa.me/27681849866?text=Hi%2C%20I'd%20like%20to%20book%20a%20luxury%20spa%20treatment%20at%20home";
+const HERO_IMAGE = "/images/massage.jpg";
+
+const HERO_TAGS = [
+  "Personalized Mobile Spa Treatments",
+  "Trusted and Certified Therapists",
+] as const;
 
 export function HomeHero() {
   return (
-    <section className="relative flex min-h-[85vh] items-center justify-center overflow-hidden md:min-h-[90vh]">
-      <div className="absolute inset-0 z-0">
+    <section className="px-3 pb-2 pt-3 sm:px-4 sm:pt-4 md:px-5 lg:px-6">
+      <div className="relative min-h-[min(88vh,820px)] overflow-hidden rounded-[1.75rem] md:min-h-[min(90vh,880px)] md:rounded-[2rem]">
         <Image
           src={HERO_IMAGE}
-          alt="Luxury mobile spa treatment in Cape Town — therapist setting up at home"
+          alt="Relaxing mobile massage treatment at home in Cape Town"
           fill
           priority
           sizes="100vw"
           className="object-cover object-center"
         />
+
         <div
-          className="absolute inset-0 bg-gradient-to-br from-primary/90 via-primary/75 to-secondary/70"
+          className="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary/65 to-primary/20"
           aria-hidden
         />
         <div
-          className="absolute inset-0 bg-gradient-to-t from-background/40 via-transparent to-transparent"
+          className="absolute inset-0 bg-gradient-to-t from-primary/50 via-transparent to-primary/10"
           aria-hidden
         />
-      </div>
 
-      <div className="relative z-10 container mx-auto animate-fade-in px-4 py-20 text-center text-white md:py-28">
-        <p className="mb-4 text-sm font-medium uppercase tracking-[0.2em] text-white/90">
-          Cape Town&apos;s premier at-home spa
-        </p>
-        <h1 className="mx-auto max-w-4xl text-balance font-serif text-4xl font-bold leading-tight sm:text-5xl md:text-6xl lg:text-7xl">
-          Luxury Mobile Spa Cape Town — At-Home Massage, Facials &amp; Nails
-        </h1>
-        <p className="mx-auto mt-6 max-w-2xl text-lg font-light leading-relaxed text-white/95 md:text-xl">
-          Arrive stressed, leave floating — five-star massage, facials, and nails without traffic, parking, or
-          crowded spas.
-        </p>
+        <div className="relative flex min-h-[min(88vh,820px)] flex-col justify-between px-6 pb-10 pt-28 sm:px-10 sm:pt-32 md:min-h-[min(90vh,880px)] md:px-14 md:pb-14 md:pt-36 lg:px-16">
+          <div className="max-w-2xl animate-fade-in">
+            <h1 className="text-4xl font-bold leading-[1.1] tracking-tight text-white sm:text-5xl md:text-6xl lg:text-[3.75rem]">
+              Relieve Stress, Restore Calm &amp;{" "}
+              <span className="font-serif font-medium italic">Total Wellness</span>
+            </h1>
 
-        <ul className="mx-auto mt-8 flex max-w-xl flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm font-medium text-white/95 md:text-base">
-          <li className="flex items-center gap-2">
-            <span className="h-1.5 w-1.5 rounded-full bg-accent" aria-hidden />
-            Same-day bookings when available
-          </li>
-          <li className="flex items-center gap-2">
-            <span className="h-1.5 w-1.5 rounded-full bg-accent" aria-hidden />
-            Certified therapists
-          </li>
-        </ul>
+            <p className="mt-5 max-w-xl text-base leading-relaxed text-white/85 sm:text-lg md:mt-6">
+              Targeted mobile spa care focused on relieving tension, restoring glow, and bringing
+              five-star massage, facials, and nails to your home, hotel, or office.
+            </p>
 
-        <div className="mx-auto mt-10 flex max-w-lg flex-col items-stretch gap-4 sm:max-w-none sm:flex-row sm:justify-center sm:items-center">
-          <Button
-            asChild
-            size="lg"
-            className="h-14 min-h-[3.5rem] rounded-full bg-accent px-10 text-base font-semibold text-accent-foreground shadow-xl ring-2 ring-white/20 transition-smooth hover:scale-[1.02] hover:bg-accent/90 hover:shadow-2xl luxury-glow sm:min-w-[220px]"
-          >
-            <Link href="/booking">Book now</Link>
-          </Button>
-          <Button
-            asChild
-            size="lg"
-            variant="outline"
-            className="h-14 min-h-[3.5rem] rounded-full border-2 border-white/90 bg-white/10 px-10 text-base font-semibold text-white backdrop-blur-md transition-smooth hover:bg-white hover:text-primary sm:min-w-[220px]"
-          >
-            <Link href="/services">View services</Link>
-          </Button>
+            <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-4">
+              <BookButton className="group h-12 rounded-full bg-white pl-6 pr-1.5 text-base font-semibold text-primary shadow-lg hover:bg-white/95">
+                <span className="flex items-center gap-3">
+                  Book Your Treatment
+                  <span className="flex h-9 w-9 items-center justify-center rounded-full bg-primary text-white transition-transform group-hover:translate-x-0.5">
+                    <ArrowRight className="h-4 w-4" aria-hidden />
+                  </span>
+                </span>
+              </BookButton>
+
+              <Link
+                href="/services"
+                className="group inline-flex h-12 items-center justify-center rounded-full border-2 border-white/70 bg-white/10 px-6 pr-1.5 text-base font-semibold text-white backdrop-blur-sm transition-colors hover:bg-white/20"
+              >
+                <span className="flex items-center gap-3">
+                  Our Services
+                  <span className="flex h-9 w-9 items-center justify-center rounded-full bg-white text-primary transition-transform group-hover:translate-x-0.5">
+                    <ArrowRight className="h-4 w-4" aria-hidden />
+                  </span>
+                </span>
+              </Link>
+            </div>
+          </div>
+
+          <div className="mt-10 flex flex-col gap-5 sm:mt-0 sm:flex-row sm:flex-wrap sm:items-end sm:justify-end sm:gap-10">
+            {HERO_TAGS.map((tag) => (
+              <div key={tag} className="flex items-center gap-3 border-l-2 border-white/40 pl-4">
+                <p className="max-w-[200px] text-sm font-medium leading-snug text-white/90">{tag}</p>
+              </div>
+            ))}
+          </div>
         </div>
-
-        <div className="mt-6">
-          <Button
-            asChild
-            variant="ghost"
-            size="lg"
-            className="h-12 rounded-full border border-white/30 bg-white/5 text-white hover:bg-white/15 hover:text-white"
-          >
-            <a href={WHATSAPP_HREF} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2">
-              <MessageCircle className="h-5 w-5 shrink-0" aria-hidden />
-              Chat on WhatsApp
-            </a>
-          </Button>
-        </div>
-
-        <p className="mt-6 text-xs text-white/70 md:text-sm">
-          Prefer voice?{" "}
-          <a href="tel:0681849866" className="inline-flex items-center gap-1 font-medium underline-offset-4 hover:underline">
-            <Phone className="inline h-3.5 w-3.5" aria-hidden />
-            068 184 9866
-          </a>
-        </p>
       </div>
     </section>
   );

@@ -1,126 +1,89 @@
+import Image from "next/image";
 import Link from "next/link";
 import { MapPin } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { SectionHeader } from "./SectionHeader";
 
-const SUBURB_LINKS = [
+const AREA_CHIPS = [
   { label: "Sea Point", href: "/locations/sea-point" },
   { label: "Camps Bay", href: "/locations/camps-bay" },
-  { label: "Claremont", href: "/locations/claremont" },
-  { label: "Constantia", href: "/locations/constantia" },
-  { label: "Green Point", href: "/locations/green-point" },
-  { label: "Durbanville", href: "/locations/durbanville" },
-  { label: "Bloubergstrand", href: "/locations/bloubergstrand" },
-  { label: "Goodwood", href: "/locations/goodwood" },
-  { label: "Bantry Bay", href: "/locations/bantry-bay" },
   { label: "Clifton", href: "/locations/clifton" },
+  { label: "Green Point", href: "/locations/green-point" },
+  { label: "CBD", href: "/locations/green-point" },
+  { label: "Bo-Kaap", href: "/locations/de-waterkant" },
   { label: "Hout Bay", href: "/locations/hout-bay" },
-  { label: "Bishopscourt", href: "/locations/bishopscourt" },
-  { label: "Stellenbosch", href: "/locations/stellenbosch" },
+  { label: "Constantia", href: "/locations/constantia" },
+  { label: "Newlands", href: "/locations/newlands" },
+  { label: "Durbanville", href: "/locations/durbanville" },
+  { label: "Blouberg", href: "/locations/bloubergstrand" },
+  { label: "Bellville", href: "/locations/goodwood" },
+  { label: "Northern Suburbs", href: "/locations/goodwood" },
 ] as const;
-
-/** Keyword-style anchors for long-tail internal links (body + SEO). */
-const KEYWORD_AREA_LINKS = [
-  { href: "/locations/sea-point", text: "mobile spa in Sea Point" },
-  { href: "/locations/camps-bay", text: "massage in Camps Bay" },
-  { href: "/locations/durbanville", text: "spa services in Durbanville" },
-  { href: "/locations/claremont", text: "at-home facials in Claremont" },
-  { href: "/locations/constantia", text: "mobile spa Constantia" },
-  { href: "/locations/green-point", text: "massage in Green Point" },
-  { href: "/locations/bloubergstrand", text: "Bloubergstrand at-home massage" },
-  { href: "/locations/goodwood", text: "Goodwood mobile spa" },
-  { href: "/locations/hout-bay", text: "Hout Bay spa at home" },
-  { href: "/locations/bantry-bay", text: "Bantry Bay luxury massage" },
-] as const;
-
-const QUICK_CHIPS = [
-  { href: "/locations/sea-point", label: "Sea Point" },
-  { href: "/locations/camps-bay", label: "Camps Bay" },
-  { href: "/locations/durbanville", label: "Durbanville" },
-  { href: "/locations/claremont", label: "Claremont" },
-  { href: "/locations/constantia", label: "Constantia" },
-  { href: "/locations/green-point", label: "Green Point" },
-  { href: "/locations/bloubergstrand", label: "Bloubergstrand" },
-  { href: "/locations/goodwood", label: "Goodwood" },
-  { href: "/locations/fresnaye", label: "Fresnaye" },
-  { href: "/locations/de-waterkant", label: "De Waterkant" },
-  { href: "/locations/tokai", label: "Tokai" },
-  { href: "/locations/franschhoek", label: "Franschhoek" },
-] as const;
-
-function SuburbInlineList() {
-  return (
-    <>
-      {SUBURB_LINKS.map((s, i) => (
-        <span key={s.href}>
-          {i > 0 && (i === SUBURB_LINKS.length - 1 ? ", and " : ", ")}
-          <Link href={s.href} className="font-medium text-primary underline-offset-4 hover:underline">
-            {s.label}
-          </Link>
-        </span>
-      ))}
-    </>
-  );
-}
-
-function KeywordLinksSentence() {
-  return (
-    <p className="mt-5 text-left text-base leading-relaxed text-muted-foreground md:text-lg">
-      Popular searches we match every week:{" "}
-      {KEYWORD_AREA_LINKS.map((item, i) => (
-        <span key={item.href}>
-          {i > 0 && (i === KEYWORD_AREA_LINKS.length - 1 ? ", and " : ", ")}
-          <Link href={item.href} className="font-medium text-primary underline-offset-4 hover:underline">
-            {item.text}
-          </Link>
-        </span>
-      ))}
-      . Each suburb page lists local routing notes — start here, then{" "}
-      <Link href="/booking" className="font-medium text-primary underline-offset-4 hover:underline">
-        book your appointment
-      </Link>{" "}
-      with your address.
-    </p>
-  );
-}
 
 export function HomeLocationBlock() {
   return (
-    <section className="py-20 md:py-28" aria-labelledby="locations-seo-heading">
-      <div className="container mx-auto px-4">
-        <div className="mx-auto max-w-3xl rounded-2xl border border-border/80 bg-gradient-to-br from-card via-card to-muted/30 p-8 shadow-sm md:p-12">
-          <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-primary/10 text-primary md:mx-auto">
-            <MapPin className="h-6 w-6" aria-hidden />
+    <section className="bg-[#f8fafc] py-20 md:py-28" aria-labelledby="locations-seo-heading">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
+          <div className="relative order-2 lg:order-1">
+            <div className="relative aspect-[5/4] overflow-hidden rounded-3xl shadow-2xl">
+              <Image
+                src="/images/hero-spa.jpg"
+                alt="Cape Town coastline and mobile spa service areas"
+                fill
+                sizes="(max-width: 1024px) 100vw, 50vw"
+                className="object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-tr from-primary/50 via-transparent to-transparent" aria-hidden />
+            </div>
+
+            <div className="absolute bottom-6 left-6 right-6 rounded-2xl bg-white/95 p-4 shadow-xl backdrop-blur-sm sm:right-auto sm:max-w-xs">
+              <div className="flex items-center gap-3">
+                <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-primary text-primary-foreground">
+                  <MapPin className="h-5 w-5" aria-hidden />
+                </span>
+                <div>
+                  <p className="text-sm font-bold text-foreground">30+ suburbs covered</p>
+                  <p className="text-xs text-muted-foreground">Atlantic Seaboard to Winelands</p>
+                </div>
+              </div>
+            </div>
           </div>
-          <h2 id="locations-seo-heading" className="text-center font-serif text-2xl font-bold tracking-tight md:text-3xl">
-            Mobile spa across Cape Town
-          </h2>
-          <p className="mt-4 text-center text-base leading-relaxed text-muted-foreground md:text-lg">
-            <strong className="font-medium text-foreground">Luxury Mobile Spa</strong> brings{" "}
-            <strong className="font-medium text-foreground">massages, facials, and nail treatments</strong> to your home,
-            Airbnb, or hotel. We are <strong className="font-medium text-foreground">serving Cape Town</strong>, including{" "}
-            <SuburbInlineList />
-            , and dozens more suburbs — premium wellness without leaving your door.
-          </p>
-          <KeywordLinksSentence />
-          <p className="mt-4 text-center text-sm leading-relaxed text-muted-foreground">
-            Atlantic Seaboard, Southern Suburbs, Northern Suburbs, West Coast, City Bowl, and Winelands —{" "}
-            <Link href="/locations" className="font-medium text-primary underline-offset-4 hover:underline">
-              view all service areas
+
+          <div className="order-1 lg:order-2">
+            <SectionHeader
+              eyebrow="Service Areas"
+              title="Mobile spa across Cape Town"
+              description="Rejuvenation Mobile Massage brings massage, facials, and nail treatments to your home, hotel, or office — from the Atlantic Seaboard and City Bowl to the Southern and Northern Suburbs."
+              align="left"
+            />
+
+            <p className="mt-4 text-sm text-muted-foreground">
+              Not sure if we cover your area?{" "}
+              <Link href="/contact" className="font-semibold text-primary underline-offset-4 hover:underline">
+                Send us your suburb
+              </Link>{" "}
+              and we&apos;ll confirm availability.
+            </p>
+
+            <div className="mt-8 flex flex-wrap gap-2">
+              {AREA_CHIPS.map((chip) => (
+                <Link
+                  key={chip.label}
+                  href={chip.href}
+                  className="rounded-full border border-primary/20 bg-white px-4 py-2 text-sm font-medium text-foreground shadow-sm transition-all hover:border-primary hover:bg-primary hover:text-white"
+                >
+                  {chip.label}
+                </Link>
+              ))}
+            </div>
+
+            <Link
+              href="/locations"
+              className="mt-8 inline-flex items-center gap-2 rounded-2xl bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground shadow-md transition-opacity hover:opacity-90"
+            >
+              View all service areas
+              <span aria-hidden>→</span>
             </Link>
-            .
-          </p>
-          <div className="mt-8 flex flex-wrap justify-center gap-2 md:gap-3">
-            {QUICK_CHIPS.map((c) => (
-              <Button
-                key={c.href}
-                asChild
-                variant="secondary"
-                size="sm"
-                className="rounded-full transition-smooth hover:border-primary/30"
-              >
-                <Link href={c.href}>{c.label}</Link>
-              </Button>
-            ))}
           </div>
         </div>
       </div>
