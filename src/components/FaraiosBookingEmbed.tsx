@@ -1,16 +1,30 @@
-import { getFaraiosBookingEmbedUrl } from "@/lib/faraios";
+import Script from "next/script";
+import {
+  FARAIOS_BOOKING_CONTAINER_ID,
+  FARAIOS_BOOKING_SCRIPT,
+  LUXURY_MOBILE_SPA_BUSINESS_ID,
+} from "@/lib/faraios";
 
 type Props = {
   businessId?: string;
 };
 
-export function FaraiosBookingEmbed({ businessId }: Props) {
+export function FaraiosBookingEmbed({
+  businessId = LUXURY_MOBILE_SPA_BUSINESS_ID,
+}: Props) {
   return (
-    <iframe
-      src={getFaraiosBookingEmbedUrl(businessId)}
-      title="Online booking form"
-      className="mx-auto min-h-[42rem] w-full max-w-xl rounded-lg border-0 bg-transparent"
-      loading="lazy"
-    />
+    <div className="mx-auto w-full max-w-xl [&_form>div:first-child]:hidden">
+      <div
+        id={FARAIOS_BOOKING_CONTAINER_ID}
+        className="min-h-[28rem] w-full"
+        aria-label="Online booking form"
+      />
+      <Script
+        src={FARAIOS_BOOKING_SCRIPT}
+        strategy="afterInteractive"
+        data-business-id={businessId}
+        data-container-id={FARAIOS_BOOKING_CONTAINER_ID}
+      />
+    </div>
   );
 }
