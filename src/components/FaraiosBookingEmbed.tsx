@@ -1,35 +1,32 @@
-"use client";
-
-import { useEffect } from "react";
+import Script from "next/script";
 import {
   FARAIOS_BOOKING_CONTAINER_ID,
   FARAIOS_BOOKING_SCRIPT,
   FARAIOS_BUSINESS_ID,
 } from "@/lib/faraios";
 
-export function FaraiosBookingEmbed() {
-  useEffect(() => {
-    if (document.querySelector('script[data-faraios="booking"]')) {
-      return;
-    }
+type Props = {
+  businessId?: string;
+  containerId?: string;
+};
 
-    const container = document.getElementById(FARAIOS_BOOKING_CONTAINER_ID);
-    if (!container) {
-      return;
-    }
-
-    const script = document.createElement("script");
-    script.src = FARAIOS_BOOKING_SCRIPT;
-    script.setAttribute("data-business-id", FARAIOS_BUSINESS_ID);
-    script.setAttribute("data-faraios", "booking");
-    container.insertAdjacentElement("afterend", script);
-  }, []);
-
+export function FaraiosBookingEmbed({
+  businessId = FARAIOS_BUSINESS_ID,
+  containerId = FARAIOS_BOOKING_CONTAINER_ID,
+}: Props) {
   return (
-    <div
-      id={FARAIOS_BOOKING_CONTAINER_ID}
-      className="mx-auto min-h-[28rem] w-full max-w-xl"
-      aria-label="Online booking form"
-    />
+    <>
+      <div
+        id={containerId}
+        className="mx-auto min-h-[28rem] w-full max-w-xl"
+        aria-label="Online booking form"
+      />
+      <Script
+        src={FARAIOS_BOOKING_SCRIPT}
+        strategy="afterInteractive"
+        data-business-id={businessId}
+        data-container-id={containerId}
+      />
+    </>
   );
 }
