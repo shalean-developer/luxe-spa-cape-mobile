@@ -13,11 +13,7 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { useToast } from "@/hooks/use-toast";
-import {
-  getFaraiosPublicBookingsUrl,
-  getFaraiosPublicServicesUrl,
-  LUXURY_MOBILE_SPA_BUSINESS_ID,
-} from "@/lib/faraios";
+import { LUXURY_MOBILE_SPA_BUSINESS_ID } from "@/lib/faraios";
 
 type FaraiosService = {
   id: string;
@@ -61,20 +57,26 @@ export function FaraiosBookingForm({
 
     async function loadServices() {
       try {
-        const response = await fetch(getFaraiosPublicServicesUrl(businessId));
+        const response = await fetch("/api/booking");
         const data = (await response.json()) as {
           ok?: boolean;
           services?: FaraiosService[];
+          error?: string;
         };
 
-        if (!cancelled && data.ok && Array.isArray(data.services)) {
-          setServices(data.services);
+        if (cancelled) return;
+
+        if (!response.ok || !data.ok || !Array.isArray(data.services)) {
+          throw new Error(data.error ?? "Failed to load services.");
         }
-      } catch {
+
+        setServices(data.services);
+      } catch (error) {
         if (!cancelled) {
           toast({
             title: "Could not load services",
-            description: "Please refresh the page or contact us to book.",
+            description:
+              error instanceof Error ? error.message : "Please refresh the page or contact us to book.",
             variant: "destructive",
           });
         }
@@ -106,7 +108,7 @@ export function FaraiosBookingForm({
     setSubmitting(true);
 
     try {
-      const response = await fetch(getFaraiosPublicBookingsUrl(businessId), {
+      const response = await fetch("/api/booking", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
