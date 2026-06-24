@@ -19,7 +19,15 @@ export const FARAIOS_TRACKING_SCRIPT = `${FARAIOS_API_BASE}/tracking.js`;
 
 export const FARAIOS_BOOKING_URL = `${FARAIOS_API_BASE}/book/${LUXURY_MOBILE_SPA_BUSINESS_ID}`;
 
-/** Iframe embed — works today. Switch to script embed after FaraiOS redeploys booking.js. */
+export function getFaraiosPublicServicesUrl(businessId = LUXURY_MOBILE_SPA_BUSINESS_ID) {
+  return `${FARAIOS_API_BASE}/api/public/business/${businessId}/services`;
+}
+
+export function getFaraiosPublicBookingsUrl(businessId = LUXURY_MOBILE_SPA_BUSINESS_ID) {
+  return `${FARAIOS_API_BASE}/api/public/business/${businessId}/bookings`;
+}
+
+/** Iframe embed — services load via public API in FaraiosBookingForm instead. */
 export function getFaraiosBookingEmbedUrl(businessId = LUXURY_MOBILE_SPA_BUSINESS_ID) {
   return `${FARAIOS_API_BASE}/book/${businessId}?embed=1`;
 }
