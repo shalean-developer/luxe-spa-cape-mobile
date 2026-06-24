@@ -13,3 +13,8 @@ export const FARAIOS_BOOKING_SCRIPT = `${FARAIOS_API_BASE}/embed/booking.js`;
 export const FARAIOS_TRACKING_SCRIPT = `${FARAIOS_API_BASE}/tracking.js`;
 
 export const FARAIOS_BOOKING_URL = `${FARAIOS_API_BASE}/book/${FARAIOS_BUSINESS_ID}`;
+
+/** Hosted booking page in embed mode (script embed currently serves HTML, not JS). */
+export function getFaraiosBookingEmbedUrl(businessId = FARAIOS_BUSINESS_ID) {
+  return `${FARAIOS_API_BASE}/book/${businessId}?embed=1`;
+}

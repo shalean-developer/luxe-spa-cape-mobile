@@ -1,12 +1,7 @@
-import Script from "next/script";
-import { FARAIOS_BUSINESS_ID, FARAIOS_TRACKING_SCRIPT } from "@/lib/faraios";
-
+/**
+ * FaraiOS tracking script currently returns HTML instead of JS on production.
+ * Re-enable once https://faraios.vercel.app/tracking.js serves JavaScript.
+ */
 export function FaraiosScripts() {
-  return (
-    <Script
-      src={FARAIOS_TRACKING_SCRIPT}
-      strategy="afterInteractive"
-      data-business-id={FARAIOS_BUSINESS_ID}
-    />
-  );
+  return null;
 }
