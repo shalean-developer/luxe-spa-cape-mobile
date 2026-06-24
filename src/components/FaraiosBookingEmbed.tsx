@@ -1,30 +1,20 @@
-import Script from "next/script";
-import {
-  FARAIOS_BOOKING_CONTAINER_ID,
-  FARAIOS_BOOKING_SCRIPT,
-  LUXURY_MOBILE_SPA_BUSINESS_ID,
-} from "@/lib/faraios";
+import { getFaraiosBookingEmbedUrl } from "@/lib/faraios";
 
 type Props = {
   businessId?: string;
 };
 
-export function FaraiosBookingEmbed({
-  businessId = LUXURY_MOBILE_SPA_BUSINESS_ID,
-}: Props) {
+/**
+ * Iframe embed (works today). After FaraiOS redeploys booking.js, switch to:
+ * <div id="faraios-booking" /> + next/script with data-business-id + data-container-id
+ */
+export function FaraiosBookingEmbed({ businessId }: Props) {
   return (
-    <div className="mx-auto w-full max-w-xl [&_form>div:first-child]:hidden">
-      <div
-        id={FARAIOS_BOOKING_CONTAINER_ID}
-        className="min-h-[28rem] w-full"
-        aria-label="Online booking form"
-      />
-      <Script
-        src={FARAIOS_BOOKING_SCRIPT}
-        strategy="afterInteractive"
-        data-business-id={businessId}
-        data-container-id={FARAIOS_BOOKING_CONTAINER_ID}
-      />
-    </div>
+    <iframe
+      src={getFaraiosBookingEmbedUrl(businessId)}
+      title="Book an appointment"
+      className="w-full min-h-[720px] rounded-xl border-0 bg-transparent"
+      loading="lazy"
+    />
   );
 }
