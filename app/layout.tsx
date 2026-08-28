@@ -7,8 +7,9 @@ import Footer from "@/components/Footer";
 import WhatsAppWidget from "@/components/WhatsAppWidget";
 import { FaraiosScripts } from "@/components/FaraiosScripts";
 import { JsonLd } from "./json-ld";
+import { getCanonicalSiteUrl } from "@/lib/siteOrigin";
 
-const siteUrl = "https://www.luxurymspa.co.za";
+const siteUrl = getCanonicalSiteUrl();
 
 const inter = Inter({
   subsets: ["latin"],
@@ -53,7 +54,6 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    site: "@RejuvenationMobileMassage",
     title: "Rejuvenation Mobile Massage Cape Town | At-Home Massage, Facials & Mobile Beauty",
     description:
       "Rejuvenation mobile massage Cape Town—at-home massage, facials, and mobile beauty services when you want five-star calm without leaving home.",
