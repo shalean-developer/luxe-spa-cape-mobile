@@ -1,10 +1,9 @@
 /**
  * Canonical public origin for absolute URLs (metadata, JSON-LD, sitemap, robots).
- * Keep this aligned with the production redirect policy and NEXT_PUBLIC_SITE_URL.
+ * Rejuvenation Mobile Massage is published at rejuvenationmassage.co.za.
  */
 export function getCanonicalSiteUrl(): string {
-  const raw = process.env.NEXT_PUBLIC_SITE_URL?.trim().replace(/\/$/, "");
-  return raw && /^https?:\/\//i.test(raw) ? raw : "https://luxurymspa.co.za";
+  return "https://rejuvenationmassage.co.za";
 }
 
 /** Canonical host only. Retained for callers that need an origin helper. */
