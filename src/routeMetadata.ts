@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
+import { getSiteMetadataConfig } from "@/lib/siteMetadata";
 
-const siteUrl = "https://luxurymspa.co.za";
 const defaultKeywords =
   "mobile massage Cape Town, at home massage Cape Town, facials Cape Town, mobile beauty services Cape Town, rejuvenation mobile massage, massage at home";
 
@@ -228,23 +228,24 @@ function locationTitleFromSlug(routeKey: string) {
 }
 
 export function getRouteMetadata(routeKey: string): Metadata {
+  const site = getSiteMetadataConfig();
   const normalized = routeKey.replace(/^\/+|\/+$/g, "");
   const fallback: RouteSeo = normalized.startsWith("locations/")
     ? {
-        title: `Mobile Spa ${locationTitleFromSlug(normalized)} | Rejuvenation Mobile Massage Cape Town`,
+        title: `Mobile Spa ${locationTitleFromSlug(normalized)} | ${site.siteName}`,
         description: `Book mobile massage and spa treatments in ${locationTitleFromSlug(normalized)}, Cape Town. At-home massage, facials, nails and mobile beauty services delivered to your location.`,
         canonical: `/${normalized}`,
       }
     : {
-        title: "Rejuvenation Mobile Massage Cape Town",
+        title: site.siteName,
         description: "Mobile massage, facials, nails and beauty treatments delivered across Cape Town.",
         canonical: normalized ? `/${normalized}` : "/",
       };
 
   const seo = routeSeoMap[normalized] ?? fallback;
   const canonicalPath = seo.canonical ?? (normalized ? `/${normalized}` : "/");
-  const canonicalUrl = new URL(canonicalPath, siteUrl).toString();
-  const ogImage = seo.ogImage ? new URL(seo.ogImage, siteUrl).toString() : `${siteUrl}/og-image.jpg`;
+  const canonicalUrl = new URL(canonicalPath, site.siteUrl).toString();
+  const ogImage = seo.ogImage ? new URL(seo.ogImage, site.siteUrl).toString() : site.defaultOgImageUrl;
 
   return {
     title: seo.title,
@@ -257,7 +258,7 @@ export function getRouteMetadata(routeKey: string): Metadata {
       title: seo.title,
       description: seo.description,
       url: canonicalUrl,
-      siteName: "Rejuvenation Mobile Massage Cape Town",
+      siteName: site.siteName,
       type: "website",
       images: [{ url: ogImage }],
     },
