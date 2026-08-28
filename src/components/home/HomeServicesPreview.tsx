@@ -8,6 +8,7 @@ import { SectionHeader } from "./SectionHeader";
 const PREVIEW_SERVICES = [
   {
     title: "Massage",
+    href: "/services/massage",
     fromPrice: "R650",
     description: "Swedish, deep tissue, and hot stone — melt tension without leaving home.",
     image: "/images/massage.jpg",
@@ -17,6 +18,7 @@ const PREVIEW_SERVICES = [
   },
   {
     title: "Facials",
+    href: "/services/facials",
     fromPrice: "R550",
     description: "Tailored facials for hydration, glow, and deep cleansing on your schedule.",
     image: "/images/facial.jpg",
@@ -26,6 +28,7 @@ const PREVIEW_SERVICES = [
   },
   {
     title: "Nails",
+    href: "/services/nails",
     fromPrice: "R350",
     description: "Manicures and pedicures with gel or classic finishes — zero commute required.",
     image: "/images/nails.jpg",
@@ -42,7 +45,7 @@ export function HomeServicesPreview() {
         <SectionHeader
           eyebrow="Our Services"
           title="Signature treatments"
-          description="Our most-booked experiences — each delivered by qualified therapists with spa-grade products and setup."
+          description="Explore mobile massage, facial, and nail appointments delivered to supported Cape Town locations."
         />
 
         <div className="mt-14 grid gap-6 md:grid-cols-3 md:gap-8">
@@ -77,7 +80,11 @@ export function HomeServicesPreview() {
 
               <div className="flex flex-1 flex-col p-6">
                 <p className="flex-1 text-sm leading-relaxed text-muted-foreground">{service.description}</p>
-                <BookButton className="mt-5 w-full rounded-xl py-5 font-semibold luxury-gradient text-primary-foreground">
+                <Link href={service.href} className="mt-5 inline-flex items-center text-sm font-semibold text-primary underline-offset-4 hover:underline">
+                  Explore {service.title.toLowerCase()}
+                  <ArrowRight className="ml-2 h-4 w-4" aria-hidden />
+                </Link>
+                <BookButton className="mt-4 w-full rounded-xl py-5 font-semibold luxury-gradient text-primary-foreground">
                   Book Now
                 </BookButton>
               </div>
