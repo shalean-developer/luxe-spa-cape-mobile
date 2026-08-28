@@ -4,10 +4,11 @@ import { MapPin, Phone, Clock, Star, CheckCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { LocationSeoExtras, type LocationFaqItem } from "@/components/locations/LocationSeoExtras";
+import { getCanonicalSiteUrl } from "@/lib/siteOrigin";
 
 const heroImage = "/images/hot-stones.jpg";
 
-const SITE_URL = "https://www.luxurymspa.co.za";
+const SITE_URL = getCanonicalSiteUrl();
 
 const capeTownPlace = (neighbourhood: string) => ({
   "@type": "Place" as const,
@@ -27,14 +28,11 @@ const SEA_POINT_SERVICE_JSON_LD = {
   "@type": "Service",
   name: "Rejuvenation mobile massage Sea Point — at-home massage, facials & nails",
   description:
-    "Five-star mobile spa Sea Point appointments: therapeutic massage, hydrating and anti-aging facials, gel manicures, and pedicures delivered to apartments, hotels, and Airbnbs along the Atlantic Seaboard.",
+    "Mobile spa Sea Point appointments: therapeutic massage, hydrating and anti-aging facials, gel manicures, and pedicures delivered to apartments, hotels, and Airbnbs along the Atlantic Seaboard.",
   url: `${SITE_URL}/locations/sea-point`,
   serviceType: ["Mobile massage therapy", "Facial skincare treatments", "Manicure and pedicure", "Couples spa rituals"],
   provider: {
-    "@type": "HealthAndBeautyBusiness",
-    name: "Rejuvenation Mobile Massage Cape Town",
-    url: SITE_URL,
-    telephone: "+27681849866",
+    "@id": `${SITE_URL}/#business`,
   },
   areaServed: [
     { "@type": "AdministrativeArea", name: "Atlantic Seaboard, Cape Town" },
