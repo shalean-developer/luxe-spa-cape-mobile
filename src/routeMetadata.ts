@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 
-const siteUrl = "https://www.luxurymspa.co.za";
+const siteUrl = "https://luxurymspa.co.za";
 const defaultKeywords =
   "mobile massage Cape Town, at home massage Cape Town, facials Cape Town, mobile beauty services Cape Town, rejuvenation mobile massage, massage at home";
 

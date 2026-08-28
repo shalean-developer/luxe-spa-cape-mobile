@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { MapPin, Phone, Clock, Star, CheckCircle } from "lucide-react";
+import { MapPin, Phone, Clock, CheckCircle } from "lucide-react";
 import { LocationSeoExtras } from "@/components/locations/LocationSeoExtras";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -21,7 +21,7 @@ const BantryBay = () => {
             Massage &amp; Mobile Spa Services in Bantry Bay, Cape Town
           </h1>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Elite spa experiences on the Atlantic Seaboard
+            Mobile spa treatments delivered to homes, apartments, hotels, and guest stays
           </p>
         </div>
       </section>
@@ -30,17 +30,15 @@ const BantryBay = () => {
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-12 items-start">
             <div>
-              <h2 className="font-serif text-3xl font-bold mb-6">Exclusive Spa in Bantry Bay</h2>
+              <h2 className="font-serif text-3xl font-bold mb-6">Mobile Spa in Bantry Bay</h2>
               <p className="text-muted-foreground mb-6">
-                Bantry Bay, one of Cape Town's most prestigious addresses with stunning sunset views, 
-                deserves the finest spa services. We cater to the luxury residences and hotels of this exclusive enclave.
+                Bantry Bay is well suited to private mobile spa appointments at homes, apartments, and hotels along the Atlantic Seaboard.
               </p>
               <p className="text-muted-foreground mb-6">
-                Our elite therapists provide personalized treatments in your private villa, 
-                penthouse apartment, or boutique hotel suite.
+                Our therapists bring the treatment setup to your location so you can book massage and spa services without travelling to a salon.
               </p>
               <div className="space-y-4 mb-8">
-                {["Elite certified therapists", "Luxury organic products", "Available 24/7", "Private villa services", "Sunset spa packages"].map((item, index) => (
+                {["Professional mobile therapists", "Spa treatment products", "Home and hotel appointments", "Private-location service", "Massage and beauty treatments"].map((item, index) => (
                   <div key={index} className="flex items-center gap-3">
                     <CheckCircle className="h-5 w-5 text-primary" />
                     <span>{item}</span>
@@ -57,7 +55,7 @@ const BantryBay = () => {
                   <h3 className="font-serif text-xl font-semibold mb-4 flex items-center gap-2">
                     <Clock className="h-5 w-5 text-primary" />Availability
                   </h3>
-                  <p className="text-muted-foreground">We're available 24/7 in Bantry Bay.</p>
+                  <p className="text-muted-foreground">Appointments are available daily, subject to therapist availability.</p>
                 </CardContent>
               </Card>
               <Card className="border-primary/20">
@@ -67,15 +65,6 @@ const BantryBay = () => {
                   </h3>
                   <p className="text-muted-foreground mb-2">Call or WhatsApp:</p>
                   <a href="tel:0681849866" className="text-primary font-semibold text-lg">068 184 9866</a>
-                </CardContent>
-              </Card>
-              <Card className="border-primary/20">
-                <CardContent className="p-6">
-                  <h3 className="font-serif text-xl font-semibold mb-4 flex items-center gap-2">
-                    <Star className="h-5 w-5 text-primary" />Client Reviews
-                  </h3>
-                  <p className="text-muted-foreground italic">"A massage while watching the sunset over the Atlantic. Absolutely magical experience."</p>
-                  <p className="text-sm text-primary mt-2">— Victoria S., Bantry Bay</p>
                 </CardContent>
               </Card>
             </div>

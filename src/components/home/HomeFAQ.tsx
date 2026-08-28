@@ -7,42 +7,42 @@ const FAQ_ITEMS = [
   {
     question: "How far in advance should I book?",
     answer:
-      "We recommend booking 24–48 hours ahead for your preferred time slot. Popular evenings and weekends fill quickly — same-day bookings are often possible for shorter treatments when therapists are available.",
+      "We recommend booking 24–48 hours ahead for your preferred time slot. Popular evenings and weekends fill quickly — same-day bookings may be possible when therapists are available.",
   },
   {
     question: "What areas do you cover?",
     answer:
-      "We serve Cape Town metro-wide — Sea Point, Camps Bay, Clifton, Green Point, the CBD, Southern Suburbs, Northern Suburbs, and Winelands. Share your suburb or pin and we'll confirm coverage.",
+      "We serve supported areas across Cape Town, including the Atlantic Seaboard, City Bowl, Southern Suburbs, Northern Suburbs, and selected Winelands routes. Share your suburb or pin and we'll confirm coverage.",
   },
   {
     question: "Can I book a same-day appointment?",
     answer:
-      "Often yes, subject to therapist availability. Same-day works best for shorter treatments like massage or express facials. For couples or group bookings, we recommend booking ahead.",
+      "Often yes, subject to therapist availability. For couples or group bookings, we recommend booking ahead so the required therapists and treatment setup can be coordinated.",
   },
   {
     question: "What payment methods do you accept?",
     answer:
-      "We accept major cards and other convenient methods confirmed at booking. Your quote reflects travel within Cape Town — no surprise fees when appointment details stay as agreed.",
+      "We accept the payment methods shown or confirmed during booking. Your booking confirmation should reflect the agreed treatment and applicable charges before the appointment.",
   },
   {
-    question: "Do you bring all the equipment and products?",
+    question: "Do you bring the equipment and products?",
     answer:
-      "Yes. We arrive with a full mobile setup — treatment table, premium oils and creams, sanitation supplies, and nail tools. You supply a calm space; we bring the spa.",
+      "The mobile treatment setup required for your booked service is brought to your location. If a treatment needs anything from you, that requirement should be confirmed before the appointment.",
   },
   {
-    question: "Are your therapists qualified?",
+    question: "What can I expect from my therapist?",
     answer:
-      "All therapists are certified, vetted professionals with experience matching top Cape Town spas. Hygiene protocols, fresh linens, and sanitised tools are standard on every visit.",
+      "Your therapist arrives for the booked treatment with the relevant appointment details and mobile setup. If you have accessibility, privacy, product, or treatment preferences, share them when booking so they can be considered in advance.",
   },
   {
     question: "Can I book for couples or groups?",
     answer:
-      "Yes. Couples massage and small-group celebrations are popular — perfect for anniversaries, bridal mornings, or recovery days. Tell us your party size and we'll coordinate therapists and timing.",
+      "Yes, subject to availability. Tell us your party size, preferred treatments, location, and date so the team can confirm whether the required therapists and timing are available.",
   },
   {
     question: "How long does a typical session last?",
     answer:
-      "Most appointments run 60–90 minutes per treatment. Couples packages or combined treatments naturally run longer. We build buffer time for setup so your session feels unrushed.",
+      "Treatment duration depends on the service selected. Review the duration shown with your service or booking confirmation, and allow a little additional time for arrival and setup.",
   },
 ] as const;
 

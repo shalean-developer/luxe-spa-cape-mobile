@@ -7,7 +7,7 @@ const HERO_IMAGE = "/images/massage.jpg";
 
 const HERO_TAGS = [
   "Personalized Mobile Spa Treatments",
-  "Trusted and Certified Therapists",
+  "Professional Mobile Therapists",
 ] as const;
 
 export function HomeHero() {
