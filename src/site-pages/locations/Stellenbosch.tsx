@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { MapPin, Phone, Clock, Star, CheckCircle } from "lucide-react";
+import { MapPin, Phone, Clock, CheckCircle } from "lucide-react";
 import { LocationSeoExtras } from "@/components/locations/LocationSeoExtras";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -8,7 +8,6 @@ const heroImage = "/images/hero-spa.jpg";
 const Stellenbosch = () => {
   return (
     <div className="min-h-screen">
-      {/* Hero Section */}
       <section className="relative h-[50vh] flex items-center justify-center">
         <div
           className="absolute inset-0 bg-cover bg-center"
@@ -25,36 +24,32 @@ const Stellenbosch = () => {
             Massage &amp; Mobile Spa Services in Stellenbosch, Western Cape
           </h1>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Luxury spa treatments in the heart of the Cape Winelands
+            Mobile treatments for homes, guest accommodation, and suitable private venues in the Cape Winelands
           </p>
         </div>
       </section>
 
-      {/* Content Section */}
       <section className="py-16 bg-background">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-12 items-start">
             <div>
-              <h2 className="font-serif text-3xl font-bold mb-6">
-                Winelands Wellness Experience
-              </h2>
+              <h2 className="font-serif text-3xl font-bold mb-6">Mobile wellness in Stellenbosch</h2>
               <p className="text-muted-foreground mb-6">
-                Stellenbosch, South Africa's premier wine destination, deserves equally premium 
-                spa experiences. We bring world-class treatments to your wine estate, boutique 
-                hotel, or private residence in this historic university town.
+                We bring booked massage, facial, nail, and selected beauty treatments to suitable locations in and around
+                Stellenbosch, including private homes, hotels, guest houses, and wine-estate accommodation where access is
+                permitted.
               </p>
               <p className="text-muted-foreground mb-6">
-                Our therapists serve all areas including De Zalze, Techno Park, Die Boord, 
-                Paradyskloof, and the surrounding wine farms.
+                When you book, share your address, parking details, estate or reception instructions, and preferred time so
+                we can confirm route availability before the appointment.
               </p>
 
               <div className="space-y-4 mb-8">
                 {[
-                  "Professional certified therapists",
-                  "Premium organic products",
-                  "Available 24/7",
-                  "Wine estate services available",
-                  "Bridal and hen party packages",
+                  "Mobile treatment setup brought to your location",
+                  "Appointments subject to therapist and route availability",
+                  "Hotel, guest-house, and private-residence visits",
+                  "Couples and small-group bookings by arrangement",
                 ].map((item, index) => (
                   <div key={index} className="flex items-center gap-3">
                     <CheckCircle className="h-5 w-5 text-primary" />
@@ -78,7 +73,8 @@ const Stellenbosch = () => {
                     Availability
                   </h3>
                   <p className="text-muted-foreground">
-                    We're available 24/7 in Stellenbosch. Perfect for post-wine tasting relaxation.
+                    Appointment times depend on therapist availability and travel scheduling. Booking ahead is recommended
+                    for couples, groups, and multiple-treatment visits.
                   </p>
                 </CardContent>
               </Card>
@@ -93,20 +89,6 @@ const Stellenbosch = () => {
                   <a href="tel:0681849866" className="text-primary font-semibold text-lg">
                     068 184 9866
                   </a>
-                </CardContent>
-              </Card>
-
-              <Card className="border-primary/20">
-                <CardContent className="p-6">
-                  <h3 className="font-serif text-xl font-semibold mb-4 flex items-center gap-2">
-                    <Star className="h-5 w-5 text-primary" />
-                    Client Reviews
-                  </h3>
-                  <p className="text-muted-foreground italic">
-                    "After a long day of wine tasting, the couples massage at our guest house 
-                    was the perfect ending. Highly recommend!"
-                  </p>
-                  <p className="text-sm text-primary mt-2">— James & Sarah, De Zalze</p>
                 </CardContent>
               </Card>
             </div>

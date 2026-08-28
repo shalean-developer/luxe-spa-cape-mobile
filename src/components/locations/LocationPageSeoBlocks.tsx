@@ -6,35 +6,34 @@ export function PopularTreatmentsBlock({ areaLabel }: { areaLabel: string }) {
   return (
     <div className="mt-8 rounded-xl border border-border/60 bg-background/80 p-6 shadow-sm">
       <h3 className="font-serif text-xl font-bold tracking-tight text-foreground md:text-2xl">
-        Popular treatments in {areaLabel}
+        Treatments available in {areaLabel}
       </h3>
       <ul className="mt-4 space-y-3 text-muted-foreground md:text-lg">
         <li>
-          <strong className="font-medium text-foreground">Deep tissue massage in {areaLabel}</strong> — sports recovery,
-          desk-tight shoulders, and restorative full-body work by{" "}
-          <span className="text-foreground">professional certified therapists</span>.
+          <strong className="font-medium text-foreground">Deep tissue massage</strong> — focused work for tired or tense
+          muscles, delivered at your home, hotel, or guest accommodation.
         </li>
         <li>
-          <strong className="font-medium text-foreground">Facials in {areaLabel}</strong> — hydrating, anti-aging, and
-          event-ready skincare using premium products in the privacy of your home.
+          <strong className="font-medium text-foreground">Facials</strong> — hydrating and skincare-focused treatments
+          prepared for your appointment.
         </li>
         <li>
-          <strong className="font-medium text-foreground">Mobile manicure &amp; pedicure in {areaLabel}</strong> — gel
-          manicures and spa pedicures without salon waits.
+          <strong className="font-medium text-foreground">Manicures and pedicures</strong> — mobile nail care without a
+          salon visit.
         </li>
         <li>
-          <strong className="font-medium text-foreground">Couples massage in {areaLabel}</strong> — side-by-side rituals
-          for date nights, celebrations, or hosting visitors from out of town.
+          <strong className="font-medium text-foreground">Couples massage</strong> — a convenient option for couples,
+          celebrations, or shared relaxation time.
         </li>
       </ul>
       <p className="mt-5 text-sm leading-relaxed text-muted-foreground">
-        Explore waxing, hot stones, and packages on our{" "}
+        See the full treatment list on our{" "}
         <Link href="/services" className="font-medium text-primary underline-offset-4 hover:underline">
-          spa services menu
+          services page
         </Link>{" "}
-        — then{" "}
+        or{" "}
         <Link href="/booking" className="font-medium text-primary underline-offset-4 hover:underline">
-          book your appointment
+          book an appointment
         </Link>
         .
       </p>
@@ -63,9 +62,8 @@ export function NearbyAreasProseBlock({
   if (neighbors.length === 0) return null;
   return (
     <p className="mt-6 leading-relaxed text-muted-foreground md:text-lg">
-      We also serve nearby areas including {linkedList(neighbors)} — ideal when you split stays between {areaLabel}{" "}
-      and neighbouring suburbs, host Airbnb or boutique-hotel guests who move across Cape Town, or want therapists who
-      already know parking and access patterns for adjacent pockets.
+      We also travel to nearby areas including {linkedList(neighbors)}. If your address is between suburbs or outside the
+      usual route, send your location when booking so we can confirm availability and travel details from {areaLabel}.
     </p>
   );
 }
@@ -73,13 +71,11 @@ export function NearbyAreasProseBlock({
 export function LocationTrustStrip() {
   return (
     <p className="mt-4 rounded-lg border border-primary/15 bg-primary/5 px-4 py-3 text-sm leading-relaxed text-foreground md:text-base">
-      <span className="font-semibold">Trusted by clients across Cape Town</span>
+      <span className="font-semibold">Mobile appointments across Cape Town</span>
       <span className="text-muted-foreground"> · </span>
-      Professional certified therapists
+      Treatment equipment brought to your location
       <span className="text-muted-foreground"> · </span>
-      Hotel-standard equipment &amp; hygiene
-      <span className="text-muted-foreground"> · </span>
-      Rated 4.9★ by guests who book our mobile spa regularly
+      Home, hotel and guest-accommodation visits
     </p>
   );
 }
