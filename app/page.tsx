@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import HomePage from "@/components/home/HomePage";
+import { getCanonicalSiteUrl } from "@/lib/siteOrigin";
 
-const siteUrl = "https://www.luxurymspa.co.za";
+const siteUrl = getCanonicalSiteUrl();
 
 export const metadata: Metadata = {
   title: "Rejuvenation Mobile Massage Cape Town | At-Home Massage, Facials & Nails",
