@@ -19,6 +19,7 @@ export function HomeHero() {
           alt="Relaxing mobile massage treatment at home in Cape Town"
           fill
           priority
+          quality={70}
           sizes="100vw"
           className="object-cover object-center"
         />
