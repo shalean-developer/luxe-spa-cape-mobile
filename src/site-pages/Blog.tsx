@@ -6,11 +6,21 @@ import { Button } from "@/components/ui/button";
 
 const publishedPosts = [
   {
+    href: "/blog/mobile-massage-cape-town-what-to-expect",
+    title: "Mobile Massage Cape Town: What to Expect Before, During & After",
+    excerpt:
+      "A practical guide to access, setup, treatment choices, timing, privacy, and preparing your home, hotel, or Airbnb for a mobile massage appointment.",
+    image: "/images/massage.jpg",
+    imageAlt: "Mobile massage treatment prepared at a private Cape Town location",
+    category: "Massage in Cape Town",
+  },
+  {
     href: "/blog/home-cleaning-before-spa-cape-town",
     title: "Why a Clean Home Enhances Your At-Home Spa Experience in Cape Town",
     excerpt:
       "How a tidy, organised space sets the tone for at-home massage and facials, with practical preparation tips before your therapist arrives.",
     image: "/images/spa-setup.jpg",
+    imageAlt: "Prepared home spa treatment space in Cape Town",
     category: "At-Home Spa Planning",
   },
 ] as const;
@@ -84,31 +94,31 @@ const Blog = () => {
           <div className="mx-auto max-w-3xl text-center">
             <p className="text-sm font-semibold uppercase tracking-[0.18em] text-primary">Published</p>
             <h2 id="published-guides-heading" className="mt-3 font-serif text-3xl font-bold md:text-4xl">
-              Latest guide
+              Latest guides
             </h2>
           </div>
 
-          <div className="mx-auto mt-12 max-w-3xl">
+          <div className="mx-auto mt-12 grid max-w-5xl gap-8 md:grid-cols-2">
             {publishedPosts.map((post) => (
               <Link
                 key={post.href}
                 href={post.href}
-                className="group block rounded-3xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+                className="group block h-full rounded-3xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
               >
-                <Card className="overflow-hidden transition-shadow hover:shadow-xl">
-                  <div className="relative h-64 overflow-hidden md:h-80">
+                <Card className="h-full overflow-hidden transition-shadow hover:shadow-xl">
+                  <div className="relative h-60 overflow-hidden">
                     <Image
                       src={post.image}
-                      alt="Prepared home spa treatment space in Cape Town"
+                      alt={post.imageAlt}
                       fill
                       quality={65}
-                      sizes="(max-width: 768px) 100vw, 768px"
+                      sizes="(max-width: 768px) 100vw, 50vw"
                       className="object-cover transition-transform duration-500 group-hover:scale-[1.03]"
                     />
                   </div>
-                  <CardContent className="p-7 md:p-8">
+                  <CardContent className="p-7">
                     <p className="text-sm font-medium text-primary">{post.category}</p>
-                    <h3 className="mt-2 font-serif text-2xl font-semibold md:text-3xl">{post.title}</h3>
+                    <h3 className="mt-2 font-serif text-2xl font-semibold">{post.title}</h3>
                     <p className="mt-4 leading-relaxed text-muted-foreground">{post.excerpt}</p>
                     <span className="mt-5 inline-flex items-center text-sm font-semibold text-primary">
                       Read the guide
