@@ -1,8 +1,18 @@
 import type { Metadata } from "next";
-import { getRouteMetadata } from "@/routeMetadata";
 import { ServiceLandingPage } from "@/components/services/ServiceLandingPage";
 
-export const metadata: Metadata = getRouteMetadata("services/facials");
+export const metadata: Metadata = {
+  title: "At-Home Facials Cape Town | Mobile Facial Treatments",
+  description:
+    "Book at-home facials in Cape Town for homes, hotels and guest stays. Explore hydrating, deep cleansing and anti-aging facial options.",
+  alternates: { canonical: "/services/facials" },
+  openGraph: {
+    title: "At-Home Facials Cape Town | Mobile Facial Treatments",
+    description: "Facial treatments delivered to supported Cape Town homes, hotels and guest stays.",
+    url: "/services/facials",
+    images: ["/images/facial.jpg"],
+  },
+};
 
 export default function FacialServicePage() {
   return (
