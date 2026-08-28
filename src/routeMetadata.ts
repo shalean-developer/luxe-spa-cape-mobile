@@ -1,13 +1,9 @@
 import type { Metadata } from "next";
 import { getSiteMetadataConfig } from "@/lib/siteMetadata";
 
-const defaultKeywords =
-  "mobile massage Cape Town, at home massage Cape Town, facials Cape Town, mobile beauty services Cape Town, rejuvenation mobile massage, massage at home";
-
 type RouteSeo = {
   title: string;
   description: string;
-  keywords?: string;
   canonical?: string;
   ogImage?: string;
 };
@@ -250,7 +246,6 @@ export function getRouteMetadata(routeKey: string): Metadata {
   return {
     title: seo.title,
     description: seo.description,
-    keywords: seo.keywords ?? defaultKeywords,
     alternates: {
       canonical: canonicalUrl,
     },
