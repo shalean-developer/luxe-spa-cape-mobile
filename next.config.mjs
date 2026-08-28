@@ -37,8 +37,20 @@ const nextConfig = {
     return [
       {
         source: "/:path*",
+        has: [{ type: "host", value: "www.rejuvenationmassage.co.za" }],
+        destination: "https://rejuvenationmassage.co.za/:path*",
+        permanent: true,
+      },
+      {
+        source: "/:path*",
+        has: [{ type: "host", value: "luxurymspa.co.za" }],
+        destination: "https://rejuvenationmassage.co.za/:path*",
+        permanent: true,
+      },
+      {
+        source: "/:path*",
         has: [{ type: "host", value: "www.luxurymspa.co.za" }],
-        destination: "https://luxurymspa.co.za/:path*",
+        destination: "https://rejuvenationmassage.co.za/:path*",
         permanent: true,
       },
     ];
