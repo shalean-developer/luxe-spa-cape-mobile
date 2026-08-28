@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { MapPin, Phone, Clock, CheckCircle } from "lucide-react";
 import { LocationSeoExtras } from "@/components/locations/LocationSeoExtras";
@@ -8,8 +9,17 @@ const heroImage = "/images/hot-stones.jpg";
 const BantryBay = () => {
   return (
     <div className="min-h-screen">
-      <section className="relative h-[50vh] flex items-center justify-center">
-        <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: `url(${heroImage})` }}>
+      <section className="relative h-[50vh] flex items-center justify-center overflow-hidden">
+        <div className="absolute inset-0">
+          <Image
+            src={heroImage}
+            alt="Mobile spa treatment setup for a Bantry Bay appointment in Cape Town"
+            fill
+            priority
+            quality={70}
+            sizes="100vw"
+            className="object-cover object-center"
+          />
           <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/60 to-background" />
         </div>
         <div className="relative z-10 text-center px-4">
