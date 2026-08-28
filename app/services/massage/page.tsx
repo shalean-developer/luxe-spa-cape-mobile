@@ -1,8 +1,18 @@
 import type { Metadata } from "next";
-import { getRouteMetadata } from "@/routeMetadata";
 import { ServiceLandingPage } from "@/components/services/ServiceLandingPage";
 
-export const metadata: Metadata = getRouteMetadata("services/massage");
+export const metadata: Metadata = {
+  title: "Mobile Massage Cape Town | At-Home Massage Services",
+  description:
+    "Book mobile massage in Cape Town for homes, hotels and guest stays. Explore Swedish, deep tissue, hot stone, aromatherapy and couples massage options.",
+  alternates: { canonical: "/services/massage" },
+  openGraph: {
+    title: "Mobile Massage Cape Town | At-Home Massage Services",
+    description: "Mobile massage treatments delivered to supported Cape Town homes, hotels and guest stays.",
+    url: "/services/massage",
+    images: ["/images/massage.jpg"],
+  },
+};
 
 export default function MassageServicePage() {
   return (
