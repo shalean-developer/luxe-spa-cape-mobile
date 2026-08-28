@@ -19,6 +19,7 @@ export default function MassageServicePage() {
     <ServiceLandingPage
       eyebrow="Mobile Massage"
       title="Mobile Massage in Cape Town"
+      pathname="/services/massage"
       intro="Book massage treatments at your home, hotel, guest stay, or suitable private venue without travelling to a spa."
       image="/images/massage.jpg"
       imageAlt="Mobile massage treatment setup in Cape Town"

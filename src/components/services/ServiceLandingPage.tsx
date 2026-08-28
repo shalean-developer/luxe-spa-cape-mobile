@@ -2,10 +2,12 @@ import Image from "next/image";
 import Link from "next/link";
 import { CheckCircle, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Breadcrumbs } from "@/components/seo/Breadcrumbs";
 
 export type ServiceLandingPageProps = {
   eyebrow: string;
   title: string;
+  pathname: string;
   intro: string;
   image: string;
   imageAlt: string;
@@ -17,6 +19,7 @@ export type ServiceLandingPageProps = {
 export function ServiceLandingPage({
   eyebrow,
   title,
+  pathname,
   intro,
   image,
   imageAlt,
@@ -32,6 +35,15 @@ export function ServiceLandingPage({
           <div className="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary/70 to-primary/35" />
         </div>
         <div className="container relative mx-auto px-4 py-24 text-white md:py-32">
+          <div className="mb-7 rounded-xl bg-black/15 px-3 py-2 backdrop-blur-sm [&_a]:text-white/85 [&_span]:text-white">
+            <Breadcrumbs
+              items={[
+                { label: "Home", href: "/" },
+                { label: "Services", href: "/services" },
+                { label: eyebrow, href: pathname },
+              ]}
+            />
+          </div>
           <p className="text-sm font-semibold uppercase tracking-[0.2em] text-white/80">{eyebrow}</p>
           <h1 className="mt-4 max-w-4xl font-serif text-4xl font-bold md:text-5xl lg:text-6xl">{title}</h1>
           <p className="mt-6 max-w-2xl text-lg leading-relaxed text-white/90 md:text-xl">{intro}</p>

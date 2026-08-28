@@ -19,6 +19,7 @@ export default function NailServicePage() {
     <ServiceLandingPage
       eyebrow="Mobile Nail Care"
       title="Mobile Manicure & Pedicure Services in Cape Town"
+      pathname="/services/nails"
       intro="Book nail care at your home, hotel, guest stay, or suitable private venue, with manicure and pedicure setup brought to you."
       image="/images/nails.jpg"
       imageAlt="Mobile manicure and nail care appointment in Cape Town"
