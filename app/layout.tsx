@@ -31,14 +31,6 @@ export const metadata: Metadata = {
     template: `%s | ${site.siteName}`,
   },
   description: site.defaultDescription,
-  keywords: [
-    "mobile massage Cape Town",
-    "at home massage Cape Town",
-    "facials Cape Town",
-    "mobile beauty services Cape Town",
-    "rejuvenation mobile massage",
-    "massage at home",
-  ],
   authors: [{ name: site.author }],
   creator: site.author,
   openGraph: {
