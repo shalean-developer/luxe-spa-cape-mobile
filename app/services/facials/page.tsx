@@ -19,6 +19,7 @@ export default function FacialServicePage() {
     <ServiceLandingPage
       eyebrow="Mobile Facials"
       title="At-Home Facials in Cape Town"
+      pathname="/services/facials"
       intro="Enjoy facial treatments in a familiar private setting, with the treatment setup brought to your home, hotel, or suitable guest accommodation."
       image="/images/facial.jpg"
       imageAlt="At-home facial treatment in Cape Town"
