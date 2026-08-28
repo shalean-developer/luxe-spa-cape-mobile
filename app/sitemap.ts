@@ -5,6 +5,17 @@ import { getCanonicalSiteUrl } from "@/lib/siteOrigin";
 
 type ChangeFreq = NonNullable<MetadataRoute.Sitemap[number]["changeFrequency"]>;
 
+const INDEXABLE_LOCATION_SLUGS = new Set([
+  "bloubergstrand",
+  "camps-bay",
+  "claremont",
+  "constantia",
+  "durbanville",
+  "goodwood",
+  "green-point",
+  "sea-point",
+]);
+
 const STATIC_ENTRIES: { pathname: string; changeFrequency: ChangeFreq; priority: number }[] = [
   { pathname: "/", changeFrequency: "weekly", priority: 1 },
   { pathname: "/services", changeFrequency: "weekly", priority: 0.9 },
@@ -21,6 +32,7 @@ function locationPathnames(): string[] {
   return fs
     .readdirSync(dir, { withFileTypes: true })
     .filter((e) => e.isDirectory())
+    .filter((e) => INDEXABLE_LOCATION_SLUGS.has(e.name))
     .filter((e) => fs.existsSync(path.join(dir, e.name, "page.tsx")))
     .map((e) => `/locations/${e.name}`);
 }
@@ -36,25 +48,23 @@ function blogArticlePathnames(): string[] {
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const siteUrl = getCanonicalSiteUrl();
-  const lastModified = new Date();
 
+  // Do not emit synthetic freshness timestamps. A lastModified value should only
+  // be added when we have a trustworthy per-page publication/update date.
   const staticUrls = STATIC_ENTRIES.map(({ pathname, changeFrequency, priority }) => ({
     url: `${siteUrl}${pathname}`,
-    lastModified,
     changeFrequency,
     priority,
   }));
 
   const locationUrls = locationPathnames().map((pathname) => ({
     url: `${siteUrl}${pathname}`,
-    lastModified,
     changeFrequency: "monthly" as const,
     priority: 0.8,
   }));
 
   const blogUrls = blogArticlePathnames().map((pathname) => ({
     url: `${siteUrl}${pathname}`,
-    lastModified,
     changeFrequency: "monthly" as const,
     priority: 0.65,
   }));
