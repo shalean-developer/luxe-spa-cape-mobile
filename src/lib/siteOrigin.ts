@@ -1,14 +1,13 @@
 /**
  * Canonical public origin for absolute URLs (metadata, JSON-LD, sitemap, robots).
- * Set NEXT_PUBLIC_SITE_URL in Vercel/hosting (no trailing slash), e.g.
- * https://www.luxurymspa.co.za
+ * Keep this aligned with the production redirect policy and NEXT_PUBLIC_SITE_URL.
  */
 export function getCanonicalSiteUrl(): string {
   const raw = process.env.NEXT_PUBLIC_SITE_URL?.trim().replace(/\/$/, "");
-  return raw && /^https?:\/\//i.test(raw) ? raw : "https://www.luxurymspa.co.za";
+  return raw && /^https?:\/\//i.test(raw) ? raw : "https://luxurymspa.co.za";
 }
 
-/** Apex host for the same site (no www), used only for robots Sitemap hints. */
+/** Canonical host only. Retained for callers that need an origin helper. */
 export function getApexSiteUrl(canonical: string): string {
   try {
     const u = new URL(canonical);
