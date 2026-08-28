@@ -37,6 +37,15 @@ function locationPathnames(): string[] {
     .map((e) => `/locations/${e.name}`);
 }
 
+function servicePathnames(): string[] {
+  const dir = path.join(process.cwd(), "app", "services");
+  return fs
+    .readdirSync(dir, { withFileTypes: true })
+    .filter((e) => e.isDirectory())
+    .filter((e) => fs.existsSync(path.join(dir, e.name, "page.tsx")))
+    .map((e) => `/services/${e.name}`);
+}
+
 function blogArticlePathnames(): string[] {
   const dir = path.join(process.cwd(), "app", "blog");
   return fs
@@ -57,6 +66,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority,
   }));
 
+  const serviceUrls = servicePathnames().map((pathname) => ({
+    url: `${siteUrl}${pathname}`,
+    changeFrequency: "monthly" as const,
+    priority: 0.8,
+  }));
+
   const locationUrls = locationPathnames().map((pathname) => ({
     url: `${siteUrl}${pathname}`,
     changeFrequency: "monthly" as const,
@@ -69,5 +84,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.65,
   }));
 
-  return [...staticUrls, ...locationUrls, ...blogUrls];
+  return [...staticUrls, ...serviceUrls, ...locationUrls, ...blogUrls];
 }
