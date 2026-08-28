@@ -43,6 +43,13 @@ const routeSeoMap: Record<string, RouteSeo> = {
       "Discover why a clean home improves your at-home spa experience. Learn how professional cleaning and mobile spa services work together in Cape Town.",
     canonical: "/blog/home-cleaning-before-spa-cape-town",
   },
+  "blog/mobile-massage-cape-town-what-to-expect": {
+    title: "Mobile Massage Cape Town: What to Expect Before, During & After",
+    description:
+      "Planning a mobile massage in Cape Town? Learn what happens before arrival, how to prepare your space, what to expect during the treatment, and how to plan your appointment window.",
+    canonical: "/blog/mobile-massage-cape-town-what-to-expect",
+    ogImage: "/images/massage.jpg",
+  },
   about: {
     title: "About Rejuvenation Mobile Massage Cape Town",
     description:
@@ -221,38 +228,38 @@ function locationTitleFromSlug(routeKey: string) {
 }
 
 export function getRouteMetadata(routeKey: string): Metadata {
-  const base = routeSeoMap[routeKey];
-  const seo =
-    base ??
-    (routeKey.startsWith("locations/")
-      ? {
-          title: `Mobile Spa ${locationTitleFromSlug(routeKey)} Cape Town | At-Home Massage & Facials`,
-          description: `Book mobile spa Cape Town therapists in ${locationTitleFromSlug(routeKey)}—at-home massage, facials, nails & mobile beauty services with discreet arrival & premium kits.`,
-          canonical: `/${routeKey}`,
-        }
-      : {
-          title: "Rejuvenation Mobile Massage Cape Town",
-          description:
-            "Cape Town's premier on-demand mobile spa service for massage, facials and beauty treatments.",
-          canonical: routeKey ? `/${routeKey}` : "/",
-        });
+  const normalized = routeKey.replace(/^\/+|\/+$/g, "");
+  const fallback: RouteSeo = normalized.startsWith("locations/")
+    ? {
+        title: `Mobile Spa ${locationTitleFromSlug(normalized)} | Rejuvenation Mobile Massage Cape Town`,
+        description: `Book mobile massage and spa treatments in ${locationTitleFromSlug(normalized)}, Cape Town. At-home massage, facials, nails and mobile beauty services delivered to your location.`,
+        canonical: `/${normalized}`,
+      }
+    : {
+        title: "Rejuvenation Mobile Massage Cape Town",
+        description: "Mobile massage, facials, nails and beauty treatments delivered across Cape Town.",
+        canonical: normalized ? `/${normalized}` : "/",
+      };
 
-  const canonical = `${siteUrl}${seo.canonical ?? "/"}`;
-  const ogImage = `${siteUrl}${seo.ogImage ?? "/og-image.jpg"}`;
+  const seo = routeSeoMap[normalized] ?? fallback;
+  const canonicalPath = seo.canonical ?? (normalized ? `/${normalized}` : "/");
+  const canonicalUrl = new URL(canonicalPath, siteUrl).toString();
+  const ogImage = seo.ogImage ? new URL(seo.ogImage, siteUrl).toString() : `${siteUrl}/og-image.jpg`;
 
   return {
     title: seo.title,
     description: seo.description,
     keywords: seo.keywords ?? defaultKeywords,
     alternates: {
-      canonical,
+      canonical: canonicalUrl,
     },
     openGraph: {
       title: seo.title,
       description: seo.description,
-      url: canonical,
+      url: canonicalUrl,
+      siteName: "Rejuvenation Mobile Massage Cape Town",
       type: "website",
-      images: [ogImage],
+      images: [{ url: ogImage }],
     },
     twitter: {
       card: "summary_large_image",
