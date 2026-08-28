@@ -1,8 +1,18 @@
 import type { Metadata } from "next";
-import { getRouteMetadata } from "@/routeMetadata";
 import { ServiceLandingPage } from "@/components/services/ServiceLandingPage";
 
-export const metadata: Metadata = getRouteMetadata("services/nails");
+export const metadata: Metadata = {
+  title: "Mobile Manicure & Pedicure Cape Town | Nail Care at Home",
+  description:
+    "Book mobile manicure and pedicure services in Cape Town for homes, hotels and guest stays, including classic and gel nail care options.",
+  alternates: { canonical: "/services/nails" },
+  openGraph: {
+    title: "Mobile Manicure & Pedicure Cape Town | Nail Care at Home",
+    description: "Mobile nail care delivered to supported Cape Town homes, hotels and guest stays.",
+    url: "/services/nails",
+    images: ["/images/nails.jpg"],
+  },
+};
 
 export default function NailServicePage() {
   return (
